@@ -1,0 +1,21 @@
+/* ==========================================================================
+   LEGAL-PAGE.CSS — shared across privacy.php, terms.php, cookies.php,
+   accessibility.php. Loaded via $extraStyles, not as a per-page stylesheet,
+   since all four share one literal layout (same reasoning as service-page.css).
+   ========================================================================== */
+
+.legal-hero{ padding:150px 0 40px; max-width:720px; }
+.legal-hero h1{ font-size:clamp(2rem, 1.7rem + 1.4vw, 2.8rem); margin-bottom:14px; }
+.legal-updated{ display:block; font-family:var(--font-label); font-size:0.78rem; letter-spacing:0.06em; text-transform:uppercase; color:var(--graphite); margin-bottom:20px; }
+
+.legal-body{ max-width:760px; }
+.legal-section{ padding:26px 0; border-top:1px solid var(--paper-line); }
+.legal-section:first-child{ border-top:none; }
+.legal-section h2{ font-size:1.2rem; margin-bottom:12px; }
+.legal-section p{ color:var(--ink-soft); font-size:0.96rem; line-height:1.7; }
+
+.legal-disclaimer{ margin-top:36px; padding-top:26px; border-top:1px solid var(--paper-line); font-size:0.82rem; color:var(--graphite); font-style:italic; }
+
+@media (min-width:940px){
+  .legal-hero{ padding:190px 0 50px; }
+}

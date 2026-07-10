@@ -1,0 +1,55 @@
+/* ==========================================================================
+   SERVICE-PAGE.CSS — shared across all individual /services/[slug].php pages.
+   Loaded via $extraStyles in includes/service-page.php, NOT per-page —
+   every one of the 33 service pages uses this exact same stylesheet.
+   Most of what a service page needs already exists in components.css
+   (service-grid, service-chip, stat-card, faq, process, final-cta); this
+   file only holds what's unique to the service-detail page type.
+   ========================================================================== */
+
+/* ---------- Breadcrumb ---------- */
+.breadcrumb{
+  display:flex; flex-wrap:wrap; align-items:center; gap:8px;
+  padding:150px var(--edge) 0; max-width:var(--container); margin:0 auto;
+  font-family:var(--font-label); font-size:0.78rem; letter-spacing:0.03em; color:var(--graphite);
+}
+.breadcrumb a{ color:var(--graphite); transition:color .25s; }
+.breadcrumb a:hover{ color:var(--green-deep); }
+.breadcrumb span[aria-current]{ color:var(--ink-soft); }
+.breadcrumb .sep{ color:var(--paper-line); }
+
+/* ---------- Service hero ---------- */
+.service-hero{ padding:26px 0 70px; }
+.service-hero .wrap{ max-width:760px; }
+.service-hero h1{ margin-bottom:22px; }
+.service-hero .lead{ max-width:none; margin-bottom:36px; }
+.service-hero__ctas{ display:flex; flex-wrap:wrap; gap:16px; }
+
+/* ---------- Problem block ---------- */
+.problem-block{ max-width:720px; }
+.problem-block h2{ margin-bottom:18px; }
+
+/* ---------- Deliverables (check-list) ---------- */
+.check-list{ display:flex; flex-direction:column; gap:16px; max-width:720px; }
+.check-list li{ display:flex; gap:14px; align-items:flex-start; font-size:1rem; color:var(--ink-soft); line-height:1.5; }
+.check-list svg{ width:18px; height:18px; flex-shrink:0; margin-top:2px; color:var(--green-deep); }
+
+/* ---------- Process (3-step modifier) ---------- */
+.process.process--three{ grid-template-columns:1fr; }
+@media (min-width:640px){ .process.process--three{ grid-template-columns:repeat(3,1fr); } }
+
+/* ---------- Insight quote (qualitative proof when no numeric stat applies) ---------- */
+.insight-quote{
+  max-width:640px; border-left:2px solid var(--green); padding:4px 0 4px 26px; margin-top:36px;
+}
+.insight-quote p{ font-family:var(--font-display); font-style:italic; font-size:1.2rem; line-height:1.5; color:var(--ink-soft); }
+
+/* ---------- Related product callout ---------- */
+.product-callout{
+  display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:20px;
+  background:var(--green-pale); border:1px solid var(--paper-line); padding:30px 34px; margin-top:40px;
+}
+.product-callout__label{ font-family:var(--font-label); font-size:0.72rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--green-deep); margin-bottom:6px; display:block; }
+.product-callout__name{ font-family:var(--font-display); font-size:1.2rem; font-weight:600; margin-bottom:4px; }
+.product-callout__desc{ font-size:0.9rem; color:var(--ink-soft); max-width:52ch; }
+.product-callout a.btn{ flex-shrink:0; }

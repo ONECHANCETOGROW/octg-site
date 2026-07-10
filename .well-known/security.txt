@@ -1,0 +1,5 @@
+Contact: mailto:hello@onechancetogrow.com
+Contact: tel:+18022768331
+Preferred-Languages: en
+Canonical: https://onechancetogrow.com/.well-known/security.txt
+Expires: 2027-07-09T00:00:00.000Z

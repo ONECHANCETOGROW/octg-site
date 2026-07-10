@@ -1,0 +1,37 @@
+/* ==========================================================================
+   PROJECTS.CSS — page-specific styles only.
+   Mobile-first; breakpoints layered up through tablet, laptop, desktop.
+   ========================================================================== */
+
+/* ===================== BASE / MOBILE ===================== */
+.projects-hero{ padding:150px 0 20px; max-width:700px; margin-inline:auto; text-align:center; }
+.projects-hero h1{ margin:20px 0 22px; }
+.projects-hero .lead{ margin-inline:auto; text-align:center; }
+
+.project-grid{ display:grid; gap:40px; }
+.project-card{ display:flex; flex-direction:column; }
+.project-card__frame{ aspect-ratio:16/11; margin-bottom:20px; transition:transform .4s var(--ease); }
+.project-card:hover .project-card__frame{ transform:translateY(-4px); }
+.project-card__industry{ font-family:var(--font-label); font-size:0.72rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--green-deep); margin-bottom:10px; }
+.project-card h3{ font-size:1.15rem; margin-bottom:10px; max-width:26ch; }
+.project-card p{ color:var(--graphite); font-size:0.92rem; line-height:1.6; margin-bottom:16px; }
+.project-card__link{
+  display:inline-flex; align-items:center; gap:8px; font-family:var(--font-label); font-size:0.8rem;
+  letter-spacing:0.03em; color:var(--ink); border-top:1px solid var(--paper-line); padding-top:14px; margin-top:auto;
+}
+.project-card__link svg{ color:var(--green); transition:transform .3s var(--ease); }
+.project-card:hover .project-card__link svg{ transform:translateX(4px); }
+.project-card__link--primary{
+  border-top:none; padding-top:0; margin-top:0; margin-bottom:14px; color:var(--green-deep); font-weight:600;
+}
+
+/* ===================== TABLET (640px+) ===================== */
+@media (min-width:640px){
+  .project-grid{ grid-template-columns:repeat(2,1fr); }
+}
+
+/* ===================== LAPTOP (980px+) ===================== */
+@media (min-width:980px){
+  .projects-hero{ padding:190px 0 30px; }
+  .project-grid{ grid-template-columns:repeat(3,1fr); gap:48px 40px; }
+}

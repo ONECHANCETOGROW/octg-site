@@ -1,0 +1,7 @@
+/* ==========================================================================
+   CAREERS.CSS — page-specific styles only.
+   ========================================================================== */
+.careers-hero{ padding:150px 0 20px; max-width:720px; margin-inline:auto; text-align:center; }
+.careers-hero h1{ margin:20px 0 22px; }
+.careers-hero .lead{ margin-inline:auto; text-align:center; }
+@media (min-width:940px){ .careers-hero{ padding:190px 0 30px; } }

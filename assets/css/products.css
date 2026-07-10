@@ -1,0 +1,49 @@
+/* ==========================================================================
+   PRODUCTS.CSS — page-specific styles only.
+   Mobile-first; breakpoints layered up through tablet, laptop, desktop.
+   ========================================================================== */
+
+/* ===================== BASE / MOBILE ===================== */
+.products-hero{ padding:150px 0 60px; max-width:760px; margin-inline:auto; text-align:center; }
+.products-hero h1{ margin:20px 0 22px; }
+.products-hero .lead{ margin-inline:auto; text-align:center; }
+
+.product-section{ overflow:hidden; }
+.product-section--alt{ background:var(--paper-deep); }
+.product-section__grid{ display:grid; gap:44px; align-items:center; }
+.product-frame{ aspect-ratio:16/10; }
+
+.product-section__copy h2{ margin-bottom:16px; }
+.product-section__copy .lead{ margin-bottom:26px; }
+.product-section__copy .check-list{ margin-bottom:26px; }
+
+.product-section__pairs{ display:flex; flex-wrap:wrap; align-items:center; gap:10px; margin-bottom:28px; }
+.product-section__pairs-label{ font-family:var(--font-label); font-size:0.74rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--graphite); margin-right:4px; }
+.product-section__pair-link{
+  font-size:0.82rem; padding:6px 14px; border:1px solid var(--paper-line); color:var(--ink-soft); transition:border-color .25s, color .25s;
+}
+.product-section__pair-link:hover{ border-color:var(--green); color:var(--green-deep); }
+
+/* ===================== TABLET (760px+) ===================== */
+@media (min-width:760px){
+  .product-section__grid{ grid-template-columns:1fr 1fr; gap:56px; }
+}
+
+/* ===================== LAPTOP (940px+) ===================== */
+@media (min-width:940px){
+  .products-hero{ padding:190px 0 80px; }
+  .product-section__grid{ gap:80px; }
+  /* alternate media/copy side on every other product for visual rhythm */
+  .product-section--alt .product-section__media{ order:2; }
+  .product-section--alt .product-section__copy{ order:1; }
+}
+
+/* ===================== DESKTOP (1300px+) ===================== */
+@media (min-width:1300px){
+  .product-section__grid{ gap:120px; }
+}
+
+/* Arrival highlight (from a #anchor link on a service page) */
+.product-section.is-highlighted{ background:var(--green-pale); transition:background 1s var(--ease); }
+.product-section.is-highlight-fade{ background:inherit; }
+.product-section--alt.is-highlighted{ background:var(--green-pale); }

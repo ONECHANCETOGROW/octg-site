@@ -1,0 +1,28 @@
+/* ==========================================================================
+   AUDIT.CSS — page-specific styles only.
+   Mobile-first; breakpoints layered up through tablet, laptop, desktop.
+   ========================================================================== */
+
+/* ===================== BASE / MOBILE ===================== */
+.audit-hero{ padding:150px 0 20px; max-width:720px; margin-inline:auto; text-align:center; }
+.audit-hero h1{ margin:20px 0 22px; }
+.audit-hero .lead{ margin-inline:auto; text-align:center; }
+
+.audit-grid{ display:grid; gap:48px; }
+.audit-form-panel form{ display:flex; flex-direction:column; }
+
+.audit-checks{ border:none; padding:0; margin:8px 0 28px; }
+.audit-checks legend{ font-family:var(--font-label); font-size:0.74rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--graphite); margin-bottom:14px; padding:0; }
+.audit-check{ display:flex; align-items:center; gap:10px; font-size:0.94rem; color:var(--ink-soft); padding:9px 0; cursor:pointer; }
+.audit-check input{ width:16px; height:16px; accent-color:var(--green-deep); }
+
+.audit-side{ display:flex; flex-direction:column; gap:32px; }
+.audit-side__block{ border-top:1px solid var(--paper-line); padding-top:20px; }
+.audit-side__block:first-child{ border-top:none; padding-top:0; }
+
+/* ===================== LAPTOP (940px+) ===================== */
+@media (min-width:940px){
+  .audit-hero{ padding:190px 0 30px; }
+  .audit-grid{ grid-template-columns:1.4fr 1fr; gap:80px; align-items:start; }
+  .audit-side{ position:sticky; top:120px; }
+}

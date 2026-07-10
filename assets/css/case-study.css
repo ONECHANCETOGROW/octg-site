@@ -1,0 +1,42 @@
+/* ==========================================================================
+   CASE-STUDY.CSS — shared across every /projects/[slug].php case study.
+   Loaded via $extraStyles, not per-page, since all case studies share layout.
+   ========================================================================== */
+
+.case-hero{ padding:150px 0 0; max-width:900px; margin-inline:auto; }
+.case-hero h1{ margin:18px 0 32px; max-width:20ch; }
+.case-hero__frame{ aspect-ratio:16/9; }
+
+.case-grid{ display:grid; gap:1px; background:var(--paper-line); border:1px solid var(--paper-line); margin-top:64px; }
+.case-col{ background:var(--paper); padding:36px 34px; }
+.case-col__label{ display:block; font-family:var(--font-label); font-size:0.74rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--green-deep); margin-bottom:16px; }
+.case-col p{ color:var(--ink-soft); font-size:1rem; line-height:1.7; }
+
+.case-results{ display:grid; gap:1px; background:var(--paper-line); border:1px solid var(--paper-line); }
+.case-result{ background:var(--paper); padding:36px 30px; text-align:center; }
+.case-result__metric{ display:block; font-family:var(--font-display); font-size:2.2rem; font-weight:600; color:var(--green-deep); margin-bottom:10px; }
+.case-result__label{ font-size:0.9rem; color:var(--graphite); line-height:1.5; }
+
+.case-gallery{ display:grid; gap:24px; }
+.case-gallery__frame{ aspect-ratio:4/3; }
+
+.case-quote{ max-width:720px; margin-inline:auto; text-align:center; }
+.case-quote .mark{ width:36px; height:26px; color:var(--green); margin-bottom:20px; }
+.case-quote p{ font-family:var(--font-display); font-size:1.5rem; font-style:italic; line-height:1.4; color:var(--ink); margin-bottom:20px; }
+.case-quote cite{ font-style:normal; font-size:0.9rem; color:var(--graphite); }
+
+.case-next{ text-align:center; }
+.case-next__link{ display:inline-block; }
+.case-next__label{ display:block; font-family:var(--font-label); font-size:0.78rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--graphite); margin-bottom:14px; }
+.case-next h2{ display:inline-flex; align-items:center; gap:14px; transition:gap .3s var(--ease); }
+.case-next__link:hover h2{ gap:20px; }
+.case-next h2 svg{ color:var(--green); }
+
+@media (min-width:700px){
+  .case-grid{ grid-template-columns:1fr 1fr; }
+  .case-results{ grid-template-columns:repeat(3,1fr); }
+  .case-gallery{ grid-template-columns:1fr 1fr; }
+}
+@media (min-width:940px){
+  .case-hero{ padding:190px 0 0; }
+}

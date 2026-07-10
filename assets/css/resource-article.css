@@ -1,0 +1,23 @@
+/* ==========================================================================
+   RESOURCE-ARTICLE.CSS — shared across every /resources/[slug].php article.
+   Loaded via $extraStyles, not per-page, since all articles share one layout.
+   ========================================================================== */
+
+.article-hero{ padding:150px 0 20px; max-width:760px; margin-inline:auto; text-align:center; }
+.article-hero h1{ margin:18px 0 14px; }
+.article-hero__meta{ font-family:var(--font-label); font-size:0.78rem; letter-spacing:0.06em; text-transform:uppercase; color:var(--graphite); }
+
+.article-cover{ aspect-ratio:16/8; max-width:900px; margin-inline:auto; margin-bottom:56px; }
+
+.article-body{ max-width:700px; margin-inline:auto; }
+.article-body h2{ font-size:1.4rem; margin:40px 0 16px; }
+.article-body h2:first-child{ margin-top:0; }
+.article-body p{ color:var(--ink-soft); font-size:1.02rem; line-height:1.75; margin-bottom:20px; }
+.article-body .check-list{ margin-bottom:24px; }
+
+.article-faq{ max-width:700px; margin:56px auto 0; }
+.article-faq h2{ font-size:1.2rem; margin-bottom:20px; }
+
+@media (min-width:940px){
+  .article-hero{ padding:190px 0 30px; }
+}

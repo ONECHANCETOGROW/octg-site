@@ -1,0 +1,53 @@
+/* ==========================================================================
+   TYPOGRAPHY.CSS — shared across every page. Requires variables.css.
+   ========================================================================== */
+
+body{
+  font-family:var(--font-body);
+  color:var(--ink);
+  line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+}
+
+h1,h2,h3,h4{
+  font-family:var(--font-display);
+  font-weight:500;
+  line-height:1.06;
+  letter-spacing:-0.01em;
+  color:var(--ink);
+}
+h1{ font-size:var(--h1); }
+h2{ font-size:var(--h2); }
+h3{ font-size:var(--h3); font-weight:600; }
+h4{ font-size:1.1rem; font-weight:600; }
+
+.accent-italic{ font-style:italic; font-weight:500; color:var(--green-deep); }
+
+.lead{
+  font-size:var(--lead);
+  color:var(--ink-soft);
+  line-height:1.6;
+  max-width:46ch;
+}
+
+.eyebrow{
+  font-family:var(--font-label);
+  font-size:0.78rem;
+  letter-spacing:0.22em;
+  text-transform:uppercase;
+  color:var(--green-deep);
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:22px;
+}
+.eyebrow::before{
+  content:'';
+  width:28px; height:1px;
+  background:var(--green);
+}
+.eyebrow.center{ justify-content:center; }
+
+/* On dark sections */
+.section--deep .eyebrow{ color:var(--green); }
+.section--deep .eyebrow::before{ background:var(--green); }

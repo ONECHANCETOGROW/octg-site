@@ -1,0 +1,18 @@
+/* ==========================================================================
+   REVIEWS.CSS — page-specific styles only.
+   Mobile-first; breakpoints layered up through tablet, laptop, desktop.
+   ========================================================================== */
+
+/* ===================== BASE / MOBILE ===================== */
+.reviews-hero{ padding:150px 0 20px; max-width:680px; margin-inline:auto; text-align:center; }
+.reviews-hero h1{ margin:20px 0 22px; }
+.reviews-hero .lead{ margin-inline:auto; text-align:center; }
+
+.reviews-grid{ transition:opacity .3s var(--ease); }
+.quote-card{ transition:opacity .35s var(--ease), transform .3s var(--ease); }
+.quote-card.is-filtered-out{ display:none; }
+
+/* ===================== LAPTOP (940px+) ===================== */
+@media (min-width:940px){
+  .reviews-hero{ padding:190px 0 30px; }
+}

@@ -1,0 +1,58 @@
+/* ==========================================================================
+   UTILITIES.CSS — reset, container, buttons, section scaffold.
+   Shared across every page. Requires variables.css.
+   ========================================================================== */
+
+*{ margin:0; padding:0; box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+
+body{ background:var(--paper); overflow-x:hidden; }
+
+img{ max-width:100%; display:block; }
+a{ color:inherit; text-decoration:none; }
+ul{ list-style:none; }
+button{ font:inherit; background:none; border:none; cursor:pointer; color:inherit; }
+section{ position:relative; }
+
+:focus-visible{ outline:2px solid var(--green-deep); outline-offset:3px; }
+
+.sr-only{
+  position:absolute; width:1px; height:1px; overflow:hidden;
+  clip:rect(0,0,0,0); white-space:nowrap;
+}
+
+.skip-link{
+  position:absolute; top:-100px; left:16px; z-index:100;
+  background:var(--ink); color:var(--paper);
+  padding:14px 22px; font-family:var(--font-label); font-size:0.9rem;
+  transition:top .2s var(--ease);
+}
+.skip-link:focus{ top:16px; outline:2px solid var(--green); outline-offset:2px; }
+
+.wrap{ max-width:var(--container); margin:0 auto; padding-inline:var(--edge); }
+
+/* --- Buttons --- */
+.btn{
+  display:inline-flex; align-items:center; gap:10px;
+  font-family:var(--font-label); font-size:0.85rem; letter-spacing:0.09em; text-transform:uppercase;
+  padding:16px 30px;
+  border:1px solid var(--ink);
+  transition:background .35s var(--ease), color .35s var(--ease), border-color .35s var(--ease), transform .35s var(--ease);
+  white-space:nowrap;
+}
+.btn-primary{ background:var(--ink); color:var(--paper); }
+.btn-primary:hover{ background:var(--green-deep); border-color:var(--green-deep); transform:translateY(-2px); }
+.btn-ghost{ background:transparent; color:var(--ink); border-color:var(--paper-line); }
+.btn-ghost:hover{ border-color:var(--ink); }
+.btn-on-dark{ border-color:rgba(247,246,241,0.4); color:var(--paper); }
+.btn-on-dark:hover{ background:var(--green-deep); border-color:var(--green-deep); color:var(--white); }
+.btn-arrow{ transition:transform .35s var(--ease); }
+.btn:hover .btn-arrow{ transform:translateX(4px); }
+
+/* --- Section scaffold (every page is built from these) --- */
+.section{ padding:96px 0; }
+@media (min-width:940px){ .section{ padding:150px 0; } }
+.section--tight{ padding:70px 0; }
+.section--deep{ background:var(--ink); color:var(--paper); }
+.section-head{ max-width:640px; margin-bottom:64px; }
+.section-head.center{ margin-inline:auto; text-align:center; }

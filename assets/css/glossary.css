@@ -1,0 +1,25 @@
+/* ==========================================================================
+   GLOSSARY.CSS — page-specific styles only.
+   ========================================================================== */
+.glossary-hero{ padding:150px 0 20px; max-width:720px; margin-inline:auto; text-align:center; }
+.glossary-hero h1{ margin:20px 0 22px; }
+.glossary-hero .lead{ margin-inline:auto; text-align:center; }
+
+.glossary-list{ display:grid; gap:1px; background:var(--paper-line); border:1px solid var(--paper-line); }
+.glossary-term{ background:var(--paper); padding:28px 30px; transition:background .3s var(--ease); }
+.glossary-term.is-filtered-out{ display:none; }
+.glossary-term:hover{ background:var(--white); }
+.glossary-term h3{ font-size:1.05rem; margin-bottom:10px; }
+.glossary-term p{ color:var(--graphite); font-size:0.9rem; line-height:1.6; margin-bottom:14px; }
+.glossary-term__link{
+  display:inline-flex; align-items:center; gap:6px; font-family:var(--font-label); font-size:0.76rem;
+  letter-spacing:0.05em; text-transform:uppercase; color:var(--green-deep);
+}
+.glossary-term__link svg{ transition:transform .3s var(--ease); }
+.glossary-term:hover .glossary-term__link svg{ transform:translateX(3px); }
+
+@media (min-width:640px){ .glossary-list{ grid-template-columns:repeat(2,1fr); } }
+@media (min-width:980px){
+  .glossary-hero{ padding:190px 0 30px; }
+  .glossary-list{ grid-template-columns:repeat(3,1fr); }
+}

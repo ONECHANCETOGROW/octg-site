@@ -1,0 +1,65 @@
+/* ==========================================================================
+   VARIABLES.CSS
+   Design tokens for One Chance To Grow. Derived from the logo mark:
+   ink-black letterforms + the single olive green of the vine.
+   Every page includes this file first. Never redefine tokens per-page.
+   ========================================================================== */
+
+/* ==========================================================================
+   MOONSCAPE ACTIVATION — do this when you have a licensed webfont kit.
+   MoonScape (Sohel Studio) is a paid commercial font, not on Google Fonts.
+   Embedding it requires your own purchased @font-face files (woff2/woff),
+   which aren't included in this project. To activate it, TWO edits, both
+   in this one file, nothing else on the site needs to change:
+
+   1. Uncomment the @font-face block below and point src at your licensed
+      font files (e.g. copy them to /assets/fonts/ and reference them here).
+   2. Change --font-display below from 'Bodoni Moda' to 'MoonScape'.
+
+   Every hero heading, section heading, stat number, and brand statement
+   site-wide reads from --font-display, so both edits together are the
+   entire activation — no other file references a font name directly.
+*/
+/*
+@font-face{
+  font-family:'MoonScape';
+  src:url('/assets/fonts/MoonScape-Regular.woff2') format('woff2'),
+      url('/assets/fonts/MoonScape-Regular.woff') format('woff');
+  font-weight:400 700;
+  font-display:swap;
+}
+*/
+
+:root{
+  /* --- Color --- */
+  --ink:        #15150F;  /* primary text / logo black */
+  --ink-soft:   #3C3B33;  /* secondary text */
+  --graphite:   #5F5D53;  /* muted/caption text */
+  --paper:      #F7F6F1;  /* base background */
+  --paper-deep: #EEEBE0;  /* alternating section background */
+  --paper-line: #DEDACB;  /* hairline borders/dividers */
+  --green:      #5C8F22;  /* brand accent, sampled from the logo vine */
+  --green-deep: #33500F;  /* hover/pressed states, deep accents */
+  --green-pale: #E7EDDA;  /* light green tint for badges/backgrounds */
+  --white:      #FFFFFF;
+
+  /* --- Type families ---
+     Display: see the MOONSCAPE ACTIVATION note at the top of this file.
+     Bodoni Moda is the placeholder until a licensed webfont is available. */
+  --font-display: 'Bodoni Moda', Georgia, serif; /* PLACEHOLDER for MoonScape */
+  --font-body:    'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-label:   'Poppins', -apple-system, sans-serif;
+
+  /* --- Layout --- */
+  --container: 1280px;
+  --edge: clamp(20px, 5vw, 80px);
+
+  /* --- Fluid type scale --- */
+  --h1: clamp(2.6rem, 1.7rem + 3.6vw, 5.6rem);
+  --h2: clamp(2rem, 1.55rem + 1.8vw, 3.4rem);
+  --h3: clamp(1.3rem, 1.15rem + 0.6vw, 1.65rem);
+  --lead: clamp(1.05rem, 0.98rem + 0.3vw, 1.3rem);
+
+  /* --- Motion --- */
+  --ease: cubic-bezier(.22,.68,.32,1);
+}

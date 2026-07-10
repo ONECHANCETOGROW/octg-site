@@ -1,0 +1,53 @@
+/* ==========================================================================
+   INDEX.CSS — homepage-specific styles only.
+   Shared header/nav/footer/buttons/section scaffold live in assets/css/.
+   ========================================================================== */
+
+.hero{
+  padding:168px 0 90px;
+  display:grid; gap:56px;
+  position:relative;
+}
+@media (min-width:940px){ .hero{ padding:200px 0 120px; grid-template-columns:1.15fr 0.85fr; align-items:center; } }
+
+.hero__eyebrow-row{ display:flex; flex-wrap:wrap; gap:10px 16px; align-items:center; margin-bottom:26px; }
+.hero__eyebrow-row .eyebrow{ margin-bottom:0; }
+
+.hero h1{ margin-bottom:26px; max-width:15ch; }
+.hero .lead{ margin-bottom:38px; }
+.hero__ctas{ display:flex; flex-wrap:wrap; gap:16px; margin-bottom:52px; }
+
+.hero__tagline{
+  display:flex; flex-wrap:wrap; gap:8px 22px;
+  font-family:var(--font-label); font-size:0.78rem; letter-spacing:0.18em; text-transform:uppercase;
+  color:var(--graphite); padding-top:26px; border-top:1px solid var(--paper-line);
+}
+.hero__tagline b{ font-weight:500; color:var(--ink); }
+.hero__tagline .dot{ color:var(--green-deep); }
+
+.hero__visual{ position:relative; }
+.hero__frame{ aspect-ratio:4/5; }
+
+.hero__vine{
+  position:absolute; top:-30px; right:-26px; width:120px; height:170px; z-index:2; color:var(--green);
+}
+
+/* ---------- Trust bar ---------- */
+.trust-bar{ padding:36px 0; border-top:1px solid var(--paper-line); border-bottom:1px solid var(--paper-line); }
+.trust-bar__label{
+  display:block; text-align:center; font-family:var(--font-label); font-size:0.72rem; letter-spacing:0.1em;
+  text-transform:uppercase; color:var(--graphite); margin-bottom:22px;
+}
+.trust-bar__logos{ display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:28px; }
+.trust-bar__logo{ position:relative; width:120px; height:48px; opacity:0.6; transition:opacity .3s var(--ease); }
+.trust-bar__logo:hover{ opacity:1; }
+.trust-bar__logo .media-placeholder{ padding:8px; }
+.trust-bar__logo .media-placeholder svg{ width:20px; height:20px; }
+.trust-bar__logo .media-placeholder__label{ font-size:0.6rem; }
+.trust-bar__logo .media-placeholder__label b{ font-size:0.62rem; }
+.trust-bar__logo .media-real{ object-fit:contain; }
+
+@media (min-width:760px){
+  .trust-bar__logos{ gap:48px; }
+  .trust-bar__logo{ width:140px; height:56px; }
+}

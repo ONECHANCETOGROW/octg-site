@@ -1,0 +1,132 @@
+/* ==========================================================================
+   BOOK-DEMO.CSS — page-specific styles only.
+   Organized mobile-first; breakpoints layered up through tablet, laptop,
+   and desktop, each commented clearly below.
+   ========================================================================== */
+
+/* ===================== BASE / MOBILE ===================== */
+.demo-intro{ padding:150px 0 40px; max-width:640px; }
+.demo-intro h1{ margin:20px 0 18px; }
+
+.demo-layout{ display:grid; gap:44px; padding-bottom:120px; position:relative; overflow:hidden; }
+
+.demo-bg-blob{
+  position:absolute; border-radius:50%; filter:blur(60px); z-index:0; pointer-events:none;
+  animation:blob-drift 18s ease-in-out infinite alternate;
+}
+.demo-bg-blob--1{ width:340px; height:340px; background:rgba(92,143,34,0.16); top:-80px; right:-60px; }
+.demo-bg-blob--2{ width:260px; height:260px; background:rgba(92,143,34,0.10); bottom:-40px; left:-60px; animation-delay:4s; }
+@keyframes blob-drift{ from{ transform:translate(0,0) scale(1); } to{ transform:translate(24px,18px) scale(1.08); } }
+@media (prefers-reduced-motion: reduce){ .demo-bg-blob{ animation:none; } }
+
+.demo-wizard{
+  background:rgba(247,246,241,0.78);
+  -webkit-backdrop-filter:blur(20px) saturate(140%); backdrop-filter:blur(20px) saturate(140%);
+  border:1px solid var(--paper-line);
+  padding:32px 22px 30px;
+  position:relative; z-index:1; overflow:hidden;
+}
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))){
+  .demo-wizard{ background:var(--paper); }
+}
+
+.demo-wizard__progress{ margin-bottom:30px; }
+.demo-wizard__bar{ height:2px; background:var(--paper-line); position:relative; margin-bottom:10px; }
+.demo-wizard__bar-fill{ position:absolute; left:0; top:0; height:100%; width:11.11%; background:var(--green); transition:width .5s var(--ease); }
+.demo-wizard__count{ font-family:var(--font-label); font-size:0.74rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--graphite); }
+
+.demo-steps{ position:relative; min-height:180px; }
+.demo-step{ display:none; }
+.demo-step.is-active{ display:block; }
+.demo-step{ transition:opacity .35s var(--ease), transform .35s var(--ease); }
+.demo-step.is-anim-out-fwd{ opacity:0; transform:translateY(-16px); }
+.demo-step.is-anim-out-back{ opacity:0; transform:translateY(16px); }
+.demo-step.is-anim-in-start-fwd{ opacity:0; transform:translateY(16px); }
+.demo-step.is-anim-in-start-back{ opacity:0; transform:translateY(-16px); }
+
+.demo-step__label{ display:block; font-family:var(--font-label); font-size:0.76rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--green-deep); margin-bottom:10px; }
+.demo-step h2{ font-size:clamp(1.4rem, 1.2rem + 1.4vw, 1.9rem); margin-bottom:26px; max-width:22ch; }
+
+.demo-input{
+  width:100%; background:transparent; border:none; border-bottom:1.5px solid var(--paper-line);
+  padding:14px 0; font-family:var(--font-display); font-size:1.35rem; color:var(--ink);
+  transition:border-color .3s var(--ease);
+}
+.demo-input:focus{ outline:none; border-bottom-color:var(--green-deep); }
+.demo-input::placeholder{ color:var(--paper-line); font-family:var(--font-body); font-size:1rem; }
+.demo-textarea{ min-height:120px; resize:vertical; line-height:1.5; font-family:var(--font-body); font-size:1.05rem; }
+
+.pill-group{ display:flex; flex-wrap:wrap; gap:12px; margin-top:4px; }
+.pill{
+  padding:12px 20px; border:1px solid var(--paper-line); background:transparent;
+  font-family:var(--font-label); font-size:0.86rem; color:var(--ink-soft);
+  transition:border-color .25s var(--ease), background .25s var(--ease), color .25s var(--ease), transform .2s var(--ease);
+}
+.pill:hover{ border-color:var(--green); }
+.pill.is-selected{ background:var(--green-deep); border-color:var(--green-deep); color:var(--paper); transform:translateY(-1px); }
+
+.demo-review{ border:1px solid var(--paper-line); margin:26px 0 30px; }
+.demo-review__row{ display:flex; justify-content:space-between; align-items:flex-start; gap:14px; padding:16px 18px; border-top:1px solid var(--paper-line); }
+.demo-review__row:first-child{ border-top:none; }
+.demo-review__label{ font-family:var(--font-label); font-size:0.74rem; letter-spacing:0.06em; text-transform:uppercase; color:var(--graphite); flex-shrink:0; }
+.demo-review__value{ font-size:0.9rem; color:var(--ink); text-align:right; }
+.demo-review__edit{ font-family:var(--font-label); font-size:0.74rem; color:var(--green-deep); flex-shrink:0; margin-left:8px; }
+.demo-review__edit:hover{ text-decoration:underline; }
+
+.demo-submit{ width:100%; justify-content:center; }
+
+.demo-wizard__nav{ display:flex; justify-content:space-between; align-items:center; margin-top:34px; padding-top:22px; border-top:1px solid var(--paper-line); }
+.demo-nav-btn{
+  display:inline-flex; align-items:center; gap:8px; font-family:var(--font-label); font-size:0.86rem; letter-spacing:0.04em;
+  padding:12px 4px; color:var(--ink-soft); transition:color .25s;
+}
+.demo-nav-btn--next{ margin-left:auto; padding:13px 26px; border:1px solid var(--ink); color:var(--ink); }
+.demo-nav-btn--next:hover{ background:var(--green-deep); border-color:var(--green-deep); color:var(--paper); }
+.demo-nav-btn--back{ visibility:hidden; }
+.demo-nav-btn--back.is-shown{ visibility:visible; }
+.demo-nav-btn--next.is-hidden{ display:none; }
+
+.demo-step.is-shake{ animation:demo-shake .4s var(--ease); }
+@keyframes demo-shake{
+  10%,90%{ transform:translateX(-3px); } 20%,80%{ transform:translateX(4px); }
+  30%,50%,70%{ transform:translateX(-6px); } 40%,60%{ transform:translateX(6px); }
+}
+
+/* Success state */
+.demo-success{ text-align:center; padding:50px 10px; }
+.demo-success__check{ width:56px; height:56px; margin:0 auto 22px; }
+.demo-success__check circle, .demo-success__check path{ stroke-dasharray:220; stroke-dashoffset:220; }
+.demo-success.is-visible .demo-success__check circle{ animation:draw-line .8s var(--ease) forwards; }
+.demo-success.is-visible .demo-success__check path{ animation:draw-line .5s var(--ease) forwards .7s; }
+@keyframes draw-line{ to{ stroke-dashoffset:0; } }
+.demo-success h2{ margin-bottom:16px; }
+.demo-success .lead{ margin-inline:auto; margin-bottom:30px; }
+
+/* Sidebar */
+.demo-side{ display:flex; flex-direction:column; gap:32px; }
+.demo-side__block{ border-top:1px solid var(--paper-line); padding-top:20px; }
+.demo-side__block:first-child{ border-top:none; padding-top:0; }
+.demo-side__block p{ font-size:0.92rem; color:var(--graphite); line-height:1.6; }
+.demo-side__phone{ display:flex; align-items:center; gap:10px; font-family:var(--font-display); font-size:1.3rem; font-weight:600; }
+.demo-side__phone svg{ width:17px; height:17px; color:var(--green); }
+
+/* The whole page is already the booking flow — the persistent Call/Book bar is redundant here */
+.page-book-demo .mobile-cta-bar{ display:none; }
+@media (max-width:759px){ body.page-book-demo{ padding-bottom:0; } }
+
+/* ===================== TABLET (700px+) ===================== */
+@media (min-width:700px){
+  .demo-wizard{ padding:48px 52px 44px; }
+}
+
+/* ===================== LAPTOP (980px+) ===================== */
+@media (min-width:980px){
+  .demo-intro{ padding:190px 0 50px; }
+  .demo-layout{ grid-template-columns:1.5fr 1fr; gap:70px; align-items:start; }
+  .demo-side{ position:sticky; top:120px; padding-top:20px; }
+}
+
+/* ===================== DESKTOP (1300px+) ===================== */
+@media (min-width:1300px){
+  .demo-layout{ gap:100px; }
+}

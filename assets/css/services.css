@@ -1,0 +1,33 @@
+/* ==========================================================================
+   SERVICES.CSS — Services page-specific styles only.
+   Shared header/nav/footer/section scaffold/service-chip patterns live in
+   assets/css/. This file only holds what's unique to this page.
+   ========================================================================== */
+
+.services-hero{ padding:26px 0 0; text-align:center; }
+.services-hero .wrap{ max-width:860px; }
+.services-hero h1{ margin-bottom:26px; }
+.services-hero .eyebrow{ justify-content:center; }
+.services-hero .lead{ margin-inline:auto; text-align:center; margin-bottom:40px; }
+.services-hero__ctas{ display:flex; flex-wrap:wrap; justify-content:center; gap:16px; margin-bottom:56px; }
+
+/* Sticky category quick-nav */
+.category-nav{
+  position:sticky; top:64px; z-index:30;
+  display:flex; gap:10px; overflow-x:auto;
+  padding:14px var(--edge);
+  background:rgba(247,246,241,0.94);
+  -webkit-backdrop-filter:blur(8px); backdrop-filter:blur(8px);
+  border-top:1px solid var(--paper-line); border-bottom:1px solid var(--paper-line);
+  scrollbar-width:none; margin-bottom:0;
+}
+.category-nav::-webkit-scrollbar{ display:none; }
+.category-nav a{
+  flex-shrink:0; font-family:var(--font-label); font-size:0.78rem; letter-spacing:0.06em; text-transform:uppercase;
+  padding:9px 18px; border:1px solid var(--paper-line); white-space:nowrap; transition:border-color .3s, color .3s;
+}
+.category-nav a:hover{ border-color:var(--green); color:var(--green-deep); }
+.category-nav a.is-active{ border-color:var(--green-deep); background:var(--green-pale); color:var(--green-deep); }
+
+/* Single stat-card used outside the two-column stat-strip */
+.stat-card.is-solo{ border:1px solid var(--paper-line); max-width:480px; margin-top:40px; }

@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+
+Sitemap: https://onechancetogrow.com/sitemap.xml
+Sitemap: https://onechancetogrow.com/sitemap-images.xml

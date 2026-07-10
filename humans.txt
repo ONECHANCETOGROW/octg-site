@@ -1,0 +1,13 @@
+/* TEAM */
+Business: One Chance To Grow LLC
+Location: Wyoming, USA
+Site: https://onechancetogrow.com
+
+/* THANKS */
+Standards: llmstxt.org, securitytxt.org, W3C
+
+/* SITE */
+Language: English
+Doctype: HTML5
+Components: PHP, vanilla CSS/JS (no framework), Poppins (Google Fonts)
+Last update: 2026/07/09

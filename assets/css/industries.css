@@ -1,0 +1,41 @@
+/* ==========================================================================
+   INDUSTRIES.CSS — page-specific styles only.
+   Mobile-first; breakpoints layered up through tablet, laptop, desktop.
+   ========================================================================== */
+
+/* ===================== BASE / MOBILE ===================== */
+.industries-hero{ padding:150px 0 20px; max-width:720px; margin-inline:auto; text-align:center; }
+.industries-hero h1{ margin:20px 0 22px; }
+.industries-hero .lead{ margin-inline:auto; text-align:center; }
+
+.industry-grid{ display:grid; gap:1px; background:var(--paper-line); border:1px solid var(--paper-line); }
+.industry-card{
+  background:var(--paper); padding:36px 32px; display:flex; flex-direction:column; gap:14px;
+  transition:background .35s var(--ease), transform .35s var(--ease), box-shadow .35s var(--ease);
+}
+.industry-card:hover{ background:var(--white); transform:translateY(-5px); box-shadow:0 20px 40px rgba(21,21,15,0.08); position:relative; z-index:2; }
+.industry-card__icon{ width:34px; height:34px; color:var(--green-deep); }
+.industry-card h3{ font-size:1.15rem; }
+.industry-card p{ color:var(--graphite); font-size:0.92rem; line-height:1.6; flex-grow:1; }
+.industry-card__link{
+  display:inline-flex; align-items:center; gap:8px; font-family:var(--font-label); font-size:0.8rem;
+  letter-spacing:0.05em; text-transform:uppercase; color:var(--green-deep); margin-top:6px;
+}
+.industry-card__link svg{ transition:transform .3s var(--ease); }
+.industry-card:hover .industry-card__link svg{ transform:translateX(4px); }
+
+/* ===================== TABLET (640px+) ===================== */
+@media (min-width:640px){
+  .industry-grid{ grid-template-columns:repeat(2,1fr); }
+}
+
+/* ===================== LAPTOP (980px+) ===================== */
+@media (min-width:980px){
+  .industries-hero{ padding:190px 0 30px; }
+  .industry-grid{ grid-template-columns:repeat(4,1fr); }
+}
+
+/* ===================== DESKTOP (1300px+) ===================== */
+@media (min-width:1300px){
+  .industry-card{ padding:42px 36px; }
+}

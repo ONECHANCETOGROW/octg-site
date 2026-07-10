@@ -1,0 +1,107 @@
+/* ==========================================================================
+   ABOUT.CSS — page-specific styles only.
+   Mobile-first; breakpoints layered up through tablet, laptop, desktop.
+   (.timeline itself lives in assets/css/animations.css as a shared motion
+   primitive — this file only positions it on the page.)
+   ========================================================================== */
+
+/* ===================== TEAM HERO (full-screen, dark) ===================== */
+.team-hero{
+  position:relative; overflow:hidden;
+  min-height:100vh; min-height:100svh;
+  display:flex; flex-direction:column; align-items:center; justify-content:flex-start;
+  background:var(--ink); color:var(--paper);
+  padding:150px 0 60px;
+}
+.breadcrumb--on-dark{ color:rgba(247,246,241,0.5); position:relative; z-index:3; }
+.breadcrumb--on-dark a{ color:rgba(247,246,241,0.7); }
+.breadcrumb--on-dark span[aria-current]{ color:var(--paper); }
+
+.team-hero__content{ position:relative; z-index:4; max-width:680px; text-align:center; margin-bottom:80px; }
+.team-hero__content .eyebrow{ color:var(--green); justify-content:center; }
+.team-hero__content .eyebrow::before{ background:var(--green); }
+.team-hero__content h1{ color:var(--paper); margin:20px 0 18px; text-shadow:0 2px 10px rgba(21,21,15,0.8); }
+.team-hero__content .lead{ color:rgba(247,246,241,0.68); margin-inline:auto; text-shadow:0 2px 8px rgba(21,21,15,0.8); }
+
+#teamHeroParticles{ z-index:1; }
+
+.globe-scene{
+  position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+  width:min(70vw, 640px); height:min(70vw, 640px);
+  perspective:1000px; z-index:2; opacity:0.55;
+}
+.globe{
+  position:relative; width:100%; height:100%; transform-style:preserve-3d;
+  animation:globe-spin 50s linear infinite;
+}
+@media (prefers-reduced-motion: reduce){ .globe{ animation:none; } }
+.globe__ring{ position:absolute; inset:0; border-radius:50%; }
+.globe__ring--lon{ border:1px solid rgba(92,143,34,0.32); }
+.globe__ring--lat{ border:1px solid rgba(92,143,34,0.22); }
+@keyframes globe-spin{ from{ transform:rotateY(0) rotateX(8deg); } to{ transform:rotateY(360deg) rotateX(8deg); } }
+
+/* ---------- Carousel ---------- */
+.team-carousel{ position:relative; z-index:3; width:100%; padding-top:20px; }
+.team-carousel__stage{
+  position:relative; height:440px; perspective:1400px;
+}
+.team-card{
+  position:absolute; top:50%; left:50%; width:280px; height:400px;
+  margin-left:-140px; margin-top:-200px;
+  background:rgba(247,246,241,0.06);
+  border:1px solid rgba(247,246,241,0.14);
+  -webkit-backdrop-filter:blur(20px); backdrop-filter:blur(20px);
+  border-radius:4px; padding:30px 26px; text-align:center;
+  display:flex; flex-direction:column; align-items:center;
+  transition:transform .8s cubic-bezier(.22,.68,.32,1), opacity .8s cubic-bezier(.22,.68,.32,1);
+  will-change:transform, opacity;
+}
+.team-card.is-active{ border-color:rgba(92,143,34,0.4); }
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))){
+  .team-card{ background:rgba(28,28,22,0.92); }
+}
+.team-card__frame{ width:88px; height:88px; margin-bottom:16px; flex-shrink:0; }
+.team-card__name{ color:var(--paper); font-size:1.15rem; margin-bottom:4px; }
+.team-card__title{ display:block; font-family:var(--font-label); font-size:0.78rem; letter-spacing:0.06em; text-transform:uppercase; color:var(--green); margin-bottom:14px; }
+.team-card__bio{
+  font-size:0.86rem; color:rgba(247,246,241,0.62); line-height:1.55; margin-bottom:16px;
+  display:-webkit-box; -webkit-line-clamp:4; -webkit-box-orient:vertical; overflow:hidden;
+}
+.team-card__social{ display:flex; gap:12px; margin-top:auto; }
+.social-icon{
+  width:30px; height:30px; display:flex; align-items:center; justify-content:center;
+  border:1px solid rgba(247,246,241,0.25); border-radius:50%; color:rgba(247,246,241,0.7);
+  transition:border-color .25s, color .25s;
+}
+.social-icon svg{ width:14px; height:14px; }
+.social-icon:hover{ border-color:var(--green); color:var(--green); }
+
+.team-carousel__dots{ display:flex; justify-content:center; gap:10px; margin-top:24px; }
+.team-dot{ width:8px; height:8px; border-radius:50%; background:rgba(247,246,241,0.25); transition:background .3s, transform .3s; }
+.team-dot:hover{ background:rgba(247,246,241,0.5); }
+.team-dot.is-active{ background:var(--green); transform:scale(1.3); }
+
+/* ===================== STORY / TIMELINE / VALUES (unchanged page body) ===================== */
+.about-story{ padding-top:96px; }
+.about-story__grid{ display:grid; gap:40px; }
+.about-story__frame{ aspect-ratio:4/3; }
+.about-story__copy h2{ margin-bottom:20px; }
+.about-story__copy .lead{ margin-bottom:20px; max-width:none; }
+
+/* ===================== TABLET (700px+) ===================== */
+@media (min-width:700px){
+  .team-card{ width:300px; margin-left:-150px; }
+}
+
+/* ===================== LAPTOP (940px+) ===================== */
+@media (min-width:940px){
+  .team-hero{ padding:170px 0 80px; }
+  .about-story{ padding-top:150px; }
+  .about-story__grid{ grid-template-columns:1fr 1.1fr; gap:70px; align-items:center; }
+  .team-carousel__stage{ height:460px; }
+}
+
+/* ===================== DESKTOP (1300px+) ===================== */
+@media (min-width:1300px){
+  .team-card{ width:320px; height:420px; margin-left:-160px; margin-top:-210px; padding:36px 30px; }
+}
