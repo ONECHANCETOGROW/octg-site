@@ -92,7 +92,7 @@ if ($headerTheme === 'dark') {
 <link rel="stylesheet" href="/assets/css/components.css?v=1.6.9">
 <link rel="stylesheet" href="/assets/css/animations.css?v=1.6.9">
 <?php foreach ($extraStyles as $sheet): ?>
-<link rel="stylesheet" href="/assets/css/<?php echo htmlspecialchars($sheet); ?>.css?v=1.7.0">
+<link rel="stylesheet" href="/assets/css/<?php echo htmlspecialchars($sheet); ?>.css?v=1.7.1">
 <?php endforeach; ?>
 
 <!-- Page-specific CSS -->

@@ -47,6 +47,8 @@
 }
 .site--dark .case-col__label, .site--dark .case-result__metric { color: var(--green) !important; }
 .site--dark .case-col p, .site--dark .case-result__label { color: rgba(255,255,255,0.85) !important; }
+.site--dark .case-quote p { color: rgba(255, 255, 255, 0.95) !important; }
+.site--dark .case-quote cite { color: rgba(255, 255, 255, 0.6) !important; }
 
 .case-gallery{ display:grid; gap:24px; }
 .case-gallery__frame{ aspect-ratio:4/3; }
