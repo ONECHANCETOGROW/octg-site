@@ -1,7 +1,7 @@
 import ftplib
 
 host = "191.101.79.129"
-user = "u263949463.darkorange-deer-673279.hostingersite.com"
+user = "u263949463.onechancetogrow.com"
 password = "G6CXmz37@123"
 
 try:

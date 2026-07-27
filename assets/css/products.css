@@ -10,12 +10,59 @@
 
 .product-section{ overflow:hidden; }
 .product-section--alt{ background:var(--paper-deep); }
-.product-section__grid{ display:grid; gap:44px; align-items:center; }
+/* minmax(0,1fr): without this, a CSS Grid track defaults to auto sizing,
+   which respects its content's min-content width — and the "Ask About
+   [Product Name]" button below (white-space:nowrap) has a min-content
+   width wider than the viewport on narrow phones, silently forcing the
+   whole column (and section, since overflow:hidden just clips it instead
+   of showing a scrollbar) wider than the screen. */
+.product-section__grid{ display:grid; grid-template-columns:minmax(0,1fr); gap:44px; align-items:center; }
 .product-frame{ aspect-ratio:16/10; }
+/* Once a real screenshot is assigned, let the frame's shape follow the
+   image's own proportions instead of force-cropping it into a fixed 16:10
+   box (the sitewide .media-real default is object-fit:cover, meant for
+   full-bleed photography — wrong for a product screenshot, which needs to
+   show in full whether it's a wide dashboard shot or a taller mobile view).
+   The placeholder (shown before an image is chosen) keeps the fixed 16:10
+   shape, since it has no natural image size of its own to follow. */
+.product-frame:has(.media-real){
+  aspect-ratio:auto; display:flex; align-items:center; justify-content:center; padding:28px;
+  /* No card box behind a real (already-transparent) screenshot — same
+     ambient-glow treatment as the founder photo / team cards instead of a
+     visible background rectangle. */
+  background:transparent; border:none;
+}
+.product-frame:has(.media-real)::before{
+  content:''; position:absolute; left:50%; top:50%; translate:-50% -50%;
+  width:80%; height:80%; z-index:-1; border-radius:50%;
+  background:radial-gradient(circle, rgba(163,255,71,0.55) 0%, rgba(122,199,55,0.3) 28%, rgba(92,143,34,0.14) 52%, transparent 78%);
+  filter:blur(75px); pointer-events:none;
+}
+.product-frame .media-real{
+  position:static; width:100%; height:auto; max-height:480px;
+  object-fit:contain; display:block; border-radius:4px;
+}
+
+/* The CTA button's own text ("Ask About " + product name) can be too long
+   to fit on one line at narrow widths — let it wrap rather than forcing
+   its own overflow now that the grid above can shrink to fit. */
+.product-section__copy .btn{ white-space:normal; }
 
 .product-section__copy h2{ margin-bottom:16px; }
 .product-section__copy .lead{ margin-bottom:26px; }
 .product-section__copy .check-list{ margin-bottom:26px; }
+
+/* .check-list is normally sized by service-page.css (18px icons), but this
+   page never loads that stylesheet, so the bare <svg> (no width/height
+   attributes) was falling back to the browser's default intrinsic
+   replaced-element size — ~300-500px, breaking every product section's
+   layout. Sizing only; color is intentionally left to inherit currentColor
+   from its context rather than hardcoding one, since this page's text
+   color already switches correctly between the light and dark/video-hero
+   states and a hardcoded color would fight that. */
+.check-list{ display:flex; flex-direction:column; gap:16px; }
+.check-list li{ display:flex; gap:14px; align-items:flex-start; font-size:1rem; line-height:1.5; }
+.check-list svg{ width:18px; height:18px; flex-shrink:0; margin-top:2px; }
 
 .product-section__pairs{ display:flex; flex-wrap:wrap; align-items:center; gap:10px; margin-bottom:28px; }
 .product-section__pairs-label{ font-family:var(--font-label); font-size:0.74rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--graphite); margin-right:4px; }
@@ -26,7 +73,7 @@
 
 /* ===================== TABLET (760px+) ===================== */
 @media (min-width:760px){
-  .product-section__grid{ grid-template-columns:1fr 1fr; gap:56px; }
+  .product-section__grid{ grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:56px; }
 }
 
 /* ===================== LAPTOP (940px+) ===================== */
@@ -47,3 +94,11 @@
 .product-section.is-highlighted{ background:var(--green-pale); transition:background 1s var(--ease); }
 .product-section.is-highlight-fade{ background:inherit; }
 .product-section--alt.is-highlighted{ background:var(--green-pale); }
+
+/* Dark-mode text — no .site--dark handling existed on this page; the pill
+   label/border and link text were rendering at ink-dark against the dark
+   video backdrop (confirmed live: ~1.75:1 contrast, under WCAG AA). The
+   pairs label itself was fine already (inherits light color as a bare
+   <span>), this is specifically the bordered pill links. */
+.site--dark .product-section__pair-link{ color:rgba(255,255,255,0.78); border-color:rgba(255,255,255,0.18); }
+.site--dark .product-section__pair-link:hover{ border-color:var(--green); color:var(--green); }

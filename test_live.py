@@ -1,7 +1,7 @@
 import urllib.request
 import re
 
-base_url = "https://darkorange-deer-673279.hostingersite.com"
+base_url = "https://onechancetogrow.com"
 urls_to_test = [
     "/",
     "/about.php",

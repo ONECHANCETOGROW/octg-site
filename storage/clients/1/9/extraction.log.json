@@ -1,0 +1,101 @@
+[
+  {
+    "timestamp": "2026-07-18T03:18:38.519Z",
+    "level": "INFO",
+    "message": "Pipeline started: Module 1 Data Extraction",
+    "context": {}
+  },
+  {
+    "timestamp": "2026-07-18T03:18:38.521Z",
+    "level": "INFO",
+    "message": "Loaded plugin manifest: google_ads v1.0",
+    "context": {}
+  },
+  {
+    "timestamp": "2026-07-18T03:18:38.522Z",
+    "level": "INFO",
+    "message": "Skipping extraction and knowledge generation phase (AI Data Collection System generated knowledge.json).",
+    "context": {}
+  },
+  {
+    "timestamp": "2026-07-18T03:18:38.627Z",
+    "level": "INFO",
+    "message": "Module 3: Rule Engine started.",
+    "context": {}
+  },
+  {
+    "timestamp": "2026-07-18T03:18:38.629Z",
+    "level": "INFO",
+    "message": "Rule Engine loaded 3 rules across 2 categories.",
+    "context": {}
+  },
+  {
+    "timestamp": "2026-07-18T03:18:38.632Z",
+    "level": "INFO",
+    "message": "Module 3: Rule Engine completed successfully.",
+    "context": {
+      "triggered": 0,
+      "passed": 3
+    }
+  },
+  {
+    "timestamp": "2026-07-18T03:18:38.672Z",
+    "level": "INFO",
+    "message": "Module 4: Scoring Engine started.",
+    "context": {}
+  },
+  {
+    "timestamp": "2026-07-18T03:18:38.673Z",
+    "level": "INFO",
+    "message": "Module 4: Scoring Engine completed. Overall Score: 100 (A)",
+    "context": {}
+  },
+  {
+    "timestamp": "2026-07-18T03:18:38.694Z",
+    "level": "INFO",
+    "message": "Module 5: Opportunity Engine started.",
+    "context": {}
+  },
+  {
+    "timestamp": "2026-07-18T03:18:38.696Z",
+    "level": "INFO",
+    "message": "Module 5: Opportunity Engine completed. Generated 0 opportunities.",
+    "context": {}
+  },
+  {
+    "timestamp": "2026-07-18T03:18:38.716Z",
+    "level": "INFO",
+    "message": "Module 6: Recommendation Engine started.",
+    "context": {}
+  },
+  {
+    "timestamp": "2026-07-18T03:18:38.718Z",
+    "level": "INFO",
+    "message": "Module 6: Recommendation Engine completed. Generated 0 recommendations.",
+    "context": {}
+  },
+  {
+    "timestamp": "2026-07-18T03:18:38.737Z",
+    "level": "INFO",
+    "message": "Module 7: Executive Summary Engine started.",
+    "context": {}
+  },
+  {
+    "timestamp": "2026-07-18T03:18:38.738Z",
+    "level": "INFO",
+    "message": "Module 7: Executive Summary Engine completed.",
+    "context": {}
+  },
+  {
+    "timestamp": "2026-07-18T03:18:38.759Z",
+    "level": "INFO",
+    "message": "Module 8: Contract Builder started.",
+    "context": {}
+  },
+  {
+    "timestamp": "2026-07-18T03:18:38.760Z",
+    "level": "INFO",
+    "message": "Module 8: Contract Builder completed successfully.",
+    "context": {}
+  }
+]

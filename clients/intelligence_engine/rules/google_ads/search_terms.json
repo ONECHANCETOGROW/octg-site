@@ -1,0 +1,20 @@
+{
+    "rules": [
+        {
+            "rule_id": "GA-ST-001",
+            "rule_name": "Wasted Spend on Search Term",
+            "category": "searchTerms",
+            "severity": "Medium",
+            "description": "Search term is accumulating spend without generating conversions.",
+            "business_reason": "Irrelevant search terms indicate poor match types or missing negative keywords.",
+            "condition": "entity.conversions == 0 && entity.spend > 25",
+            "evidence_fields": ["search_term", "spend", "conversions"],
+            "recommendation_reference": "REC-ST-001",
+            "score_weight": 5.0,
+            "enabled": true,
+            "version": "1.0",
+            "created_at": "2026-07-16T12:00:00Z",
+            "updated_at": "2026-07-16T12:00:00Z"
+        }
+    ]
+}

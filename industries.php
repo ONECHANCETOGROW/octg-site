@@ -41,7 +41,7 @@ include __DIR__ . '/includes/header.php';
 
 <section class="industries-hero wrap">
   <span class="eyebrow center">Who We Work With</span>
-  <h1 class="reveal-text">Local Shops. Growing Companies. Every Kind of Business.</h1>
+  <h1 class="reveal-text">Local Shops Growing Companies Every Kind of Business</h1>
   <p class="lead">Every industry sells differently, and gets found differently. We build the growth system around how yours actually works, not a one-size-fits-all package.</p>
 </section>
 

@@ -12,12 +12,13 @@ $pageTitle       = 'Products — Software Built Into Every Engagement | One Chan
 $pageDescription = "The CRM, AI, reputation, ads, and website platforms behind One Chance To Grow's services — built for growing businesses, not enterprises.";
 $pageSlug        = 'products';
 $activeNav       = 'products';
+$pageStyle       = 'products.css';
 $bodyClass       = 'page-products';
 
 include __DIR__ . '/includes/header.php';
 ?>
 
-<nav class="breadcrumb" aria-label="Breadcrumb">
+<nav class="breadcrumb wrap" aria-label="Breadcrumb">
   <a href="/index.php">Home</a>
   <span class="sep">/</span>
   <span aria-current="page">Products</span>

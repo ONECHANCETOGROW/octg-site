@@ -1,0 +1,105 @@
+{
+    "metadata": {
+        "contract_version": "1.0",
+        "engine_version": "1.0",
+        "plugin": "google_ads",
+        "generated_at": "2026-07-17T19:46:25.638Z"
+    },
+    "knowledge": {
+        "metadata": {
+            "contract_version": "1.0",
+            "engine_version": "1.0",
+            "plugin": "google_ads",
+            "plugin_version": "1.0",
+            "generated_at": "2026-07-17T23:02:40Z",
+            "client_id": "1",
+            "audit_id": "4",
+            "source_files": [
+                "ai_data_collection"
+            ],
+            "unclassified_fact_groups": 40
+        },
+        "statistics": {
+            "total_spend": 12125.7,
+            "total_conversions": 1787.9199999999998,
+            "total_clicks": 8001.84
+        },
+        "entities": {
+            "campaigns": [
+                {
+                    "campaign_name": "No segments applied",
+                    "clicks": 0,
+                    "conversions": 0,
+                    "spend": 0
+                },
+                {
+                    "campaign_name": "Performance Max Calls 1\/21\/25",
+                    "clicks": 903,
+                    "conversions": 118.06,
+                    "spend": 2781.08
+                }
+            ],
+            "searchTerms": [],
+            "keywords": [],
+            "devices": [],
+            "locations": [],
+            "conversions": [],
+            "landingPages": [],
+            "tracking": [],
+            "budget": [],
+            "audiences": [],
+            "extensions": []
+        }
+    },
+    "scorecard": {
+        "metadata": {
+            "contract_version": "1.0",
+            "engine_version": "1.0",
+            "plugin": "google_ads",
+            "generated_at": "2026-07-17T19:46:25.528Z"
+        },
+        "overall_score": 100,
+        "health_status": "Excellent",
+        "grade": "A",
+        "categories": [],
+        "penalties": []
+    },
+    "opportunities": {
+        "metadata": {
+            "contract_version": "1.0",
+            "engine_version": "1.0",
+            "plugin": "google_ads",
+            "generated_at": "2026-07-17T19:46:25.564Z"
+        },
+        "opportunities": []
+    },
+    "recommendations": {
+        "metadata": {
+            "contract_version": "1.0",
+            "engine_version": "1.0",
+            "plugin": "google_ads",
+            "generated_at": "2026-07-17T19:46:25.595Z"
+        },
+        "recommendations": []
+    },
+    "executive_summary": {
+        "metadata": {
+            "contract_version": "1.0",
+            "engine_version": "1.0",
+            "plugin": "google_ads",
+            "generated_at": "2026-07-17T19:46:25.615Z"
+        },
+        "executive_summary": "The marketing account has achieved an overall health score of 100 (A). While there are performing segments, immediate attention is required in key areas to prevent budget waste.",
+        "biggest_wins": [
+            "Active campaigns driving baseline conversions."
+        ],
+        "biggest_risks": [
+            "No immediate high-priority risks detected."
+        ],
+        "immediate_actions": [
+            "Continue monitoring campaign performance."
+        ],
+        "long_term_strategy": "Focus on reallocating wasted spend from poor performing segments into top converting campaigns to scale ROI.",
+        "overall_business_assessment": "Stable but needs optimization."
+    }
+}

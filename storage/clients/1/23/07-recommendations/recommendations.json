@@ -1,0 +1,19 @@
+{
+  "metadata": {
+    "contract_version": "1.0",
+    "engine_version": "1.0",
+    "plugin": "google_ads",
+    "generated_at": "2026-07-22T01:59:12.173Z"
+  },
+  "recommendations": [
+    {
+      "recommendation_id": "REC-AI-693CC9A8",
+      "opportunity_id": "OPP-AI-73A8B42D",
+      "what_to_change": "Increase the daily budget for the Performance Max campaign (Performance Max Calls 1/21/25) by $32.00/day (from $58.00 to $90.00) — The campaign currently operates at a 97% budget utilization rate, and this budget expansion is forecasted to capture untapped headroom, driving an estimated 5.9 more weekly conversions and $8.4k in weekly conversion value. (Priority: High)",
+      "why_it_matters": "Increase the daily budget for the Search campaign (Leads-Search-2) by $7.50/day (a 30% increase from $25.00 to $32.50) — This campaign is highly efficient but restricted by its budget (97% utilization rate over the last 28 days); increasing it creates a healthy buffer to capture more local vehicle-buying intent during peak search periods. (Priority: Medium) Regularly audit search terms and add negative keywords for non-sales and non-service intents (such as \"rv salvage\" or \"rv rental\") — While your local search terms are highly relevant, filtering out low-intent or unrelated queries will preserve your budget and focus your ad spend strictly on high-intent sales and repair leads. (Priority: Low)",
+      "expected_outcome": "Improve overall performance",
+      "effort": "Medium",
+      "priority": "Medium"
+    }
+  ]
+}

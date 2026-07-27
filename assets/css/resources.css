@@ -55,3 +55,9 @@ a.article-card:hover .article-card__frame{ transform:translateY(-4px); }
   .newsletter-field input{ flex:1; }
   .newsletter-field .btn{ flex-shrink:0; margin-left:20px; padding:14px 28px; }
 }
+
+/* Dark-mode text — no .site--dark handling existed for the article cards
+   (the newsletter panel below was already fine, its text is hardcoded
+   light); card body copy was rendering at ink-dark against the dark video
+   backdrop (confirmed live: ~2.98:1 contrast, under WCAG AA). */
+.site--dark .article-card p{ color:rgba(255,255,255,0.72); }

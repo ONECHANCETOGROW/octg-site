@@ -1,0 +1,298 @@
+{
+  "metadata": {
+    "contract_version": "1.0",
+    "engine_version": "1.0",
+    "plugin": "google_ads",
+    "generated_at": "2026-07-22T00:30:08.202Z"
+  },
+  "knowledge": {
+    "metadata": {
+      "contract_version": "1.0",
+      "engine_version": "1.0",
+      "plugin": "google_ads",
+      "plugin_version": "1.0",
+      "generated_at": "2026-07-22T00:30:06Z",
+      "client_id": "1",
+      "audit_id": "11",
+      "source_files": [
+        "ai_data_collection"
+      ],
+      "unclassified_fact_groups": 4
+    },
+    "statistics": {
+      "total_spend": 10088.859999999997,
+      "total_conversions": 944.2,
+      "total_clicks": 4887
+    },
+    "entities": {
+      "campaigns": [
+        {
+          "campaign_name": "INDEPENDENT RV LLC",
+          "clicks": 0,
+          "conversions": 0,
+          "impressions": 0,
+          "spend": 0
+        },
+        {
+          "campaign_name": "Leads-Search-1",
+          "clicks": 0,
+          "conversions": 0,
+          "impressions": 0,
+          "spend": 0
+        },
+        {
+          "campaign_name": "Leads-Search-2",
+          "clicks": 288,
+          "conversions": 75.96,
+          "impressions": 3560,
+          "spend": 759.13
+        },
+        {
+          "campaign_name": "Performance Max Calls 12125",
+          "clicks": 859,
+          "conversions": 137.98,
+          "impressions": 9476,
+          "spend": 1728.95
+        }
+      ],
+      "searchTerms": [
+        {
+          "clicks": 11,
+          "conversions": 1,
+          "impressions": 17,
+          "search_term": "independence rv",
+          "spend": 21.87
+        },
+        {
+          "clicks": 272,
+          "conversions": 53.72,
+          "impressions": 500,
+          "search_term": "independent rv",
+          "spend": 324.45
+        },
+        {
+          "clicks": 29,
+          "conversions": 2,
+          "impressions": 91,
+          "search_term": "independent rv llc",
+          "spend": 16.96
+        },
+        {
+          "clicks": 6,
+          "conversions": 2,
+          "impressions": 8,
+          "search_term": "independent rv modesto ca",
+          "spend": 7.37
+        },
+        {
+          "clicks": 44,
+          "conversions": 7,
+          "impressions": 129,
+          "search_term": "independent rv modesto Performance Max",
+          "spend": 80.91
+        },
+        {
+          "clicks": 12,
+          "conversions": 1,
+          "impressions": 30,
+          "search_term": "independent rv modesto Search - Broad",
+          "spend": 6.82
+        },
+        {
+          "clicks": 40,
+          "conversions": 4,
+          "impressions": 92,
+          "search_term": "independent rv modesto Search - Phrase",
+          "spend": 53.6
+        },
+        {
+          "clicks": 8,
+          "conversions": 0,
+          "impressions": 46,
+          "search_term": "modesto rv center",
+          "spend": 2.81
+        },
+        {
+          "clicks": 7,
+          "conversions": 1,
+          "impressions": 51,
+          "search_term": "rv dealer near me",
+          "spend": 6.98
+        },
+        {
+          "clicks": 6,
+          "conversions": 2,
+          "impressions": 26,
+          "search_term": "rv repair modesto",
+          "spend": 28.13
+        },
+        {
+          "clicks": 7,
+          "conversions": 3.5,
+          "impressions": 66,
+          "search_term": "rv repair near me",
+          "spend": 24.46
+        }
+      ],
+      "keywords": [
+        {
+          "clicks": 127,
+          "conversions": 34.2,
+          "impressions": 1128,
+          "keyword": "buy a rv",
+          "spend": 288.41
+        },
+        {
+          "clicks": 12,
+          "conversions": 1,
+          "impressions": 141,
+          "keyword": "buy new rv",
+          "spend": 25.03
+        },
+        {
+          "clicks": 16,
+          "conversions": 4.4,
+          "impressions": 162,
+          "keyword": "CA",
+          "spend": 17.93
+        },
+        {
+          "clicks": 9,
+          "conversions": 3.87,
+          "impressions": 118,
+          "keyword": "new 5th wheel rvs",
+          "spend": 65.34
+        },
+        {
+          "clicks": 9,
+          "conversions": 1,
+          "impressions": 169,
+          "keyword": "new class a rvs",
+          "spend": 7.36
+        },
+        {
+          "clicks": 3,
+          "conversions": 0,
+          "impressions": 157,
+          "keyword": "new class c rvs",
+          "spend": 21.54
+        },
+        {
+          "clicks": 10,
+          "conversions": 1,
+          "impressions": 90,
+          "keyword": "new rv",
+          "spend": 8.42
+        },
+        {
+          "clicks": 10,
+          "conversions": 4,
+          "impressions": 287,
+          "keyword": "new rv dealership near me",
+          "spend": 34.78
+        },
+        {
+          "clicks": 5,
+          "conversions": 0,
+          "impressions": 176,
+          "keyword": "new rv financing",
+          "spend": 15.44
+        },
+        {
+          "clicks": 8,
+          "conversions": 0,
+          "impressions": 121,
+          "keyword": "new rvs for sale",
+          "spend": 14.91
+        },
+        {
+          "clicks": 22,
+          "conversions": 3.5,
+          "impressions": 348,
+          "keyword": "rv collision repair",
+          "spend": 65.05
+        },
+        {
+          "clicks": 49,
+          "conversions": 21,
+          "impressions": 440,
+          "keyword": "rv repair Modesto",
+          "spend": 173.73
+        },
+        {
+          "clicks": 1,
+          "conversions": 0,
+          "impressions": 65,
+          "keyword": "rv roof repair",
+          "spend": 0.01
+        },
+        {
+          "clicks": 0,
+          "conversions": 0,
+          "impressions": 0,
+          "keyword": "venta",
+          "spend": 0
+        }
+      ],
+      "devices": [],
+      "locations": [],
+      "conversions": [],
+      "landingPages": [],
+      "tracking": [],
+      "budget": [],
+      "audiences": [],
+      "extensions": []
+    }
+  },
+  "scorecard": {
+    "metadata": {
+      "contract_version": "1.0",
+      "engine_version": "1.0",
+      "plugin": "google_ads",
+      "generated_at": "2026-07-22T00:30:08.030Z"
+    },
+    "overall_score": 100,
+    "health_status": "Excellent",
+    "grade": "A",
+    "categories": {},
+    "penalties": []
+  },
+  "opportunities": {
+    "metadata": {
+      "contract_version": "1.0",
+      "engine_version": "1.0",
+      "plugin": "google_ads",
+      "generated_at": "2026-07-22T00:30:08.080Z"
+    },
+    "opportunities": []
+  },
+  "recommendations": {
+    "metadata": {
+      "contract_version": "1.0",
+      "engine_version": "1.0",
+      "plugin": "google_ads",
+      "generated_at": "2026-07-22T00:30:08.122Z"
+    },
+    "recommendations": []
+  },
+  "executive_summary": {
+    "metadata": {
+      "contract_version": "1.0",
+      "engine_version": "1.0",
+      "plugin": "google_ads",
+      "generated_at": "2026-07-22T00:30:08.168Z"
+    },
+    "executive_summary": "The marketing account has achieved an overall health score of 100 (A). While there are performing segments, immediate attention is required in key areas to prevent budget waste.",
+    "biggest_wins": [
+      "Active campaigns driving baseline conversions."
+    ],
+    "biggest_risks": [
+      "No immediate high-priority risks detected."
+    ],
+    "immediate_actions": [
+      "Continue monitoring campaign performance."
+    ],
+    "long_term_strategy": "Focus on reallocating wasted spend from poor performing segments into top converting campaigns to scale ROI.",
+    "overall_business_assessment": "Stable but needs optimization."
+  }
+}

@@ -20,7 +20,7 @@ return [
         'photo_key' => 'team_1_photo',
         'social' => [
             ['platform' => 'linkedin', 'url' => '#'],
-            ['platform' => 'email', 'url' => 'mailto:hello@onechancetogrow.com'],
+            ['platform' => 'email', 'url' => 'mailto:support@onechancetogrow.com'],
         ],
     ],
     [

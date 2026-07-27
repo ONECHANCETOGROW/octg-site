@@ -21,7 +21,7 @@ window.OCTG.initForm = function (form, options) {
     e.preventDefault();
 
     /* Honeypot spam trap — field should stay empty for real users */
-    var honeypot = form.querySelector('input[name="company_website"]');
+    var honeypot = form.querySelector('input[name="hp_val_url"]');
     if (honeypot && honeypot.value) return;
 
     /* Native required-field validation */
@@ -31,14 +31,28 @@ window.OCTG.initForm = function (form, options) {
     }
 
     var submitBtn = form.querySelector('[type="submit"]');
-    if (submitBtn) submitBtn.disabled = true;
+    var originalBtnText = '';
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.classList.add('is-loading');
+      var label = submitBtn.querySelector('.btn-label');
+      if (label) {
+        originalBtnText = label.textContent;
+        label.textContent = 'Sending Message...';
+      }
+    }
     setStatus('Sending…', false);
 
     var endpoint = form.getAttribute('action');
     if (!endpoint || endpoint === '#') {
       /* No backend endpoint configured yet */
       setStatus('This form isn\u2019t connected to a backend yet.', true);
-      if (submitBtn) submitBtn.disabled = false;
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.classList.remove('is-loading');
+        var label = submitBtn.querySelector('.btn-label');
+        if (label && originalBtnText) label.textContent = originalBtnText;
+      }
       return;
     }
 
@@ -51,17 +65,30 @@ window.OCTG.initForm = function (form, options) {
       .then(function (result) {
         if (result.body && result.body.ok) {
           setStatus(options.successMessage || 'Thanks — we\u2019ll be in touch shortly.', false);
-          form.reset();
-          if (typeof options.onSuccess === 'function') options.onSuccess(result.body);
+          // Only reset form, don't re-enable button immediately to prevent double clicks during success animation
+          if (typeof options.onSuccess !== 'function') {
+            form.reset();
+          } else {
+            options.onSuccess(result.body);
+          }
         } else {
           setStatus((result.body && result.body.error) || 'Something went wrong. Please call (802) 276-8331 instead.', true);
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.classList.remove('is-loading');
+            var label = submitBtn.querySelector('.btn-label');
+            if (label && originalBtnText) label.textContent = originalBtnText;
+          }
         }
       })
       .catch(function () {
         setStatus('Something went wrong. Please call (802) 276-8331 instead.', true);
-      })
-      .finally(function () {
-        if (submitBtn) submitBtn.disabled = false;
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.classList.remove('is-loading');
+          var label = submitBtn.querySelector('.btn-label');
+          if (label && originalBtnText) label.textContent = originalBtnText;
+        }
       });
   });
 };

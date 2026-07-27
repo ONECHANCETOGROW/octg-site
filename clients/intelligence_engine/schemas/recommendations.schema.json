@@ -1,0 +1,28 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Recommendations Schema",
+    "description": "Output format for Module 6 Recommendation Engine",
+    "type": "object",
+    "required": ["metadata", "recommendations"],
+    "properties": {
+        "metadata": {
+            "type": "object"
+        },
+        "recommendations": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": ["recommendation_id", "opportunity_id", "what_to_change", "why_it_matters", "expected_outcome", "effort", "priority"],
+                "properties": {
+                    "recommendation_id": { "type": "string" },
+                    "opportunity_id": { "type": "string" },
+                    "what_to_change": { "type": "string" },
+                    "why_it_matters": { "type": "string" },
+                    "expected_outcome": { "type": "string" },
+                    "effort": { "type": "string", "enum": ["High", "Medium", "Low"] },
+                    "priority": { "type": "string", "enum": ["High", "Medium", "Low"] }
+                }
+            }
+        }
+    }
+}

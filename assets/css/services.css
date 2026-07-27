@@ -4,7 +4,13 @@
    assets/css/. This file only holds what's unique to this page.
    ========================================================================== */
 
-.services-hero{ padding:26px 0 0; text-align:center; }
+/* Was 26px — the only hero on the site with almost no top clearance,
+   apparently written assuming the breadcrumb (now position:absolute,
+   contributing zero flow height) would supply it. Confirmed live: the
+   eyebrow and H1 were rendering underneath the fixed header. Padding
+   values here match the range already used by every other page's hero. */
+.services-hero{ padding:150px 0 0; text-align:center; }
+@media (min-width:940px){ .services-hero{ padding:190px 0 0; } }
 .services-hero .wrap{ max-width:860px; }
 .services-hero h1{ margin-bottom:26px; }
 .services-hero .eyebrow{ justify-content:center; }
@@ -14,20 +20,49 @@
 /* Sticky category quick-nav */
 .category-nav{
   position:sticky; top:64px; z-index:30;
-  display:flex; gap:10px; overflow-x:auto;
-  padding:14px var(--edge);
+  display:flex; gap:12px; overflow-x:auto;
+  padding:16px var(--edge);
   background:rgba(247,246,241,0.94);
-  -webkit-backdrop-filter:blur(8px); backdrop-filter:blur(8px);
+  -webkit-backdrop-filter:blur(16px); backdrop-filter:blur(16px);
   border-top:1px solid var(--paper-line); border-bottom:1px solid var(--paper-line);
   scrollbar-width:none; margin-bottom:0;
+  justify-content:center;
 }
 .category-nav::-webkit-scrollbar{ display:none; }
+/* Set by services.js once the last category section has scrolled out of
+   view — without this, the sticky nav has no natural bound and stays
+   glued to the viewport through the compare/FAQ/final-CTA sections,
+   covering their tops. Hidden, not repositioned, so there's no reflow. */
+.category-nav.is-past-categories{ opacity:0; visibility:hidden; pointer-events:none; transition:opacity .2s var(--ease); }
 .category-nav a{
-  flex-shrink:0; font-family:var(--font-label); font-size:0.78rem; letter-spacing:0.06em; text-transform:uppercase;
-  padding:9px 18px; border:1px solid var(--paper-line); white-space:nowrap; transition:border-color .3s, color .3s;
+  flex-shrink:0; font-family:var(--font-label); font-size:0.75rem; letter-spacing:0.08em; text-transform:uppercase;
+  padding:10px 22px; border:1px solid var(--paper-line); border-radius:40px;
+  white-space:nowrap; transition:all .3s var(--ease); color:var(--graphite);
 }
-.category-nav a:hover{ border-color:var(--green); color:var(--green-deep); }
-.category-nav a.is-active{ border-color:var(--green-deep); background:var(--green-pale); color:var(--green-deep); }
+.category-nav a:hover{ border-color:var(--green); color:var(--green-deep); background:rgba(92,143,34,0.05); }
+.category-nav a.is-active{ border-color:var(--green); background:var(--green); color:var(--ink); box-shadow:0 4px 15px rgba(92,143,34,0.2); }
+
+/* Premium Dark Mode Override */
+.site--dark .category-nav {
+  background: rgba(10, 10, 8, 0.75);
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+.site--dark .category-nav a {
+  border-color: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.6);
+}
+.site--dark .category-nav a:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #fff;
+  background: rgba(255, 255, 255, 0.05);
+}
+.site--dark .category-nav a.is-active {
+  background: var(--green);
+  border-color: var(--green);
+  color: var(--ink) !important;
+  box-shadow: 0 4px 20px rgba(163, 255, 71, 0.25);
+}
 
 /* Single stat-card used outside the two-column stat-strip */
 .stat-card.is-solo{ border:1px solid var(--paper-line); max-width:480px; margin-top:40px; }

@@ -35,3 +35,10 @@
   .projects-hero{ padding:190px 0 30px; }
   .project-grid{ grid-template-columns:repeat(3,1fr); gap:48px 40px; }
 }
+
+/* Dark-mode text — no .site--dark handling existed on this page; body copy
+   and the "Read case study" link were rendering at ink-dark against the
+   dark video backdrop (confirmed live: ~2.98:1 / ~1.75:1, under WCAG AA). */
+.site--dark .project-card p{ color:rgba(255,255,255,0.72); }
+.site--dark .project-card__link{ color:#F7F6F1; border-top-color:rgba(255,255,255,0.14); }
+.site--dark .project-card__link--primary{ color:var(--green); }

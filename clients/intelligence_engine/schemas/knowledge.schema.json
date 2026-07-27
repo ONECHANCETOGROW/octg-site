@@ -1,0 +1,47 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Knowledge Builder Schema",
+    "description": "Output format for Module 2 Knowledge Builder",
+    "type": "object",
+    "required": ["metadata", "statistics", "entities"],
+    "properties": {
+        "metadata": {
+            "type": "object",
+            "required": ["contract_version", "engine_version", "plugin", "generated_at"],
+            "properties": {
+                "contract_version": { "type": "string" },
+                "engine_version": { "type": "string" },
+                "plugin": { "type": "string" },
+                "plugin_version": { "type": "string" },
+                "generated_at": { "type": "string", "format": "date-time" },
+                "client_id": { "type": ["string", "null"] },
+                "audit_id": { "type": ["string", "null"] },
+                "source_files": {
+                    "type": "array",
+                    "items": { "type": "string" }
+                }
+            }
+        },
+        "statistics": {
+            "type": "object",
+            "additionalProperties": true
+        },
+        "entities": {
+            "type": "object",
+            "properties": {
+                "campaigns": { "type": "array", "items": { "type": "object" } },
+                "searchTerms": { "type": "array", "items": { "type": "object" } },
+                "keywords": { "type": "array", "items": { "type": "object" } },
+                "devices": { "type": "array", "items": { "type": "object" } },
+                "locations": { "type": "array", "items": { "type": "object" } },
+                "conversions": { "type": "array", "items": { "type": "object" } },
+                "landingPages": { "type": "array", "items": { "type": "object" } },
+                "tracking": { "type": "array", "items": { "type": "object" } },
+                "budget": { "type": "array", "items": { "type": "object" } },
+                "audiences": { "type": "array", "items": { "type": "object" } },
+                "extensions": { "type": "array", "items": { "type": "object" } }
+            },
+            "additionalProperties": false
+        }
+    }
+}

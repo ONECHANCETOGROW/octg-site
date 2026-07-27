@@ -1,0 +1,566 @@
+{
+    "knowledge": {
+        "Campaign": {
+            "Campaign 1": {
+                "Impressions": {
+                    "value": "100",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Clicks": {
+                    "value": "100",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "CTR": {
+                    "value": "5.00%",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "CPC": {
+                    "value": "Value 1",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Spend": {
+                    "value": "$100.00",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Conversions": {
+                    "value": "100",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Cost Per Conversion": {
+                    "value": "$100.00",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Daily Budget": {
+                    "value": "Value 1",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Avg Daily Spend": {
+                    "value": "$100.00",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Impr. Share Lost (Budget)": {
+                    "value": "5.00%",
+                    "unit": null,
+                    "confidence": 92
+                }
+            },
+            "Campaign 2": {
+                "Impressions": {
+                    "value": "200",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Clicks": {
+                    "value": "200",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "CTR": {
+                    "value": "5.00%",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "CPC": {
+                    "value": "Value 2",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Spend": {
+                    "value": "$100.00",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Conversions": {
+                    "value": "200",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Cost Per Conversion": {
+                    "value": "$100.00",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Daily Budget": {
+                    "value": "Value 2",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Avg Daily Spend": {
+                    "value": "$100.00",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Impr. Share Lost (Budget)": {
+                    "value": "5.00%",
+                    "unit": null,
+                    "confidence": 92
+                }
+            }
+        },
+        "Search Term": {
+            "Value 1": {
+                "Matched Campaign": {
+                    "value": "Campaign 1",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Ad Group": {
+                    "value": "Value 1",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Clicks": {
+                    "value": "100",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Spend": {
+                    "value": "$100.00",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Conversions": {
+                    "value": "100",
+                    "unit": null,
+                    "confidence": 92
+                }
+            },
+            "Value 2": {
+                "Matched Campaign": {
+                    "value": "Campaign 2",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Ad Group": {
+                    "value": "Value 2",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Clicks": {
+                    "value": "200",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Spend": {
+                    "value": "$100.00",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Conversions": {
+                    "value": "200",
+                    "unit": null,
+                    "confidence": 92
+                }
+            }
+        },
+        "Conversion Action": {
+            "100": {
+                "Category": {
+                    "value": "Value 1",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Primary or Secondary": {
+                    "value": "Value 1",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Counting": {
+                    "value": "Value 1",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Status": {
+                    "value": "Value 1",
+                    "unit": null,
+                    "confidence": 92
+                }
+            },
+            "200": {
+                "Category": {
+                    "value": "Value 2",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Primary or Secondary": {
+                    "value": "Value 2",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Counting": {
+                    "value": "Value 2",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Status": {
+                    "value": "Value 2",
+                    "unit": null,
+                    "confidence": 92
+                }
+            }
+        },
+        "Landing Page": {
+            "Value 1": {
+                "Clicks": {
+                    "value": "100",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Spend": {
+                    "value": "$100.00",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Conversions": {
+                    "value": "100",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Conversion Rate": {
+                    "value": "100",
+                    "unit": null,
+                    "confidence": 82
+                }
+            },
+            "Value 2": {
+                "Clicks": {
+                    "value": "200",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Spend": {
+                    "value": "$100.00",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Conversions": {
+                    "value": "200",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Conversion Rate": {
+                    "value": "200",
+                    "unit": null,
+                    "confidence": 82
+                }
+            }
+        },
+        "Device": {
+            "Value 1": {
+                "Clicks": {
+                    "value": "100",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Spend": {
+                    "value": "$100.00",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Conversions": {
+                    "value": "100",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Conversion Rate": {
+                    "value": "100",
+                    "unit": null,
+                    "confidence": 82
+                }
+            },
+            "Value 2": {
+                "Clicks": {
+                    "value": "200",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Spend": {
+                    "value": "$100.00",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Conversions": {
+                    "value": "200",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Conversion Rate": {
+                    "value": "200",
+                    "unit": null,
+                    "confidence": 82
+                }
+            }
+        },
+        "Location": {
+            "Value 1": {
+                "Clicks": {
+                    "value": "100",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Spend": {
+                    "value": "$100.00",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Conversions": {
+                    "value": "100",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Conversion Rate": {
+                    "value": "100",
+                    "unit": null,
+                    "confidence": 82
+                }
+            },
+            "Value 2": {
+                "Clicks": {
+                    "value": "200",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Spend": {
+                    "value": "$100.00",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Conversions": {
+                    "value": "200",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Conversion Rate": {
+                    "value": "200",
+                    "unit": null,
+                    "confidence": 82
+                }
+            }
+        },
+        "Total Conversions": {
+            "100": {
+                "Total Conversion Value": {
+                    "value": "100",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Change vs Previous Period": {
+                    "value": "Value 1",
+                    "unit": null,
+                    "confidence": 92
+                }
+            },
+            "200": {
+                "Total Conversion Value": {
+                    "value": "200",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Change vs Previous Period": {
+                    "value": "Value 2",
+                    "unit": null,
+                    "confidence": 92
+                }
+            }
+        },
+        "Audience Segment": {
+            "Value 1": {
+                "Campaign": {
+                    "value": "Campaign 1",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Clicks": {
+                    "value": "100",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Spend": {
+                    "value": "$100.00",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Conversions": {
+                    "value": "100",
+                    "unit": null,
+                    "confidence": 92
+                }
+            },
+            "Value 2": {
+                "Campaign": {
+                    "value": "Campaign 2",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Clicks": {
+                    "value": "200",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Spend": {
+                    "value": "$100.00",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Conversions": {
+                    "value": "200",
+                    "unit": null,
+                    "confidence": 92
+                }
+            }
+        },
+        "Asset Type": {
+            "Value 1": {
+                "Asset Text or Description": {
+                    "value": "Value 1",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Status": {
+                    "value": "Value 1",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Clicks": {
+                    "value": "100",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Conversions": {
+                    "value": "100",
+                    "unit": null,
+                    "confidence": 92
+                }
+            },
+            "Value 2": {
+                "Asset Text or Description": {
+                    "value": "Value 2",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Status": {
+                    "value": "Value 2",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Clicks": {
+                    "value": "200",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Conversions": {
+                    "value": "200",
+                    "unit": null,
+                    "confidence": 92
+                }
+            }
+        },
+        "Advertiser": {
+            "Value 1": {
+                "Impression Share": {
+                    "value": "100",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Overlap Rate": {
+                    "value": "Value 1",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Position Above Rate": {
+                    "value": "Value 1",
+                    "unit": null,
+                    "confidence": 82
+                }
+            },
+            "Value 2": {
+                "Impression Share": {
+                    "value": "200",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Overlap Rate": {
+                    "value": "Value 2",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Position Above Rate": {
+                    "value": "Value 2",
+                    "unit": null,
+                    "confidence": 82
+                }
+            }
+        },
+        "Recommendation": {
+            "Value 1": {
+                "Type": {
+                    "value": "Value 1",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Estimated Impact": {
+                    "value": "Value 1",
+                    "unit": null,
+                    "confidence": 92
+                }
+            },
+            "Value 2": {
+                "Type": {
+                    "value": "Value 2",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Estimated Impact": {
+                    "value": "Value 2",
+                    "unit": null,
+                    "confidence": 92
+                }
+            }
+        },
+        "Scenario": {
+            "Value 1": {
+                "Suggested Spend": {
+                    "value": "$100.00",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Forecasted Conversions": {
+                    "value": "100",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Forecasted Cost Per Conversion": {
+                    "value": "$100.00",
+                    "unit": null,
+                    "confidence": 92
+                }
+            },
+            "Value 2": {
+                "Suggested Spend": {
+                    "value": "$100.00",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Forecasted Conversions": {
+                    "value": "200",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Forecasted Cost Per Conversion": {
+                    "value": "$100.00",
+                    "unit": null,
+                    "confidence": 92
+                }
+            }
+        }
+    }
+}

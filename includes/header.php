@@ -16,6 +16,17 @@ $activeNav       = $activeNav       ?? '';
 $bodyClass       = $bodyClass       ?? '';
 $ogImage         = $ogImage         ?? 'https://onechancetogrow.com/assets/img/og-default.jpg';
 $headerTheme     = $headerTheme     ?? '';
+
+// Global Background Media
+$heroVideoData = octg_get_media_data('hero_video');
+$hasBgMedia = $heroVideoData ? true : false;
+$isVideo = $hasBgMedia && (strpos($heroVideoData['mime_type'] ?? '', 'video/') === 0 || preg_match('/\.(mp4|webm)$/i', $heroVideoData['file_path']));
+
+if ($hasBgMedia) {
+    $headerTheme = 'dark';
+    $bodyClass .= ' site--dark';
+}
+
 /* $pageStyle: set to null to skip the auto per-page stylesheet (used by templated
    pages like service-page.php that load a shared stylesheet via $extraStyles instead). */
 $pageStyle       = array_key_exists('pageStyle', get_defined_vars()) ? $pageStyle : ($pageSlug . '.css');
@@ -50,8 +61,8 @@ if ($headerTheme === 'dark') {
 <meta name="twitter:image" content="<?php echo htmlspecialchars($ogImage); ?>">
 
 <link rel="manifest" href="/manifest.webmanifest">
-<link rel="icon" href="/assets/icons/icon-192.png" type="image/png">
-<link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/img/favicon.svg">
 <meta name="theme-color" content="#15150F">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -59,7 +70,7 @@ if ($headerTheme === 'dark') {
 <?php if (!empty($preloadImage)): ?>
 <link rel="preload" as="image" href="<?php echo htmlspecialchars($preloadImage); ?>" fetchpriority="high">
 <?php endif; ?>
-<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;1,6..96,500&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,500;0,600;0,700;0,800;1,600;1,700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <script type="application/ld+json">
 {
@@ -75,38 +86,45 @@ if ($headerTheme === 'dark') {
 </script>
 
 <!-- Shared design system (never edit per-page) -->
-<link rel="stylesheet" href="/assets/css/variables.css?v=1.0.0">
-<link rel="stylesheet" href="/assets/css/typography.css?v=1.0.0">
-<link rel="stylesheet" href="/assets/css/utilities.css?v=1.0.0">
-<link rel="stylesheet" href="/assets/css/components.css?v=1.0.0">
-<link rel="stylesheet" href="/assets/css/animations.css?v=1.0.0">
+<link rel="stylesheet" href="/assets/css/variables.css?v=1.6.9">
+<link rel="stylesheet" href="/assets/css/typography.css?v=1.6.9">
+<link rel="stylesheet" href="/assets/css/utilities.css?v=1.6.9">
+<link rel="stylesheet" href="/assets/css/components.css?v=1.6.9">
+<link rel="stylesheet" href="/assets/css/animations.css?v=1.6.9">
 <?php foreach ($extraStyles as $sheet): ?>
-<link rel="stylesheet" href="/assets/css/<?php echo htmlspecialchars($sheet); ?>.css?v=1.0.0">
+<link rel="stylesheet" href="/assets/css/<?php echo htmlspecialchars($sheet); ?>.css?v=1.7.0">
 <?php endforeach; ?>
-<?php if ($pageStyle): ?>
-<!-- Page-specific styles only -->
-<link rel="stylesheet" href="/assets/css/<?php echo htmlspecialchars($pageStyle); ?>?v=1.0.0">
-<?php endif; ?>
+
+<!-- Page-specific CSS -->
+    <?php if ($pageStyle !== 'none'): ?>
+    <link rel="stylesheet" href="/assets/css/<?php echo htmlspecialchars($pageStyle); ?>?v=1.6.9">
+    <?php endif; ?>
+
+    <!-- Desktop Enhancements Layer (1200px+) -->
+    <link rel="stylesheet" href="/assets/css/desktop-enhancements.css?v=1.0.4">
 </head>
 <body class="<?php echo htmlspecialchars($bodyClass); ?>">
+<?php if ($hasBgMedia): ?>
+<div class="site-bg-container" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1;">
+  <div class="site-bg-overlay" style="position: absolute; inset: 0; background: rgba(10, 10, 10, 0.82); mix-blend-mode: multiply; z-index: 1;"></div>
+  <?php if ($isVideo): ?>
+    <video autoplay loop muted playsinline style="width: 100%; height: 100%; object-fit: cover; z-index: 0; position: relative;" src="<?php echo htmlspecialchars($heroVideoData['file_path']); ?>"></video>
+  <?php else: ?>
+    <img style="width: 100%; height: 100%; object-fit: cover; z-index: 0; position: relative;" src="<?php echo htmlspecialchars($heroVideoData['file_path']); ?>" alt="Background">
+  <?php endif; ?>
+</div>
+<?php endif; ?>
+
 <a href="#main-content" class="skip-link">Skip to main content</a>
 
-<div class="growth-rail" id="growthRail" aria-hidden="true">
-  <div class="growth-rail__track"></div>
-  <div class="growth-rail__fill" id="railFill"></div>
-</div>
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
 
 <header class="<?php echo $headerClasses; ?>" id="siteHeader">
   <div class="wrap">
     <a href="/index.php" class="brand" aria-label="One Chance To Grow — home">
-      <svg class="brand__mark" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M14 10C7 12 5 19 6 26C7 33 12 38 19 37C25 36 28 30 26 24" stroke="#15150F" stroke-width="2.4" stroke-linecap="round"/>
-        <path d="M34 10C29 9 24 12 22.5 18C21 24 24 30 30 31C35 32 39 28 38.5 23" stroke="#15150F" stroke-width="2.4" stroke-linecap="round"/>
-        <path d="M24 8C24 16 24 24 24 34" stroke="#5C8F22" stroke-width="2" stroke-linecap="round"/>
-        <path d="M24 16C24 16 18 15 17 20C22 21 24 18 24 16Z" fill="#5C8F22"/>
-        <path d="M24 26C24 26 30 25 31 30C26 31 24 28 24 26Z" fill="#5C8F22"/>
-      </svg>
-      <span class="brand__word">One Chance <span>To</span> Grow<small>Growth · Strategy · Results</small></span>
+      <img src="/assets/img/logo-mark.png" alt="One Chance To Grow Logo" class="brand__mark" style="width:38px; height:38px; object-fit:contain; border-radius:8px;">
+      <span class="brand__word">ONE CHANCE TO GROW<small>GROWTH - STRATEGY - RESULTS</small></span>
     </a>
 
     <?php include __DIR__ . '/navigation.php'; ?>

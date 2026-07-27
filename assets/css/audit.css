@@ -26,3 +26,10 @@
   .audit-grid{ grid-template-columns:1.4fr 1fr; gap:80px; align-items:start; }
   .audit-side{ position:sticky; top:120px; }
 }
+
+/* Dark-mode text — no .site--dark handling existed on this page; the
+   checklist legend/labels were rendering at ink-dark against the dark video
+   backdrop (confirmed live: ~1.75:1 contrast, under WCAG AA). */
+.site--dark .audit-checks legend{ color:rgba(255,255,255,0.5); }
+.site--dark .audit-check{ color:rgba(255,255,255,0.82); }
+.site--dark .audit-side__block{ border-top-color:rgba(255,255,255,0.14); }

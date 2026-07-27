@@ -1,0 +1,36 @@
+{
+    "rules": [
+        {
+            "rule_id": "GA-CAMP-001",
+            "rule_name": "High CPA Campaign",
+            "category": "campaigns",
+            "severity": "High",
+            "description": "Campaign has a high Cost Per Acquisition compared to the account average.",
+            "business_reason": "High CPA campaigns drain budget without proportional return.",
+            "condition": "entity.conversions > 0 && entity.cpa > 50",
+            "evidence_fields": ["campaign_name", "spend", "conversions", "cpa"],
+            "recommendation_reference": "REC-CAMP-001",
+            "score_weight": 10.0,
+            "enabled": true,
+            "version": "1.0",
+            "created_at": "2026-07-16T12:00:00Z",
+            "updated_at": "2026-07-16T12:00:00Z"
+        },
+        {
+            "rule_id": "GA-CAMP-002",
+            "rule_name": "Zero Conversion Spend",
+            "category": "campaigns",
+            "severity": "Critical",
+            "description": "Campaign is spending budget but generating zero conversions.",
+            "business_reason": "Wasted spend directly hurts overall account ROI.",
+            "condition": "entity.conversions == 0 && entity.spend > 100",
+            "evidence_fields": ["campaign_name", "spend", "conversions"],
+            "recommendation_reference": "REC-CAMP-002",
+            "score_weight": 20.0,
+            "enabled": true,
+            "version": "1.0",
+            "created_at": "2026-07-16T12:00:00Z",
+            "updated_at": "2026-07-16T12:00:00Z"
+        }
+    ]
+}

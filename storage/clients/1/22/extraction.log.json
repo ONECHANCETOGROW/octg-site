@@ -1,0 +1,121 @@
+[
+  {
+    "timestamp": "2026-07-22T01:58:32.804Z",
+    "level": "INFO",
+    "message": "Pipeline started: Module 1 Data Extraction",
+    "context": {}
+  },
+  {
+    "timestamp": "2026-07-22T01:58:32.806Z",
+    "level": "INFO",
+    "message": "Loaded plugin manifest: google_ads v1.0",
+    "context": {}
+  },
+  {
+    "timestamp": "2026-07-22T01:58:32.807Z",
+    "level": "INFO",
+    "message": "Skipping extraction and knowledge generation phase (AI Data Collection System generated knowledge.json).",
+    "context": {}
+  },
+  {
+    "timestamp": "2026-07-22T01:58:32.910Z",
+    "level": "INFO",
+    "message": "Module 3: Rule Engine started.",
+    "context": {}
+  },
+  {
+    "timestamp": "2026-07-22T01:58:32.912Z",
+    "level": "INFO",
+    "message": "Rule Engine loaded 3 rules across 2 categories.",
+    "context": {}
+  },
+  {
+    "timestamp": "2026-07-22T01:58:32.916Z",
+    "level": "INFO",
+    "message": "Module 3: Rule Engine completed successfully.",
+    "context": {
+      "triggered": 0,
+      "passed": 3
+    }
+  },
+  {
+    "timestamp": "2026-07-22T01:58:32.966Z",
+    "level": "INFO",
+    "message": "Module 4: Scoring Engine started.",
+    "context": {}
+  },
+  {
+    "timestamp": "2026-07-22T01:58:32.969Z",
+    "level": "INFO",
+    "message": "Module 4: Scoring Engine completed. Overall Score: 100 (A)",
+    "context": {}
+  },
+  {
+    "timestamp": "2026-07-22T01:58:32.992Z",
+    "level": "INFO",
+    "message": "Module 5: Opportunity Engine started.",
+    "context": {}
+  },
+  {
+    "timestamp": "2026-07-22T01:58:32.994Z",
+    "level": "INFO",
+    "message": "Module 5: Opportunity Engine completed. Generated 1 opportunities.",
+    "context": {}
+  },
+  {
+    "timestamp": "2026-07-22T01:58:33.017Z",
+    "level": "INFO",
+    "message": "Module 6: Recommendation Engine started.",
+    "context": {}
+  },
+  {
+    "timestamp": "2026-07-22T01:58:33.019Z",
+    "level": "WARN",
+    "message": "No recommendation reference found for rule AI_GENERATED",
+    "context": {}
+  },
+  {
+    "timestamp": "2026-07-22T01:58:33.020Z",
+    "level": "ERROR",
+    "message": "Recommendation Engine produced invalid schema",
+    "context": {
+      "errors": [
+        {
+          "instancePath": "/recommendations/0",
+          "schemaPath": "#/properties/recommendations/items/required",
+          "keyword": "required",
+          "params": {
+            "missingProperty": "opportunity_id"
+          },
+          "message": "must have required property 'opportunity_id'"
+        },
+        {
+          "instancePath": "/recommendations/0",
+          "schemaPath": "#/properties/recommendations/items/required",
+          "keyword": "required",
+          "params": {
+            "missingProperty": "expected_outcome"
+          },
+          "message": "must have required property 'expected_outcome'"
+        },
+        {
+          "instancePath": "/recommendations/0",
+          "schemaPath": "#/properties/recommendations/items/required",
+          "keyword": "required",
+          "params": {
+            "missingProperty": "effort"
+          },
+          "message": "must have required property 'effort'"
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-07-22T01:58:33.022Z",
+    "level": "ERROR",
+    "message": "Pipeline Failed",
+    "context": {
+      "error": "Recommendation Engine produced invalid schema"
+    }
+  }
+]

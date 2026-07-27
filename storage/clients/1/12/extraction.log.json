@@ -1,0 +1,85 @@
+[
+  {
+    "timestamp": "2026-07-22T01:06:03.356Z",
+    "level": "INFO",
+    "message": "Pipeline started: Module 1 Data Extraction",
+    "context": {}
+  },
+  {
+    "timestamp": "2026-07-22T01:06:03.359Z",
+    "level": "INFO",
+    "message": "Loaded plugin manifest: google_ads v1.0",
+    "context": {}
+  },
+  {
+    "timestamp": "2026-07-22T01:06:03.360Z",
+    "level": "INFO",
+    "message": "Skipping extraction and knowledge generation phase (AI Data Collection System generated knowledge.json).",
+    "context": {}
+  },
+  {
+    "timestamp": "2026-07-22T01:06:03.505Z",
+    "level": "INFO",
+    "message": "Module 3: Rule Engine started.",
+    "context": {}
+  },
+  {
+    "timestamp": "2026-07-22T01:06:03.509Z",
+    "level": "INFO",
+    "message": "Rule Engine loaded 3 rules across 2 categories.",
+    "context": {}
+  },
+  {
+    "timestamp": "2026-07-22T01:06:03.514Z",
+    "level": "INFO",
+    "message": "Module 3: Rule Engine completed successfully.",
+    "context": {
+      "triggered": 0,
+      "passed": 3
+    }
+  },
+  {
+    "timestamp": "2026-07-22T01:06:03.581Z",
+    "level": "INFO",
+    "message": "Module 4: Scoring Engine started.",
+    "context": {}
+  },
+  {
+    "timestamp": "2026-07-22T01:06:03.584Z",
+    "level": "INFO",
+    "message": "Module 4: Scoring Engine completed. Overall Score: 100 (A)",
+    "context": {}
+  },
+  {
+    "timestamp": "2026-07-22T01:06:03.623Z",
+    "level": "INFO",
+    "message": "Module 5: Opportunity Engine started.",
+    "context": {}
+  },
+  {
+    "timestamp": "2026-07-22T01:06:03.627Z",
+    "level": "ERROR",
+    "message": "Opportunity Engine produced invalid schema",
+    "context": {
+      "errors": [
+        {
+          "instancePath": "/opportunities/0/evidence",
+          "schemaPath": "#/properties/opportunities/items/properties/evidence/type",
+          "keyword": "type",
+          "params": {
+            "type": "object"
+          },
+          "message": "must be object"
+        }
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-07-22T01:06:03.628Z",
+    "level": "ERROR",
+    "message": "Pipeline Failed",
+    "context": {
+      "error": "Opportunity Engine produced invalid schema"
+    }
+  }
+]

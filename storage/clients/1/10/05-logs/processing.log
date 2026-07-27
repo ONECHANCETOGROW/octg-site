@@ -1,0 +1,31 @@
+[2026-07-18 03:28:11] Pipeline Execution Log:
+>>> EVENT: Extraction Started
+[2026-07-18T03:28:11.479Z] [INFO] Pipeline started: Module 1 Data Extraction {}
+[2026-07-18T03:28:11.481Z] [INFO] Loaded plugin manifest: google_ads v1.0 {}
+[2026-07-18T03:28:11.482Z] [INFO] Skipping extraction and knowledge generation phase (AI Data Collection System generated knowledge.json). {}
+>>> EVENT: Rule Evaluation Started
+[2026-07-18T03:28:11.580Z] [INFO] Module 3: Rule Engine started. {}
+[2026-07-18T03:28:11.583Z] [INFO] Rule Engine loaded 3 rules across 2 categories. {}
+[2026-07-18T03:28:11.588Z] [INFO] Module 3: Rule Engine completed successfully. { triggered: 0, passed: 3 }
+>>> EVENT: Rule Evaluation Completed
+>>> EVENT: Scoring Started
+[2026-07-18T03:28:11.627Z] [INFO] Module 4: Scoring Engine started. {}
+[2026-07-18T03:28:11.629Z] [INFO] Module 4: Scoring Engine completed. Overall Score: 100 (A) {}
+>>> EVENT: Scoring Completed
+>>> EVENT: Opportunities Started
+[2026-07-18T03:28:11.655Z] [INFO] Module 5: Opportunity Engine started. {}
+[2026-07-18T03:28:11.656Z] [INFO] Module 5: Opportunity Engine completed. Generated 0 opportunities. {}
+>>> EVENT: Opportunities Completed
+>>> EVENT: Recommendations Started
+[2026-07-18T03:28:11.676Z] [INFO] Module 6: Recommendation Engine started. {}
+[2026-07-18T03:28:11.679Z] [INFO] Module 6: Recommendation Engine completed. Generated 0 recommendations. {}
+>>> EVENT: Recommendations Completed
+>>> EVENT: Executive Summary Started
+[2026-07-18T03:28:11.696Z] [INFO] Module 7: Executive Summary Engine started. {}
+[2026-07-18T03:28:11.698Z] [INFO] Module 7: Executive Summary Engine completed. {}
+>>> EVENT: Executive Summary Completed
+>>> EVENT: Contract Builder Started
+[2026-07-18T03:28:11.714Z] [INFO] Module 8: Contract Builder started. {}
+[2026-07-18T03:28:11.715Z] [INFO] Module 8: Contract Builder completed successfully. {}
+>>> EVENT: Contract Builder Completed
+Pipeline finished successfully.

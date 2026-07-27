@@ -15,10 +15,10 @@ return [
             ['h' => 'How We Use It', 'body' => "We use the information you submit to respond to your inquiry, prepare for a call, deliver the service you've requested, and, if you've opted in, send occasional updates by email or text. We do not sell your information to third parties."],
             ['h' => 'How We Store It', 'body' => "Form submissions are stored securely in our database, hosted with our web hosting provider. Access is limited to team members who need it to do their jobs."],
             ['h' => 'Cookies & Analytics', 'body' => "This site uses cookies and similar technologies for basic functionality and to understand how visitors use the site. See our Cookie Policy for details and how to manage your preferences."],
-            ['h' => 'Your Choices', 'body' => "You can ask us to access, correct, or delete the personal information we hold about you at any time by emailing hello@onechancetogrow.com. You can unsubscribe from any email using the link in that email, or by asking us directly."],
+            ['h' => 'Your Choices', 'body' => "You can ask us to access, correct, or delete the personal information we hold about you at any time by emailing support@onechancetogrow.com. You can unsubscribe from any email using the link in that email, or by asking us directly."],
             ['h' => 'Children', 'body' => "This site and our services are intended for business owners and professionals. We do not knowingly collect information from anyone under 18."],
             ['h' => 'Changes to This Policy', 'body' => "We may update this policy as our services or legal requirements change. The date at the top reflects the most recent update."],
-            ['h' => 'Contact Us', 'body' => "Questions about this policy can be sent to hello@onechancetogrow.com or (802) 276-8331."],
+            ['h' => 'Contact Us', 'body' => "Questions about this policy can be sent to support@onechancetogrow.com or (802) 276-8331."],
         ],
     ],
     'terms' => [
@@ -45,7 +45,7 @@ return [
             ['h' => 'How We Use Them', 'body' => "We use essential cookies to keep the site functioning correctly (for example, remembering that you dismissed a popup), and analytics cookies to understand how visitors use the site so we can improve it. We do not use cookies to sell your data to third parties."],
             ['h' => 'Managing Cookies', 'body' => "Most browsers let you block or delete cookies through their settings. Blocking essential cookies may affect how parts of this site function."],
             ['h' => 'Third-Party Cookies', 'body' => "Tools we use for analytics or advertising performance may set their own cookies, governed by their own privacy policies."],
-            ['h' => 'Questions', 'body' => "Reach out to hello@onechancetogrow.com with any questions about how we use cookies."],
+            ['h' => 'Questions', 'body' => "Reach out to support@onechancetogrow.com with any questions about how we use cookies."],
         ],
     ],
     'accessibility' => [
@@ -55,7 +55,7 @@ return [
         'sections' => [
             ['h' => 'Our Approach', 'body' => "We build this site with semantic HTML, keyboard-navigable menus and forms, visible focus states, and support for reduced-motion preferences. We test against common accessibility guidelines (WCAG 2.1 AA) as an ongoing practice, not a one-time checklist."],
             ['h' => 'Known Limitations', 'body' => "As with most active websites, some areas may not yet fully meet every guideline. We treat accessibility as continuous work, not a finished project."],
-            ['h' => 'Feedback', 'body' => "If you encounter an accessibility barrier anywhere on this site, please tell us. Email hello@onechancetogrow.com or call (802) 276-8331, and we'll work to address it."],
+            ['h' => 'Feedback', 'body' => "If you encounter an accessibility barrier anywhere on this site, please tell us. Email support@onechancetogrow.com or call (802) 276-8331, and we'll work to address it."],
         ],
     ],
 ];

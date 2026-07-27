@@ -6,20 +6,46 @@
    "Read the Full Case Study" link. The other 3 still link to their most
    relevant service page until there's real material to expand them with.
    ========================================================================== */
+require_once __DIR__ . '/api/_lib.php';
+
 $pageTitle       = 'Projects — Real Results Across Industries | One Chance To Grow';
 $pageDescription = 'A look at the systems One Chance To Grow has built — lead follow-up, reputation, CRM, and advertising work across home services, healthcare, real estate, and more.';
 $pageSlug        = 'projects';
 $activeNav       = '';
 $bodyClass       = 'page-projects';
 
-$PROJECTS = [
-  ['img'=>'project_1_image','industry'=>'Home Services','title'=>'A Lead System That Stopped Losing Calls','result'=>'Booked jobs increased significantly after AI-backed follow-up replaced manual callbacks.','service'=>'ai-automation','serviceName'=>'AI Automation','case'=>'home-services-lead-system'],
-  ['img'=>'project_2_image','industry'=>'Health & Wellness','title'=>'A Reputation Rebuild Across 5 Locations','result'=>'Average rating climbed from under 4 stars to well above it across every location.','service'=>'reputation-management','serviceName'=>'Reputation Management','case'=>'health-wellness-reputation-rebuild'],
-  ['img'=>'project_3_image','industry'=>'B2B & SaaS','title'=>'A Website and CRM Built to Match a Longer Sales Cycle','result'=>'Demo requests grew after the site and CRM were rebuilt around how the sales team actually works.','service'=>'crm-development','serviceName'=>'CRM Development','case'=>null],
-  ['img'=>'project_4_image','industry'=>'Real Estate','title'=>'An Ad Account Rebuilt Around Cost Per Lead','result'=>'Cost per lead dropped substantially within the first 90 days of active management.','service'=>'google-ads-management','serviceName'=>'Google Ads Management','case'=>'real-estate-ad-account-rebuild'],
-  ['img'=>'project_5_image','industry'=>'Contractors & Trades','title'=>'A Local SEO Cleanup That Reached the Map Pack','result'=>'Moved into the map pack for the business\'s core service area after a citation and content overhaul.','service'=>'local-seo','serviceName'=>'Local SEO','case'=>null],
-  ['img'=>'project_6_image','industry'=>'Retail & E-Commerce','title'=>'A Social Presence Rebuilt for Consistency','result'=>'Engagement grew substantially once posting became consistent instead of sporadic.','service'=>'social-media-management','serviceName'=>'Social Media Management','case'=>null],
-];
+$PROJECTS = [];
+$pdo = octg_db();
+if ($pdo) {
+    try {
+        $stmt = $pdo->query("SELECT * FROM cms_projects WHERE status = 'published' ORDER BY display_order ASC, id DESC");
+        $dbProjects = $stmt->fetchAll();
+        foreach ($dbProjects as $r) {
+            $PROJECTS[] = [
+                'img' => $r['featured_image'] ?: '',
+                'industry' => $r['industry'],
+                'title' => $r['title'],
+                'result' => $r['short_description'],
+                'service' => $r['category'],
+                'serviceName' => $r['service_name'],
+                'case' => ($r['has_case_study'] && !empty($r['slug'])) ? $r['slug'] : null
+            ];
+        }
+    } catch (Throwable $e) {
+        $PROJECTS = [];
+    }
+}
+
+if (empty($PROJECTS)) {
+    $PROJECTS = [
+      ['img'=>'project_1_image','industry'=>'Home Services','title'=>'A Lead System That Stopped Losing Calls','result'=>'Booked jobs increased significantly after AI-backed follow-up replaced manual callbacks.','service'=>'ai-automation','serviceName'=>'AI Automation','case'=>'home-services-lead-system'],
+      ['img'=>'project_2_image','industry'=>'Health & Wellness','title'=>'A Reputation Rebuild Across 5 Locations','result'=>'Average rating climbed from under 4 stars to well above it across every location.','service'=>'reputation-management','serviceName'=>'Reputation Management','case'=>'health-wellness-reputation-rebuild'],
+      ['img'=>'project_3_image','industry'=>'B2B & SaaS','title'=>'A Website and CRM Built to Match a Longer Sales Cycle','result'=>'Demo requests grew after the site and CRM were rebuilt around how the sales team actually works.','service'=>'crm-development','serviceName'=>'CRM Development','case'=>null],
+      ['img'=>'project_4_image','industry'=>'Real Estate','title'=>'An Ad Account Rebuilt Around Cost Per Lead','result'=>'Cost per lead dropped substantially within the first 90 days of active management.','service'=>'google-ads-management','serviceName'=>'Google Ads Management','case'=>'real-estate-ad-account-rebuild'],
+      ['img'=>'project_5_image','industry'=>'Contractors & Trades','title'=>'A Local SEO Cleanup That Reached the Map Pack','result'=>'Moved into the map pack for the business\'s core service area after a citation and content overhaul.','service'=>'local-seo','serviceName'=>'Local SEO','case'=>null],
+      ['img'=>'project_6_image','industry'=>'Retail & E-Commerce','title'=>'A Social Presence Rebuilt for Consistency','result'=>'Engagement grew substantially once posting became consistent instead of sporadic.','service'=>'social-media-management','serviceName'=>'Social Media Management','case'=>null],
+    ];
+}
 
 include __DIR__ . '/includes/header.php';
 ?>
@@ -44,7 +70,7 @@ include __DIR__ . '/includes/header.php';
     </div>
     <div class="project-grid reveal">
       <?php foreach ($PROJECTS as $p): ?>
-      <article class="project-card">
+      <article class="project-card reveal">
         <div class="media-frame project-card__frame">
           <?php octg_media($p['img'], $p['title'] . ' Preview'); ?>
         </div>

@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS email_settings (
 -- Seed the one settings row with sane defaults (safe to import even if
 -- a row already exists — INSERT IGNORE skips it rather than erroring).
 INSERT IGNORE INTO email_settings (id, notification_emails, sender_email, reply_to_email)
-VALUES (1, '["hello@onechancetogrow.com"]', 'no-reply@onechancetogrow.com', 'hello@onechancetogrow.com');
+VALUES (1, '["support@onechancetogrow.com"]', 'no-reply@onechancetogrow.com', 'support@onechancetogrow.com');
 
 CREATE TABLE IF NOT EXISTS email_logs (
     id             BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,

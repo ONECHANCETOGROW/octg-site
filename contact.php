@@ -28,7 +28,7 @@ include __DIR__ . '/includes/header.php';
 
     <div class="contact-form-panel reveal">
       <form id="contactForm" action="/api/contact-handler.php" method="POST" novalidate>
-        <input type="text" name="company_website" class="sr-only" tabindex="-1" autocomplete="off">
+        <input type="text" name="hp_val_url" class="sr-only" tabindex="-1" autocomplete="off">
         <input type="hidden" name="source_page" value="/contact.php">
 
         <div class="field">
@@ -38,26 +38,26 @@ include __DIR__ . '/includes/header.php';
 
         <div class="field-row">
           <div class="field">
-            <input type="email" name="email" id="cf-email" placeholder=" " required>
-            <label for="cf-email">Email Address</label>
+            <input type="email" name="email" id="cf-email" placeholder=" ">
+            <label for="cf-email">Email Address (optional)</label>
           </div>
           <div class="field">
-            <input type="tel" name="phone" id="cf-phone" placeholder=" ">
-            <label for="cf-phone">Phone (optional)</label>
+            <input type="tel" name="phone" id="cf-phone" placeholder=" " required>
+            <label for="cf-phone">Phone</label>
           </div>
         </div>
 
         <div class="field">
           <input type="text" name="business_name" id="cf-business" placeholder=" ">
-          <label for="cf-business">Business Name</label>
+          <label for="cf-business">Business Name (optional)</label>
         </div>
 
         <div class="field">
-          <textarea name="message" id="cf-message" placeholder=" " required></textarea>
-          <label for="cf-message">What's going on with your business?</label>
+          <textarea name="message" id="cf-message" placeholder=" "></textarea>
+          <label for="cf-message">What's going on with your business? (optional)</label>
         </div>
 
-        <button type="submit" class="btn btn-primary">
+        <button type="submit" class="btn btn-primary" id="cf-submit-btn">
           <span class="spinner"></span>
           <span class="btn-label">Send Message</span>
           <svg class="btn-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
@@ -65,6 +65,24 @@ include __DIR__ . '/includes/header.php';
         <span class="form-trust-note">We reply within one business day. No spam, ever.</span>
         <p class="form-status" data-form-status role="status" aria-live="polite"></p>
       </form>
+
+      <!-- Premium Success State -->
+      <div id="contactSuccessState" class="contact-success-state" style="display: none; text-align: center; padding: 40px; background: var(--paper); border: 1px solid var(--paper-line); border-radius: 12px; box-shadow: 0 4px 24px rgba(0,0,0,0.1);">
+        <svg viewBox="0 0 24 24" width="64" height="64" class="success-checkmark" style="fill:none; stroke:var(--green); stroke-width:2; stroke-linecap:round; stroke-linejoin:round; margin: 0 auto 24px auto; filter: drop-shadow(0 0 8px rgba(163, 224, 0, 0.4));">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+        </svg>
+        <h2 style="color: var(--ink); margin-bottom: 16px; font-family: var(--font-display); font-size: 2rem;">Message Sent Successfully</h2>
+        <p style="color: var(--ink-soft); font-size: 1.1rem; line-height: 1.6; margin-bottom: 32px;">
+            Thank you for contacting One Chance To Grow.<br>
+            Our team has received your request.<br>
+            We'll review it and contact you as soon as possible.
+        </p>
+        <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+            <a href="/index.php" class="btn btn-ghost">Return to Homepage</a>
+            <a href="/book-demo.php" class="btn btn-primary">Book a Growth Call <svg class="btn-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </div>
     </div>
 
     <aside class="contact-side reveal">
@@ -74,7 +92,7 @@ include __DIR__ . '/includes/header.php';
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2C9.4 21 3 14.6 3 6a2 2 0 0 1 2-2Z"/></svg>
           (802) 276-8331
         </a>
-        <a href="mailto:hello@onechancetogrow.com" class="contact-side__email">hello@onechancetogrow.com</a>
+        <a href="mailto:support@onechancetogrow.com" class="contact-side__email">support@onechancetogrow.com</a>
         <p>Registered in Wyoming, USA<br>Serving businesses across the US &amp; Canada</p>
       </div>
 

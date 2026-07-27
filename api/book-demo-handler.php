@@ -55,17 +55,18 @@ if ($pdo) {
 }
 
 try {
-    octg_save_lead('book-demo', [
+    $leadId = octg_save_lead('book-demo', [
         'name' => $contactName, 'business_name' => $businessName, 'phone' => $phone,
         'email' => $email, 'interested_service' => implode(', ', $servicesInterested),
         'message' => $goals, 'source_page' => $sourcePage,
     ]);
     octg_notify_lead('Book a Growth Call', [
-        'Contact Name' => $contactName, 'Business Name' => $businessName, 'Email' => $email,
+        'Name' => $contactName, 'Business Name' => $businessName, 'Email' => $email,
         'Phone' => $phone, 'Business Type' => $businessType,
         'Services Interested' => implode(', ', $servicesInterested),
         'Budget Range' => $budgetRange, 'Goals' => $goals,
-    ]);
+    ], $leadId);
+    octg_send_customer_confirmation('Book a Growth Call', $email, $contactName);
 } catch (Throwable $e) {
     // Demo request is already saved above regardless of notification outcome.
 }

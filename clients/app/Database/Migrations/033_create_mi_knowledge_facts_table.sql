@@ -1,0 +1,22 @@
+CREATE TABLE IF NOT EXISTS `mi_knowledge_facts` (
+    `id` BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    `audit_id` BIGINT UNSIGNED NOT NULL,
+    `requirement_id` BIGINT UNSIGNED NOT NULL,
+    `entity_type` VARCHAR(64) NOT NULL COMMENT 'MIS entity, e.g. Campaign, Keyword, LandingPage, Metric',
+    `entity_key` VARCHAR(255) NOT NULL COMMENT 'Identifies the specific entity instance, e.g. campaign name or "account_total"',
+    `field_name` VARCHAR(120) NOT NULL,
+    `value` TEXT NOT NULL,
+    `unit` VARCHAR(32) NULL,
+    `period_start` DATE NULL,
+    `period_end` DATE NULL,
+    `confidence` TINYINT UNSIGNED NOT NULL DEFAULT 0,
+    `source_collection_attempt_id` BIGINT UNSIGNED NOT NULL,
+    `created_at` DATETIME NOT NULL,
+    `updated_at` DATETIME NOT NULL,
+    KEY `mi_knowledge_facts_audit_id_index` (`audit_id`),
+    KEY `mi_knowledge_facts_requirement_id_index` (`requirement_id`),
+    KEY `mi_knowledge_facts_entity_lookup_index` (`audit_id`, `entity_type`, `entity_key`, `field_name`),
+    CONSTRAINT `mi_knowledge_facts_audit_id_foreign` FOREIGN KEY (`audit_id`) REFERENCES `mi_audits` (`id`) ON DELETE CASCADE,
+    CONSTRAINT `mi_knowledge_facts_requirement_id_foreign` FOREIGN KEY (`requirement_id`) REFERENCES `mi_intelligence_requirements` (`id`) ON DELETE CASCADE,
+    CONSTRAINT `mi_knowledge_facts_source_attempt_id_foreign` FOREIGN KEY (`source_collection_attempt_id`) REFERENCES `mi_collection_attempts` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

@@ -14,24 +14,28 @@ function octg_media(string $key, string $label, string $alt = '', bool $round = 
     $url = null;
     $dbAlt = $alt;
 
-    // Fetch from database
-    $mediaData = octg_get_media_data($key);
-    if ($mediaData) {
-        $url = $mediaData['file_path'];
-        if (empty($dbAlt) && !empty($mediaData['alt_text'])) {
-            $dbAlt = $mediaData['alt_text'];
-        }
-        if (empty($dbAlt) && !empty($mediaData['title'])) {
-            $dbAlt = $mediaData['title'];
-        }
+    if (strpos($key, '/') === 0 || strpos($key, 'http') === 0) {
+        $url = $key;
     } else {
-        // Fallback to static config if DB lookup fails or is not setup yet
-        static $images = null;
-        if ($images === null) {
-            $path = __DIR__ . '/../data/cms-images.php';
-            $images = file_exists($path) ? require $path : [];
+        // Fetch from database
+        $mediaData = octg_get_media_data($key);
+        if ($mediaData) {
+            $url = $mediaData['file_path'];
+            if (empty($dbAlt) && !empty($mediaData['alt_text'])) {
+                $dbAlt = $mediaData['alt_text'];
+            }
+            if (empty($dbAlt) && !empty($mediaData['title'])) {
+                $dbAlt = $mediaData['title'];
+            }
+        } else {
+            // Fallback to static config if DB lookup fails or is not setup yet
+            static $images = null;
+            if ($images === null) {
+                $path = __DIR__ . '/../data/cms-images.php';
+                $images = file_exists($path) ? require $path : [];
+            }
+            $url = $images[$key] ?? null;
         }
-        $url = $images[$key] ?? null;
     }
 
     $roundClass = $round ? ' is-round' : '';

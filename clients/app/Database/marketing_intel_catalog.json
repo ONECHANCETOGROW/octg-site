@@ -1,0 +1,369 @@
+{
+  "channels": [
+    { "code": "google_ads", "name": "Google Ads", "description": "Paid search, display, and shopping campaigns.", "is_active": true, "sort_order": 1 },
+    { "code": "seo", "name": "SEO / Website", "description": "Covered by the existing OCTG SEO crawler — collected automatically, not through this AI Data Collection System.", "is_active": true, "sort_order": 2 },
+    { "code": "ga4", "name": "Google Analytics 4", "description": "Planned — Phase 1 of the RNS scalability roadmap.", "is_active": false, "sort_order": 3 },
+    { "code": "search_console", "name": "Google Search Console", "description": "Planned — Phase 1.", "is_active": false, "sort_order": 4 },
+    { "code": "google_business_profile", "name": "Google Business Profile", "description": "Planned — Phase 1.", "is_active": false, "sort_order": 5 },
+    { "code": "meta_ads", "name": "Meta Ads", "description": "Planned — Phase 3.", "is_active": false, "sort_order": 6 },
+    { "code": "microsoft_ads", "name": "Microsoft Ads", "description": "Planned — Phase 3.", "is_active": false, "sort_order": 7 },
+    { "code": "call_tracking", "name": "Call Tracking", "description": "Planned — Phase 3.", "is_active": false, "sort_order": 8 },
+    { "code": "crm", "name": "CRM Data", "description": "Planned — Phase 3.", "is_active": false, "sort_order": 9 },
+    { "code": "email_marketing", "name": "Email Marketing", "description": "Planned — Phase 3.", "is_active": false, "sort_order": 10 }
+  ],
+  "requirements": [
+    {
+      "channel_code": "google_ads",
+      "code": "google_ads.campaign_performance",
+      "title": "Campaign Performance",
+      "category": "Campaign Performance",
+      "purpose": "Establishes the campaign list and top-line metrics everything else builds on.",
+      "description": "A per-campaign breakdown of spend, clicks, impressions, conversions, and CTR for the audit period.",
+      "is_required": true,
+      "confidence_weight": 20,
+      "sort_order": 1,
+      "prompt": {
+        "title": "Campaign Performance — Last 30 Days",
+        "target_surface": "Google Ads Advisor",
+        "purpose": "Get a per-campaign performance breakdown.",
+        "description": "The foundational data set — every other prompt in this audit references the campaign names this one surfaces.",
+        "prompt_text": "For the {{account_name}} Google Ads account, show performance for every active campaign over {{date_range}}: impressions, clicks, CTR, average CPC, spend, conversions, and cost per conversion.",
+        "response_format_contract": "Return your answer as a markdown table with exactly these columns: Campaign, Impressions, Clicks, CTR, CPC, Spend, Conversions, Cost Per Conversion. One row per campaign. Do not summarize or round — use the exact figures from the account.",
+        "expected_columns": ["Campaign", "Impressions", "Clicks", "CTR", "CPC", "Spend", "Conversions", "Cost Per Conversion"]
+      },
+      "upload": {
+        "title": "Campaign performance export",
+        "accepted_formats": "csv,xlsx,pdf",
+        "description": "The standard \"Campaigns\" report exported from Google Ads.",
+        "expected_columns": ["Campaign", "Impressions", "Clicks", "CTR", "CPC", "Spend", "Conversions", "Cost Per Conversion"]
+      }
+    },
+    {
+      "channel_code": "google_ads",
+      "code": "google_ads.search_terms",
+      "title": "Search Terms",
+      "category": "Search Terms",
+      "purpose": "Reveals real user queries triggering ads — the basis for negative-keyword and relevance analysis.",
+      "description": "The search terms report: actual queries that triggered an ad, with performance per term.",
+      "is_required": true,
+      "confidence_weight": 12,
+      "sort_order": 2,
+      "prompt": {
+        "title": "Top Search Terms — Last 30 Days",
+        "target_surface": "Google Ads Advisor",
+        "purpose": "Get the highest-spend and highest-conversion search terms.",
+        "description": "Used for negative-keyword opportunities and relevance/quality analysis.",
+        "prompt_text": "For the {{account_name}} account, list the top 25 search terms by spend over {{date_range}}, including which campaign and ad group they matched.",
+        "response_format_contract": "Return your answer as a markdown table with exactly these columns: Search Term, Matched Campaign, Ad Group, Clicks, Spend, Conversions. One row per search term, sorted by Spend descending.",
+        "expected_columns": ["Search Term", "Matched Campaign", "Ad Group", "Clicks", "Spend", "Conversions"]
+      },
+      "upload": {
+        "title": "Search terms report export",
+        "accepted_formats": "csv,xlsx,pdf",
+        "description": "The standard \"Search terms\" report exported from Google Ads.",
+        "expected_columns": ["Search Term", "Matched Campaign", "Ad Group", "Clicks", "Spend", "Conversions"]
+      }
+    },
+    {
+      "channel_code": "google_ads",
+      "code": "google_ads.budget_analysis",
+      "title": "Budget Analysis",
+      "category": "Budget Analysis",
+      "purpose": "Shows how budget is allocated and whether campaigns are budget-constrained.",
+      "description": "Daily budget, budget utilization, and lost impression share due to budget per campaign.",
+      "is_required": true,
+      "confidence_weight": 10,
+      "sort_order": 3,
+      "prompt": {
+        "title": "Budget Utilization — Current Month",
+        "target_surface": "Google Ads Advisor",
+        "purpose": "See which campaigns are budget-constrained.",
+        "description": "Ask about the campaigns already known from the Campaign Performance prompt, by name, for a more precise answer.",
+        "prompt_text": "For the {{account_name}} account, for each of these campaigns: {{known_campaign_names}} — show the daily budget, average daily spend, and impression share lost due to budget over {{date_range}}.",
+        "response_format_contract": "Return your answer as a markdown table with exactly these columns: Campaign, Daily Budget, Avg Daily Spend, Impr. Share Lost (Budget).",
+        "expected_columns": ["Campaign", "Daily Budget", "Avg Daily Spend", "Impr. Share Lost (Budget)"]
+      },
+      "upload": {
+        "title": "Budget report export",
+        "accepted_formats": "csv,xlsx,pdf",
+        "description": "The standard budget/impression-share report exported from Google Ads.",
+        "expected_columns": ["Campaign", "Daily Budget", "Avg Daily Spend", "Impr. Share Lost (Budget)"]
+      }
+    },
+    {
+      "channel_code": "google_ads",
+      "code": "google_ads.measurement_audit",
+      "title": "Measurement Audit",
+      "category": "Measurement Audit",
+      "purpose": "Confirms conversion tracking is actually configured correctly before trusting any conversion numbers above.",
+      "description": "Which conversion actions exist, their status, and whether they're marked primary/secondary.",
+      "is_required": true,
+      "confidence_weight": 15,
+      "sort_order": 4,
+      "prompt": {
+        "title": "Conversion Tracking Setup",
+        "target_surface": "Google Ads Advisor",
+        "purpose": "Audit conversion tracking configuration, not just conversion counts.",
+        "description": "Cross-checked against the Conversions requirement's totals — see the enriches dependency below.",
+        "prompt_text": "For the {{account_name}} account, list every conversion action configured: its category, whether it's marked Primary or Secondary, its counting setting (Every / One), and its status (active, no recent conversions, or needs attention).",
+        "response_format_contract": "Return your answer as a markdown table with exactly these columns: Conversion Action, Category, Primary or Secondary, Counting, Status.",
+        "expected_columns": ["Conversion Action", "Category", "Primary or Secondary", "Counting", "Status"]
+      },
+      "upload": {
+        "title": "Conversion actions export",
+        "accepted_formats": "csv,xlsx,pdf",
+        "description": "The conversion actions list exported from Google Ads' Measurement settings.",
+        "expected_columns": ["Conversion Action", "Category", "Primary or Secondary", "Counting", "Status"]
+      }
+    },
+    {
+      "channel_code": "google_ads",
+      "code": "google_ads.landing_pages",
+      "title": "Landing Pages",
+      "category": "Landing Pages",
+      "purpose": "Connects ad spend to what happens after the click.",
+      "description": "Per-landing-page performance: clicks, conversions, conversion rate, bounce indicators if available.",
+      "is_required": false,
+      "confidence_weight": 8,
+      "sort_order": 5,
+      "prompt": {
+        "title": "Landing Page Performance",
+        "target_surface": "Google Ads Advisor",
+        "purpose": "See which landing pages convert well and which don't.",
+        "description": "Optional but recommended — feeds conversion-rate-opportunity analysis.",
+        "prompt_text": "For the {{account_name}} account, show performance by final URL / landing page over {{date_range}}: clicks, spend, conversions, and conversion rate.",
+        "response_format_contract": "Return your answer as a markdown table with exactly these columns: Landing Page, Clicks, Spend, Conversions, Conversion Rate.",
+        "expected_columns": ["Landing Page", "Clicks", "Spend", "Conversions", "Conversion Rate"]
+      },
+      "upload": {
+        "title": "Landing page report export",
+        "accepted_formats": "csv,xlsx,pdf",
+        "description": "The standard \"Landing pages\" report exported from Google Ads.",
+        "expected_columns": ["Landing Page", "Clicks", "Spend", "Conversions", "Conversion Rate"]
+      }
+    },
+    {
+      "channel_code": "google_ads",
+      "code": "google_ads.devices",
+      "title": "Devices",
+      "category": "Devices",
+      "purpose": "Surfaces device-level performance gaps (e.g. strong desktop, weak mobile conversion rate).",
+      "description": "Performance broken down by device: mobile, desktop, tablet.",
+      "is_required": false,
+      "confidence_weight": 5,
+      "sort_order": 6,
+      "prompt": {
+        "title": "Performance by Device",
+        "target_surface": "Google Ads Advisor",
+        "purpose": "See device-level performance differences.",
+        "description": "Optional — useful for mobile-experience-related recommendations.",
+        "prompt_text": "For the {{account_name}} account, show performance broken down by device (mobile, desktop, tablet) over {{date_range}}: clicks, spend, conversions, conversion rate.",
+        "response_format_contract": "Return your answer as a markdown table with exactly these columns: Device, Clicks, Spend, Conversions, Conversion Rate.",
+        "expected_columns": ["Device", "Clicks", "Spend", "Conversions", "Conversion Rate"]
+      },
+      "upload": {
+        "title": "Device performance export",
+        "accepted_formats": "csv,xlsx,pdf",
+        "description": "The standard \"Devices\" segment report exported from Google Ads.",
+        "expected_columns": ["Device", "Clicks", "Spend", "Conversions", "Conversion Rate"]
+      }
+    },
+    {
+      "channel_code": "google_ads",
+      "code": "google_ads.locations",
+      "title": "Locations",
+      "category": "Locations",
+      "purpose": "Surfaces geographic performance gaps, especially important for local/service businesses.",
+      "description": "Performance broken down by targeted or matched geographic location.",
+      "is_required": false,
+      "confidence_weight": 8,
+      "sort_order": 7,
+      "prompt": {
+        "title": "Performance by Location",
+        "target_surface": "Google Ads Advisor",
+        "purpose": "See which service areas/locations perform best.",
+        "description": "Especially relevant for local-service businesses — pairs with the Local SEO module on the SEO side of the platform.",
+        "prompt_text": "For the {{account_name}} account, show performance by user location over {{date_range}}: clicks, spend, conversions, conversion rate, for the top 15 locations by spend.",
+        "response_format_contract": "Return your answer as a markdown table with exactly these columns: Location, Clicks, Spend, Conversions, Conversion Rate.",
+        "expected_columns": ["Location", "Clicks", "Spend", "Conversions", "Conversion Rate"]
+      },
+      "upload": {
+        "title": "Location report export",
+        "accepted_formats": "csv,xlsx,pdf",
+        "description": "The standard \"User locations\" report exported from Google Ads.",
+        "expected_columns": ["Location", "Clicks", "Spend", "Conversions", "Conversion Rate"]
+      }
+    },
+    {
+      "channel_code": "google_ads",
+      "code": "google_ads.conversions",
+      "title": "Conversions",
+      "category": "Conversions",
+      "purpose": "The actual conversion totals and their trend — what the whole account is ultimately being measured against.",
+      "description": "Account-level and campaign-level conversion totals, conversion value, and trend over the period.",
+      "is_required": true,
+      "confidence_weight": 15,
+      "sort_order": 8,
+      "prompt": {
+        "title": "Conversion Totals and Trend",
+        "target_surface": "Google Ads Advisor",
+        "purpose": "Get the headline conversion numbers.",
+        "description": "Cross-checked against Measurement Audit's configuration — a high conversion count from a misconfigured action is a red flag, not a win.",
+        "prompt_text": "For the {{account_name}} account, what is the total number of conversions and total conversion value over {{date_range}}, and how does that compare to the previous {{date_range}}?",
+        "response_format_contract": "Return your answer as a short list of key: value lines, for example: \"Total Conversions: 142\", \"Total Conversion Value: $18,400\", \"Change vs Previous Period: +12%\".",
+        "expected_columns": ["Total Conversions", "Total Conversion Value", "Change vs Previous Period"]
+      },
+      "upload": {
+        "title": "Conversions summary export",
+        "accepted_formats": "csv,xlsx,pdf",
+        "description": "The account-level conversions summary exported from Google Ads.",
+        "expected_columns": ["Total Conversions", "Total Conversion Value"]
+      }
+    },
+    {
+      "channel_code": "google_ads",
+      "code": "google_ads.audiences",
+      "title": "Audiences",
+      "category": "Audiences",
+      "purpose": "Shows which audience segments are being targeted and how they perform.",
+      "description": "Performance by audience segment (remarketing, in-market, affinity, custom).",
+      "is_required": false,
+      "confidence_weight": 6,
+      "sort_order": 9,
+      "prompt": {
+        "title": "Audience Segment Performance",
+        "target_surface": "Google Ads Advisor",
+        "purpose": "See which audience segments are in use and how they perform.",
+        "description": "Optional — feeds audience-expansion recommendations.",
+        "prompt_text": "For the {{account_name}} account, list the audience segments currently applied to campaigns and their performance over {{date_range}}: clicks, spend, conversions.",
+        "response_format_contract": "Return your answer as a markdown table with exactly these columns: Audience Segment, Campaign, Clicks, Spend, Conversions.",
+        "expected_columns": ["Audience Segment", "Campaign", "Clicks", "Spend", "Conversions"]
+      },
+      "upload": {
+        "title": "Audience performance export",
+        "accepted_formats": "csv,xlsx,pdf",
+        "description": "The standard \"Audiences\" segment report exported from Google Ads.",
+        "expected_columns": ["Audience Segment", "Campaign", "Clicks", "Spend", "Conversions"]
+      }
+    },
+    {
+      "channel_code": "google_ads",
+      "code": "google_ads.assets",
+      "title": "Assets",
+      "category": "Assets",
+      "purpose": "Checks ad-asset (extension) usage and performance — sitelinks, callouts, images, etc.",
+      "description": "Which asset types are in use and their performance/approval status.",
+      "is_required": false,
+      "confidence_weight": 5,
+      "sort_order": 10,
+      "prompt": {
+        "title": "Ad Assets (Extensions) Review",
+        "target_surface": "Google Ads Advisor",
+        "purpose": "See which ad assets are configured and how they're performing.",
+        "description": "Optional — feeds ad-strength and asset-coverage recommendations.",
+        "prompt_text": "For the {{account_name}} account, list the ad assets in use (sitelinks, callouts, structured snippets, images, etc.), their approval status, and their performance over {{date_range}}.",
+        "response_format_contract": "Return your answer as a markdown table with exactly these columns: Asset Type, Asset Text or Description, Status, Clicks, Conversions.",
+        "expected_columns": ["Asset Type", "Asset Text or Description", "Status", "Clicks", "Conversions"]
+      },
+      "upload": {
+        "title": "Assets report export",
+        "accepted_formats": "csv,xlsx,pdf",
+        "description": "The standard \"Assets\" report exported from Google Ads.",
+        "expected_columns": ["Asset Type", "Asset Text or Description", "Status", "Clicks", "Conversions"]
+      }
+    },
+    {
+      "channel_code": "google_ads",
+      "code": "google_ads.competition",
+      "title": "Competition",
+      "category": "Competition",
+      "purpose": "Shows competitive position via auction insights — who else is bidding and how the account compares.",
+      "description": "Auction insights: impression share, overlap rate, position-above rate versus other advertisers.",
+      "is_required": false,
+      "confidence_weight": 5,
+      "sort_order": 11,
+      "prompt": {
+        "title": "Auction Insights",
+        "target_surface": "Google Ads Advisor",
+        "purpose": "See competitive position for the account's top campaigns.",
+        "description": "Optional — useful context for the Growth Plan and Recommendations requirements below.",
+        "prompt_text": "For the {{account_name}} account's top campaign by spend, show the Auction Insights report over {{date_range}}: other advertisers' impression share, overlap rate, and position above rate versus this account.",
+        "response_format_contract": "Return your answer as a markdown table with exactly these columns: Advertiser (or \"Domain\"), Impression Share, Overlap Rate, Position Above Rate.",
+        "expected_columns": ["Advertiser", "Impression Share", "Overlap Rate", "Position Above Rate"]
+      },
+      "upload": {
+        "title": "Auction insights export",
+        "accepted_formats": "csv,xlsx,pdf",
+        "description": "The standard \"Auction insights\" report exported from Google Ads.",
+        "expected_columns": ["Advertiser", "Impression Share", "Overlap Rate", "Position Above Rate"]
+      }
+    },
+    {
+      "channel_code": "google_ads",
+      "code": "google_ads.recommendations",
+      "title": "Recommendations",
+      "category": "Recommendations",
+      "purpose": "Captures Google's own in-platform recommendations as one more input, not the final word.",
+      "description": "The Recommendations tab's suggestions, with their type and estimated impact, treated as one input among many — never accepted automatically (see Module 3, ranking-systems knowledge base, and this platform's own \"Google's own tools aren't infallible\" principle).",
+      "is_required": false,
+      "confidence_weight": 4,
+      "sort_order": 12,
+      "prompt": {
+        "title": "Google Ads Recommendations",
+        "target_surface": "Google Ads Advisor",
+        "purpose": "Capture what Google itself is currently recommending for this account.",
+        "description": "Optional context — cross-referenced against, not blindly adopted into, this audit's own Recommendation output once that engine exists.",
+        "prompt_text": "For the {{account_name}} account, list the current items on the Recommendations page, their type, and their estimated impact if shown.",
+        "response_format_contract": "Return your answer as a markdown table with exactly these columns: Recommendation, Type, Estimated Impact.",
+        "expected_columns": ["Recommendation", "Type", "Estimated Impact"]
+      },
+      "upload": {
+        "title": "Recommendations export",
+        "accepted_formats": "csv,xlsx,pdf",
+        "description": "A screenshot-to-text or export of the Google Ads Recommendations page.",
+        "expected_columns": ["Recommendation", "Type", "Estimated Impact"]
+      }
+    },
+    {
+      "channel_code": "google_ads",
+      "code": "google_ads.growth_plan",
+      "title": "Growth Plan",
+      "category": "Growth Plan",
+      "purpose": "Captures Google's own forecasted growth opportunities (e.g. Performance Planner output) as a baseline to compare this audit's own recommendations against.",
+      "description": "Forecasted spend/conversion scenarios from Google's own planning tools, if available.",
+      "is_required": false,
+      "confidence_weight": 4,
+      "sort_order": 13,
+      "prompt": {
+        "title": "Growth Forecast",
+        "target_surface": "Google Ads Advisor",
+        "purpose": "Capture Google's own growth/forecast suggestions for this account.",
+        "description": "Depends on Campaign Performance and Conversions already being collected, so the forecast can be sanity-checked against real baseline numbers.",
+        "prompt_text": "For the {{account_name}} account, using the Performance Planner or similar forecasting tool, what spend and conversion scenarios does Google suggest for the next 30 days?",
+        "response_format_contract": "Return your answer as a markdown table with exactly these columns: Scenario, Suggested Spend, Forecasted Conversions, Forecasted Cost Per Conversion.",
+        "expected_columns": ["Scenario", "Suggested Spend", "Forecasted Conversions", "Forecasted Cost Per Conversion"]
+      },
+      "upload": {
+        "title": "Growth forecast export",
+        "accepted_formats": "csv,xlsx,pdf",
+        "description": "A Performance Planner export or screenshot-to-text.",
+        "expected_columns": ["Scenario", "Suggested Spend", "Forecasted Conversions", "Forecasted Cost Per Conversion"]
+      }
+    }
+  ],
+  "dependencies": [
+    { "requirement_code": "google_ads.budget_analysis", "depends_on_code": "google_ads.campaign_performance", "edge_type": "blocks" },
+    { "requirement_code": "google_ads.landing_pages", "depends_on_code": "google_ads.campaign_performance", "edge_type": "blocks" },
+    { "requirement_code": "google_ads.devices", "depends_on_code": "google_ads.campaign_performance", "edge_type": "blocks" },
+    { "requirement_code": "google_ads.locations", "depends_on_code": "google_ads.campaign_performance", "edge_type": "blocks" },
+    { "requirement_code": "google_ads.audiences", "depends_on_code": "google_ads.campaign_performance", "edge_type": "blocks" },
+    { "requirement_code": "google_ads.assets", "depends_on_code": "google_ads.campaign_performance", "edge_type": "blocks" },
+    { "requirement_code": "google_ads.competition", "depends_on_code": "google_ads.campaign_performance", "edge_type": "blocks" },
+    { "requirement_code": "google_ads.measurement_audit", "depends_on_code": "google_ads.conversions", "edge_type": "enriches" },
+    { "requirement_code": "google_ads.conversions", "depends_on_code": "google_ads.measurement_audit", "edge_type": "enriches" },
+    { "requirement_code": "google_ads.growth_plan", "depends_on_code": "google_ads.campaign_performance", "edge_type": "blocks" },
+    { "requirement_code": "google_ads.growth_plan", "depends_on_code": "google_ads.conversions", "edge_type": "blocks" },
+    { "requirement_code": "google_ads.recommendations", "depends_on_code": "google_ads.campaign_performance", "edge_type": "blocks" },
+    { "requirement_code": "google_ads.recommendations", "depends_on_code": "google_ads.search_terms", "edge_type": "enriches" }
+  ]
+}

@@ -75,7 +75,7 @@ function octg_regenerate_llms_txt(): string {
     $lines[] = '';
     $lines[] = '> Marketing, web, CRM, and automation systems built as one connected system for small and mid-size businesses across the United States and Canada. Registered in Wyoming, USA.';
     $lines[] = '';
-    $lines[] = 'Contact: (802) 276-8331 · hello@onechancetogrow.com';
+    $lines[] = 'Contact: (802) 276-8331 · support@onechancetogrow.com';
     $lines[] = '';
     $lines[] = '## Services';
     $lines[] = '- [Full services overview](https://onechancetogrow.com/services.php)';
@@ -96,10 +96,25 @@ function octg_regenerate_llms_txt(): string {
     return 'llms.txt regenerated with ' . (count($services) + count($articles) + count($cases)) . ' content links';
 }
 
-/* robots.txt is short and rarely needs regeneration, but included for
-   completeness/consistency — this always writes the same known-good rules. */
+/* robots.txt rarely needs regeneration, but included for completeness/
+   consistency — this always writes the same known-good rules: public pages
+   open to search + AI crawlers, admin panel blocked. Keep this in sync with
+   the root robots.txt file if that file is ever edited by hand. */
 function octg_regenerate_robots_txt(): string {
-    $content = "User-agent: *\nAllow: /\nDisallow: /admin/\n\nSitemap: https://onechancetogrow.com/sitemap.xml\nSitemap: https://onechancetogrow.com/sitemap-images.xml\n";
+    $bots = ['*', 'Googlebot', 'Google-Extended', 'Bingbot', 'GPTBot', 'ClaudeBot',
+             'anthropic-ai', 'PerplexityBot', 'Applebot', 'Applebot-Extended',
+             'CCBot', 'Amazonbot', 'facebookexternalhit', 'Twitterbot', 'LinkedInBot'];
+    $lines = ["# One Chance To Grow — robots.txt",
+              "# Public pages are open to search and AI crawlers. The admin panel is blocked.", ""];
+    foreach ($bots as $bot) {
+        $lines[] = "User-agent: {$bot}";
+        $lines[] = "Allow: /";
+        $lines[] = "Disallow: /admin8828051506/";
+        $lines[] = "";
+    }
+    $lines[] = "Sitemap: https://onechancetogrow.com/sitemap.xml";
+    $lines[] = "Sitemap: https://onechancetogrow.com/sitemap-images.xml";
+    $content = implode("\n", $lines) . "\n";
     file_put_contents(__DIR__ . '/../../robots.txt', $content);
     return 'robots.txt regenerated';
 }

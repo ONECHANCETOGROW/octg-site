@@ -1,0 +1,29 @@
+[2026-07-22 01:53:54] Pipeline Execution Log:
+>>> EVENT: Extraction Started
+[2026-07-22T01:53:54.364Z] [INFO] Pipeline started: Module 1 Data Extraction {}
+[2026-07-22T01:53:54.367Z] [INFO] Loaded plugin manifest: google_ads v1.0 {}
+[2026-07-22T01:53:54.367Z] [INFO] Skipping extraction and knowledge generation phase (AI Data Collection System generated knowledge.json). {}
+>>> EVENT: Rule Evaluation Started
+[2026-07-22T01:53:54.488Z] [INFO] Module 3: Rule Engine started. {}
+[2026-07-22T01:53:54.492Z] [INFO] Rule Engine loaded 3 rules across 2 categories. {}
+[2026-07-22T01:53:54.496Z] [INFO] Module 3: Rule Engine completed successfully. { triggered: 0, passed: 3 }
+>>> EVENT: Rule Evaluation Completed
+>>> EVENT: Scoring Started
+[2026-07-22T01:53:54.544Z] [INFO] Module 4: Scoring Engine started. {}
+[2026-07-22T01:53:54.547Z] [INFO] Module 4: Scoring Engine completed. Overall Score: 100 (A) {}
+>>> EVENT: Scoring Completed
+>>> EVENT: Opportunities Started
+[2026-07-22T01:53:54.570Z] [INFO] Module 5: Opportunity Engine started. {}
+[2026-07-22T01:53:54.572Z] [ERROR] Opportunity Engine produced invalid schema {
+  errors: [
+    {
+      instancePath: '/opportunities/0/evidence',
+      schemaPath: '#/properties/opportunities/items/properties/evidence/type',
+      keyword: 'type',
+      params: [Object],
+      message: 'must be object'
+    }
+  ]
+}
+[2026-07-22T01:53:54.573Z] [ERROR] Pipeline Failed { error: 'Opportunity Engine produced invalid schema' }
+Pipeline crashed: Opportunity Engine produced invalid schema

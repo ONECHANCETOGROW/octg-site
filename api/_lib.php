@@ -64,7 +64,7 @@ function octg_get_content(string $key, string $default = ''): string {
     $stmt = $pdo->prepare('SELECT content_value FROM cms_content WHERE content_key = ? AND status = \'published\'');
     $stmt->execute([$key]);
     $val = $stmt->fetchColumn();
-    return $val !== false ? $val : $default;
+    return ($val !== false && trim($val) !== '') ? $val : $default;
 }
 
 function octg_get_json(string $key, array $default = []): array {
@@ -93,7 +93,7 @@ function octg_get_media_data(string $contentKey): ?array {
     
     if ($mediaId && is_numeric($mediaId)) {
         // Now fetch the media details
-        $stmt2 = $pdo->prepare('SELECT file_path, alt_text, title FROM cms_media WHERE id = ?');
+        $stmt2 = $pdo->prepare('SELECT file_path, alt_text, title, mime_type FROM cms_media WHERE id = ?');
         $stmt2->execute([$mediaId]);
         $media = $stmt2->fetch();
         if ($media) {
@@ -101,4 +101,13 @@ function octg_get_media_data(string $contentKey): ?array {
         }
     }
     return null;
+}
+
+function octg_get_media_data_by_id($mediaId): ?array {
+    $pdo = octg_db();
+    if (!$pdo || empty($mediaId) || !is_numeric($mediaId)) return null;
+    $stmt = $pdo->prepare('SELECT file_path, alt_text, title, mime_type FROM cms_media WHERE id = ?');
+    $stmt->execute([(int)$mediaId]);
+    $media = $stmt->fetch();
+    return $media ?: null;
 }

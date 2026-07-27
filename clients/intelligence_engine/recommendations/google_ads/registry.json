@@ -1,0 +1,25 @@
+{
+    "registry": [
+        {
+            "reference_id": "REC-CAMP-001",
+            "what_to_change": "Pause or restructure the high CPA campaign.",
+            "why_it_matters": "The campaign is converting but at an unsustainable cost, bleeding overall account profitability.",
+            "expected_outcome": "Improved overall account CPA and better budget allocation.",
+            "effort": "Medium"
+        },
+        {
+            "reference_id": "REC-CAMP-002",
+            "what_to_change": "Immediately pause the zero-conversion campaign and investigate tracking/targeting.",
+            "why_it_matters": "This campaign is actively wasting budget with zero return on ad spend.",
+            "expected_outcome": "Immediate cessation of wasted spend, freeing budget for performing campaigns.",
+            "effort": "Low"
+        },
+        {
+            "reference_id": "REC-ST-001",
+            "what_to_change": "Add the wasted search term as a negative keyword.",
+            "why_it_matters": "Irrelevant traffic is draining budget without converting.",
+            "expected_outcome": "Reduced wasted spend and higher click-through rates.",
+            "effort": "Low"
+        }
+    ]
+}

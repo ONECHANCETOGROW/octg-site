@@ -1,0 +1,33 @@
+{
+    "metadata": {
+        "contract_version": "1.0",
+        "engine_version": "1.0",
+        "plugin": "google_ads",
+        "plugin_version": "1.0",
+        "generated_at": "2026-07-18T03:02:15Z",
+        "client_id": "1",
+        "audit_id": "8",
+        "source_files": [
+            "ai_data_collection"
+        ],
+        "unclassified_fact_groups": 1
+    },
+    "statistics": {
+        "total_spend": 2466.48,
+        "total_conversions": 211.26,
+        "total_clicks": 1188
+    },
+    "entities": {
+        "campaigns": [],
+        "searchTerms": [],
+        "keywords": [],
+        "devices": [],
+        "locations": [],
+        "conversions": [],
+        "landingPages": [],
+        "tracking": [],
+        "budget": [],
+        "audiences": [],
+        "extensions": []
+    }
+}

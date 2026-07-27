@@ -9,8 +9,42 @@ if (!isset($caseSlug)) {
     die('case-study.php requires $caseSlug to be set before it is included.');
 }
 
-$CASES = require __DIR__ . '/../data/case-studies-catalog.php';
-usort($CASES, function($a, $b){ return $a['order'] <=> $b['order']; });
+require_once __DIR__ . '/../api/_lib.php';
+
+$CASES = [];
+$pdo = octg_db();
+if ($pdo) {
+    try {
+        $stmt = $pdo->query("SELECT * FROM cms_projects WHERE status = 'published' AND has_case_study = 1 ORDER BY display_order ASC, id DESC");
+        $rows = $stmt->fetchAll();
+        foreach ($rows as $r) {
+            $CASES[] = [
+                'slug' => $r['slug'],
+                'industry' => $r['industry'],
+                'title' => $r['title'],
+                'client_label' => $r['client_name'],
+                'hero_key' => $r['featured_image'] ?: '',
+                'gallery_keys' => json_decode($r['gallery_images'] ?? '[]', true) ?: [],
+                'challenge' => $r['challenge'],
+                'solution' => $r['solution'],
+                'results' => json_decode($r['results'] ?? '[]', true) ?: [],
+                'timeline' => json_decode($r['timeline'] ?? '[]', true) ?: [],
+                'quote' => $r['quote'],
+                'quote_role' => $r['quote_role'],
+                'services_used' => json_decode($r['services_used'] ?? '[]', true) ?: [],
+                'order' => $r['display_order']
+            ];
+        }
+    } catch (Throwable $e) {
+        $CASES = [];
+    }
+}
+
+if (empty($CASES)) {
+    $CASES = require __DIR__ . '/../data/case-studies-catalog.php';
+    usort($CASES, function($a, $b){ return $a['order'] <=> $b['order']; });
+}
+
 $SERVICES = require __DIR__ . '/../data/services-catalog.php';
 $svcBySlug = [];
 foreach ($SERVICES as $row) { $svcBySlug[$row['slug']] = $row; }

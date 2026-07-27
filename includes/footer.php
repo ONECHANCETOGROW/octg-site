@@ -17,7 +17,10 @@ $extraScripts = $extraScripts ?? [];
   <div class="wrap">
     <div class="footer-top">
       <div class="footer-brand">
-        <span class="brand__word">One Chance <span>To</span> Grow</span>
+        <a href="/index.php" class="brand" aria-label="One Chance To Grow — home">
+          <img src="/assets/img/logo-mark.png" alt="One Chance To Grow Logo" class="brand__mark" style="width:38px; height:38px; object-fit:contain; border-radius:8px;">
+          <span class="brand__word">ONE CHANCE TO GROW<small>GROWTH - STRATEGY - RESULTS</small></span>
+        </a>
         <p>Growth systems for businesses that are done guessing — marketing, software, and automation, built as one.</p>
       </div>
       <div class="footer-col">
@@ -61,7 +64,7 @@ $extraScripts = $extraScripts ?? [];
           <li><a href="/audit.php">Free Audit</a></li>
           <li><a href="/book-demo.php">Book a Growth Call</a></li>
           <li><a class="phone" href="tel:+18022768331"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2C9.4 21 3 14.6 3 6a2 2 0 0 1 2-2Z"/></svg>(802) 276-8331</a></li>
-          <li><a href="mailto:hello@onechancetogrow.com">hello@onechancetogrow.com</a></li>
+          <li><a href="mailto:support@onechancetogrow.com">support@onechancetogrow.com</a></li>
         </ul>
         </nav>
       </div>
@@ -83,15 +86,15 @@ $extraScripts = $extraScripts ?? [];
 </div>
 
 <!-- Shared scripts (every page) -->
-<script src="/assets/js/navigation.js?v=1.0.1" defer></script>
-<script src="/assets/js/animations.js?v=1.0.1" defer></script>
-<script src="/assets/js/forms.js?v=1.0.1" defer></script>
+<script src="/assets/js/navigation.js?v=1.5.6" defer></script>
+<script src="/assets/js/animations.js?v=1.5.6" defer></script>
+<script src="/assets/js/forms.js?v=1.5.6" defer></script>
 <?php foreach ($extraScripts as $script): ?>
-<script src="/assets/js/<?php echo htmlspecialchars($script); ?>.js?v=1.0.1" defer></script>
+<script src="/assets/js/<?php echo htmlspecialchars($script); ?>.js?v=1.5.0" defer></script>
 <?php endforeach; ?>
 <?php if ($pageScript): ?>
 <!-- Page-specific script only -->
-<script src="/assets/js/<?php echo htmlspecialchars($pageScript); ?>?v=1.0.1" defer></script>
+<script src="/assets/js/<?php echo htmlspecialchars($pageScript); ?>?v=1.5.1" defer></script>
 <?php endif; ?>
 </body>
 </html>

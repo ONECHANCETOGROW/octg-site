@@ -1,0 +1,20 @@
+{
+  "metadata": {
+    "contract_version": "1.0",
+    "engine_version": "1.0",
+    "plugin": "google_ads",
+    "generated_at": "2026-07-22T02:02:17.693Z"
+  },
+  "opportunities": [
+    {
+      "opportunity_id": "OPP-AI-6AC672A8",
+      "rule_id": "AI_GENERATED",
+      "problem": "",
+      "evidence": {},
+      "business_impact": "",
+      "estimated_roi": "Medium",
+      "priority": "Medium",
+      "difficulty": "Medium"
+    }
+  ]
+}

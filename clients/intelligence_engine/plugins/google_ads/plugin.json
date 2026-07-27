@@ -1,0 +1,88 @@
+{
+    "plugin_name": "google_ads",
+    "version": "1.0",
+    "supported_file_types": [".csv", ".xlsx"],
+    "supported_reports": ["campaigns", "search_terms", "locations", "devices", "keywords"],
+    "parser_version": "1.0",
+    "rule_version": "1.0",
+    "score_version": "1.0",
+    "header_normalization": {
+        "campaign": "campaign_name",
+        "campaign name": "campaign_name",
+        "campaign_name": "campaign_name",
+        "ad campaign": "campaign_name",
+
+        "cost": "spend",
+        "amount": "spend",
+        "spend": "spend",
+        "amount spent": "spend",
+        "total spend": "spend",
+        "total cost": "spend",
+        "ad spend": "spend",
+        "budget spent": "spend",
+
+        "conversions": "conversions",
+        "conversion": "conversions",
+        "conv.": "conversions",
+        "total conversions": "conversions",
+        "leads": "conversions",
+
+        "cost / conv.": "cpa",
+        "cost/conv.": "cpa",
+        "cpa": "cpa",
+        "cost per conversion": "cpa",
+        "cost per lead": "cpa",
+
+        "cpc": "cpc",
+        "avg. cpc": "cpc",
+        "average cpc": "cpc",
+        "cost per click": "cpc",
+
+        "search term": "search_term",
+        "search query": "search_term",
+        "query": "search_term",
+
+        "keyword": "keyword",
+        "keywords": "keyword",
+
+        "clicks": "clicks",
+        "click": "clicks",
+        "total clicks": "clicks",
+
+        "impressions": "impressions",
+        "impr.": "impressions",
+        "impr": "impressions",
+        "total impressions": "impressions",
+
+        "ctr": "ctr",
+        "click-through rate": "ctr",
+        "click through rate": "ctr",
+
+        "match type": "match_type",
+        "match": "match_type",
+
+        "device": "device",
+        "device type": "device",
+
+        "location": "location",
+        "city": "location",
+        "region": "location"
+    },
+    "entities": {
+        "searchTerms": {
+            "required_columns": ["search_term", "spend"]
+        },
+        "campaigns": {
+            "required_columns": ["campaign_name", "spend"]
+        },
+        "keywords": {
+            "required_columns": ["keyword", "match_type", "spend"]
+        },
+        "devices": {
+            "required_columns": ["device", "spend"]
+        },
+        "locations": {
+            "required_columns": ["location", "spend"]
+        }
+    }
+}

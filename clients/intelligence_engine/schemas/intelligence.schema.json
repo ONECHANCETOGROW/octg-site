@@ -1,0 +1,15 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Intelligence Contract Schema",
+    "description": "Output format for Module 8 Contract Builder",
+    "type": "object",
+    "required": ["metadata", "executive_summary", "scorecard", "opportunities", "recommendations", "knowledge"],
+    "properties": {
+        "metadata": { "type": "object" },
+        "executive_summary": { "type": "object" },
+        "scorecard": { "type": "object" },
+        "opportunities": { "type": "object" },
+        "recommendations": { "type": "object" },
+        "knowledge": { "type": "object" }
+    }
+}

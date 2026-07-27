@@ -53,9 +53,9 @@ include __DIR__ . '/includes/header.php';
   <div class="wrap">
     <span class="eyebrow center">Get On Our Radar</span>
     <h2>Think you'd be a fit down the line?</h2>
-    <p class="lead">Send a short note and your background to hello@onechancetogrow.com. We keep good people in mind for when a real opening comes up.</p>
+    <p class="lead">Send a short note and your background to support@onechancetogrow.com. We keep good people in mind for when a real opening comes up.</p>
     <div class="final-cta__ctas">
-      <a href="mailto:hello@onechancetogrow.com" class="btn btn-primary">Email Us</a>
+      <a href="mailto:support@onechancetogrow.com" class="btn btn-primary">Email Us</a>
       <a href="/about.php" class="btn btn-ghost">Learn About Us</a>
     </div>
   </div>

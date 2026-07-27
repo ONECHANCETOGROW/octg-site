@@ -1,0 +1,21 @@
+{
+  "metadata": {
+    "contract_version": "1.0",
+    "engine_version": "1.0",
+    "plugin": "google_ads",
+    "plugin_version": "1.0",
+    "generated_at": "2026-07-22T01:59:12.066Z"
+  },
+  "triggered_rules": [],
+  "passed_rules": [
+    "GA-CAMP-001",
+    "GA-CAMP-002",
+    "GA-ST-001"
+  ],
+  "validation_summary": {
+    "total_rules_evaluated": 15,
+    "total_triggered": 0,
+    "total_passed": 3,
+    "errors": []
+  }
+}

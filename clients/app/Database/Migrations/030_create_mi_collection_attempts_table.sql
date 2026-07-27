@@ -1,0 +1,20 @@
+CREATE TABLE IF NOT EXISTS `mi_collection_attempts` (
+    `id` BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    `audit_id` BIGINT UNSIGNED NOT NULL,
+    `requirement_id` BIGINT UNSIGNED NOT NULL,
+    `method` ENUM('ai_assistant', 'upload_csv', 'upload_excel', 'upload_pdf', 'manual', 'api') NOT NULL,
+    `source_trust_tier` TINYINT UNSIGNED NOT NULL DEFAULT 0 COMMENT 'Higher = more trusted, see SourceTrustRanking',
+    `raw_input` LONGTEXT NULL COMMENT 'Pasted AI text, or a text-extracted rendering of an uploaded file',
+    `original_filename` VARCHAR(255) NULL,
+    `original_file_path` VARCHAR(500) NULL COMMENT 'Relative path under storage/ if a file was uploaded',
+    `actor_user_id` INT NOT NULL,
+    `status` ENUM('pending', 'parsed', 'failed') NOT NULL DEFAULT 'pending',
+    `failure_reason` VARCHAR(255) NULL,
+    `created_at` DATETIME NOT NULL,
+    `updated_at` DATETIME NOT NULL,
+    KEY `mi_collection_attempts_audit_id_index` (`audit_id`),
+    KEY `mi_collection_attempts_requirement_id_index` (`requirement_id`),
+    CONSTRAINT `mi_collection_attempts_audit_id_foreign` FOREIGN KEY (`audit_id`) REFERENCES `mi_audits` (`id`) ON DELETE CASCADE,
+    CONSTRAINT `mi_collection_attempts_requirement_id_foreign` FOREIGN KEY (`requirement_id`) REFERENCES `mi_intelligence_requirements` (`id`) ON DELETE CASCADE,
+    CONSTRAINT `mi_collection_attempts_actor_user_id_foreign` FOREIGN KEY (`actor_user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

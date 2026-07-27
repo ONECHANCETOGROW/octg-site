@@ -1,0 +1,252 @@
+/* ==========================================================================
+   DESKTOP ENHANCEMENTS LAYER (1200px+)
+   This stylesheet ONLY targets large screens and optimizes layouts that
+   would otherwise feel like stretched mobile versions.
+   ========================================================================== */
+
+@media (min-width: 1200px) {
+
+  /* ------------------------------------------------------------------------
+     1. Global Shared Elements
+     ------------------------------------------------------------------------ */
+  /* Expand section headers to utilize wide screens */
+  .section-head {
+    max-width: 960px;
+  }
+
+  /* Reduce excessive vertical whitespace */
+  .section {
+    padding-block: 80px; /* Reduced from default large paddings */
+  }
+
+  /* Expand footer branding */
+  .footer-brand p {
+    max-width: 45ch;
+  }
+
+  /* Root-cause fix: these shared card grids (.pillars, .compare, .why-grid,
+     .quote-row, .process, .service-grid, .stat-strip) all use `1fr` tracks
+     with a fixed final column count reached well below 1200px, sitting
+     inside `.wrap` (max-width: var(--container), 1800px). Because the
+     tracks are fluid but the column count is frozen, each card just keeps
+     getting wider as the viewport grows — at 1800px, a 3-column grid puts
+     ~600px behind each card, while its icon/padding/type scale never
+     changed from what was tuned for a ~380px card. That mismatch (sparse,
+     oversized cards with fixed-size content) is what reads as "mobile
+     design stretched onto a big monitor," not literally unused space —
+     these grids DO already fill the width. The fix is a sensible max-width
+     + centering on the grid itself, so the existing card proportions stay
+     intentional at any monitor size instead of stretching indefinitely. */
+  .pillars,
+  .why-grid,
+  .quote-row,
+  .service-grid {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .compare {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .process {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .stat-strip {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* ------------------------------------------------------------------------
+     1b. Section-head paired layouts (the single biggest desktop win —
+     shared by /includes/service-page.php, the template behind all 30+
+     individual service pages, plus contact.php's FAQ block)
+
+     Root cause: `.section-head` (eyebrow + h2, capped ~640-960px) is
+     followed by its content (.check-list, .process, .faq, .service-grid)
+     as a plain sibling <div> inside the same .wrap — i.e. two blocks
+     stacked vertically with nothing establishing a row between them. On a
+     1920-2560px screen that reads as a narrow label sitting alone above a
+     wide grid, the exact "mobile column, just wider" feeling the audit
+     was asked to explain. Since the label and its content are a genuine
+     primary/supporting pair (not independent sections), the fix is
+     compositional, not a measurement: turn the shared `.wrap` into a
+     grid only when it contains exactly this label+content adjacency, via
+     :has() — so the CSS opts in per-pattern instead of touching .wrap
+     everywhere else on the site. No :has() support = falls back to the
+     existing stacked layout untouched, so this never breaks anything.
+     ------------------------------------------------------------------------ */
+  .wrap:has(> .section-head + .check-list),
+  .wrap:has(> .section-head + .process),
+  .wrap:has(> .section-head + .faq),
+  .wrap:has(> .section-head + .service-grid) {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    column-gap: 64px;
+    align-items: start;
+  }
+  .wrap:has(> .section-head + .check-list) > .section-head,
+  .wrap:has(> .section-head + .process) > .section-head,
+  .wrap:has(> .section-head + .faq) > .section-head,
+  .wrap:has(> .section-head + .service-grid) > .section-head {
+    max-width: none;
+    margin-bottom: 0;
+  }
+
+  /* ------------------------------------------------------------------------
+     2. Homepage (index.php)
+     ------------------------------------------------------------------------ */
+  .hero .lead {
+    max-width: 65ch;
+  }
+  .trust-bar__img {
+    max-width: 120%; /* allow logos to stretch slightly larger */
+  }
+
+  /* ------------------------------------------------------------------------
+     3. Services Hub & Subpages
+     ------------------------------------------------------------------------ */
+  .services-hero .wrap,
+  .service-hero .wrap {
+    max-width: 1100px;
+  }
+
+  /* Same label-beside-content pattern as 1b above, but services.php's hub
+     page uses its own heading class (.service-category__head) for the six
+     category sections rather than the generic .section-head. */
+  .wrap:has(> .service-category__head) {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    column-gap: 64px;
+    align-items: start;
+  }
+  .wrap:has(> .service-category__head) > .service-category__head {
+    margin-bottom: 0;
+  }
+
+  /* Convert stacked checklists into 2-column grids */
+  .check-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    max-width: 1000px;
+  }
+
+  /* Allow problem blocks to breathe */
+  .problem-block {
+    max-width: 1000px;
+  }
+
+  .stat-card.is-solo {
+    max-width: 680px;
+  }
+
+  /* ------------------------------------------------------------------------
+     4. Products Hub
+     ------------------------------------------------------------------------ */
+  .products-hero {
+    max-width: 960px;
+  }
+  
+  .product-section__grid {
+    gap: 100px; /* Increase gap to utilize horizontal space */
+  }
+
+  /* ------------------------------------------------------------------------
+     5. About Page
+     (single source of truth for About-page desktop sizing — about.css only
+     carries the base/structural breakpoints below this, e.g. the 980px
+     row-layout switch and the 940px timeline grid conversion)
+     ------------------------------------------------------------------------ */
+  .founder-hero {
+    padding-top: 110px;
+  }
+  .founder-hero__content {
+    max-width: clamp(560px, 34vw, 680px);
+  }
+  .founder-hero__media {
+    width: clamp(520px, 38vw, 760px);
+    height: min(92vh, 960px);
+  }
+  .founder-hero__desc {
+    max-width: 50ch; /* kept in step with the tuned content-column width above */
+  }
+
+  .team-stats {
+    gap: 40px; /* Spread out stats */
+  }
+  .team-stats__item {
+    border-radius: 14px; /* needed once tiles are gapped apart instead of seamed */
+  }
+
+  .about-story__grid {
+    gap: 120px; /* Wide gap for storytelling */
+  }
+
+  .page-about .timeline {
+    max-width: 1400px;
+  }
+  .page-about .timeline-item {
+    grid-template-columns: 200px 1fr;
+    column-gap: 44px;
+  }
+  .page-about .timeline-item__frame {
+    width: 200px;
+    height: 200px;
+  }
+
+  /* ------------------------------------------------------------------------
+     6. Industries Page
+     ------------------------------------------------------------------------ */
+  .industries-hero .lead {
+    max-width: 960px;
+  }
+
+  /* ------------------------------------------------------------------------
+     7. Contact & Reviews
+     ------------------------------------------------------------------------ */
+  .contact-hero,
+  .reviews-hero {
+    max-width: 960px;
+  }
+
+  .contact-grid {
+    gap: 80px;
+  }
+
+  /* .reviews-grid reuses the shared .quote-row (capped 1200px/3-col above),
+     which is correct for the homepage's 3-item teaser but this page is a
+     full filterable listing — more items genuinely benefit from a wider,
+     denser grid instead of extra row count. .reviews-grid gives enough
+     specificity to diverge from .quote-row without touching it. */
+  .reviews-grid {
+    max-width: 1500px;
+  }
+}
+
+/* For ultra-wide screens */
+@media (min-width: 1600px) {
+  .industry-grid {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 48px;
+  }
+
+  .founder-hero__content {
+    max-width: 720px;
+  }
+  .founder-hero__name {
+    font-size: 8rem;
+  }
+  .founder-hero__media {
+    width: 800px;
+    height: min(92vh, 1000px);
+  }
+
+  .reviews-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

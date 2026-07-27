@@ -21,3 +21,11 @@
 @media (min-width:940px){
   .article-hero{ padding:190px 0 30px; }
 }
+
+/* Dark-mode text — this page never had any .site--dark handling, so body
+   copy was rendering at full ink-dark against the dark video backdrop
+   (confirmed live: ~1.75:1 contrast, well under the 4.5:1 WCAG minimum). */
+.site--dark .article-hero__meta{ color:rgba(255,255,255,0.5); }
+.site--dark .article-body p{ color:rgba(255,255,255,0.78); }
+.site--dark .article-body h2{ color:#F7F6F1; }
+.site--dark .article-faq h2{ color:#F7F6F1; }

@@ -1,0 +1,36 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Rule Schema",
+    "description": "Validates rule definitions for the Intelligence Engine",
+    "type": "object",
+    "required": ["rules"],
+    "properties": {
+        "rules": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": [
+                    "rule_id", "rule_name", "category", "severity", "description", 
+                    "business_reason", "condition", "evidence_fields", 
+                    "score_weight", "enabled", "version"
+                ],
+                "properties": {
+                    "rule_id": { "type": "string" },
+                    "rule_name": { "type": "string" },
+                    "category": { "type": "string" },
+                    "severity": { "type": "string", "enum": ["Critical", "High", "Medium", "Low", "Info"] },
+                    "description": { "type": "string" },
+                    "business_reason": { "type": "string" },
+                    "condition": { "type": "string" },
+                    "evidence_fields": { "type": "array", "items": { "type": "string" } },
+                    "recommendation_reference": { "type": "string" },
+                    "score_weight": { "type": "number" },
+                    "enabled": { "type": "boolean" },
+                    "version": { "type": "string" },
+                    "created_at": { "type": "string" },
+                    "updated_at": { "type": "string" }
+                }
+            }
+        }
+    }
+}

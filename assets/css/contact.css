@@ -5,17 +5,29 @@
    ========================================================================== */
 
 /* ===================== BASE / MOBILE ===================== */
-.contact-hero{ padding:150px 0 50px; max-width:720px; }
+.contact-hero{ padding:160px 0 50px; max-width:720px; }
 .contact-hero h1{ margin:20px 0 22px; }
 
-.contact-grid{ display:grid; gap:56px; }
+.contact-grid{ display:grid; gap:32px; }
 
+/* Premium boxed panels — same spaced, rounded-card language as the
+   industries/glossary/about pages. Light-mode default + a translucent
+   glass variant for .site--dark (currently always on, video hero active). */
+.contact-form-panel{
+  border:1px solid var(--paper-line); border-radius:16px;
+  padding:32px 22px; background:var(--paper);
+  box-shadow:0 24px 60px rgba(0,0,0,0.05), 0 4px 12px rgba(0,0,0,0.03);
+}
 .contact-form-panel form{ display:flex; flex-direction:column; }
-
 .contact-form-panel .btn{ align-self:flex-start; margin-top:10px; }
 
 /* Sidebar */
-.contact-side{ display:flex; flex-direction:column; gap:40px; }
+.contact-side{
+  display:flex; flex-direction:column; gap:28px;
+  border:1px solid var(--paper-line); border-radius:16px;
+  padding:32px 22px; background:var(--paper);
+  box-shadow:0 24px 60px rgba(0,0,0,0.05), 0 4px 12px rgba(0,0,0,0.03);
+}
 .contact-side__block{ border-top:1px solid var(--paper-line); padding-top:24px; }
 .contact-side__block:first-child{ border-top:none; padding-top:0; }
 .contact-side__phone{
@@ -28,14 +40,54 @@
 
 .contact-side__cta p{ margin-bottom:14px; font-size:0.92rem; color:var(--ink-soft); }
 
+/* Dark / video-hero variant */
+.site--dark .contact-form-panel,
+.site--dark .contact-side{
+  background:rgba(15,15,10,0.5) !important;
+  -webkit-backdrop-filter:blur(20px); backdrop-filter:blur(20px);
+  border-color:rgba(255,255,255,0.08) !important;
+  box-shadow:0 30px 70px rgba(0,0,0,0.4), 0 6px 18px rgba(0,0,0,0.25);
+  color:var(--paper);
+}
+.site--dark .contact-side__block{ border-top-color:rgba(255,255,255,0.1); }
+.site--dark .contact-side__phone svg{ color:#a3ff47; }
+.site--dark .contact-side__email{ color:rgba(247,246,241,0.75); }
+.site--dark .contact-side__block p{ color:rgba(247,246,241,0.6); }
+.site--dark .contact-steps li{ color:rgba(247,246,241,0.75); }
+.site--dark .contact-steps li span{ color:#a3ff47; }
+.site--dark .contact-side__cta p{ color:rgba(247,246,241,0.75); }
+.site--dark .contact-form-panel .form-trust-note{ color:rgba(247,246,241,0.5); }
+.site--dark .contact-form-panel .field input,
+.site--dark .contact-form-panel .field textarea{
+  color:var(--paper) !important; border-bottom-color:rgba(255,255,255,0.18) !important;
+}
+.site--dark .contact-form-panel .field label{ color:rgba(247,246,241,0.5) !important; }
+.site--dark .contact-form-panel .field input:focus ~ label,
+.site--dark .contact-form-panel .field textarea:focus ~ label,
+.site--dark .contact-form-panel .field input:not(:placeholder-shown) ~ label,
+.site--dark .contact-form-panel .field textarea:not(:placeholder-shown) ~ label{ color:#a3ff47 !important; }
+.site--dark .contact-form-panel .field input:focus,
+.site--dark .contact-form-panel .field textarea:focus{ border-bottom-color:#a3ff47 !important; }
+
 /* ===================== LAPTOP (940px+) ===================== */
+/* Tablet: the 2-pane split has room well before the 940px laptop tier —
+   holding it off until then left 768-939px as an oversized single-column
+   mobile form. Kept as its own tier so the 940px+ values above stay exactly
+   as tuned. */
+@media (min-width:768px) and (max-width:939px){
+  .contact-grid{ grid-template-columns:1.3fr 1fr; gap:28px; align-items:start; }
+  .contact-form-panel{ padding:36px 30px; }
+  .contact-side{ padding:32px 26px; }
+}
+
 @media (min-width:940px){
   .contact-hero{ padding:190px 0 60px; }
-  .contact-grid{ grid-template-columns:1.4fr 1fr; gap:80px; align-items:start; }
-  .contact-side{ position:sticky; top:120px; }
+  .contact-grid{ grid-template-columns:1.4fr 1fr; gap:44px; align-items:start; }
+  .contact-form-panel{ padding:44px 40px; }
+  .contact-side{ position:sticky; top:120px; padding:40px 34px; }
 }
 
 /* ===================== DESKTOP (1300px+) ===================== */
 @media (min-width:1300px){
-  .contact-grid{ gap:110px; }
+  .contact-grid{ gap:60px; }
 }

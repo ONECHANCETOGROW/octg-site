@@ -1,0 +1,2016 @@
+{
+    "knowledge": {
+        "Account": {
+            "account_total": {
+                "Change vs Previous Period": {
+                    "value": "-22.46 (-9.61%)",
+                    "unit": null,
+                    "confidence": 56
+                },
+                "Conversion Value Change vs Previous Period": {
+                    "value": "+$19,484.28 (+14.76%)",
+                    "unit": null,
+                    "confidence": 56
+                },
+                "Disapproved Assets": {
+                    "value": "There are two assets flagged as disapproved:",
+                    "unit": null,
+                    "confidence": 8
+                },
+                "Sitelink Engagement": {
+                    "value": "Sitelinks such as Contact Us (with 5.50 conversions) and Apply Online (with 4 conversions) are performing exceptionally well in driving user interaction.",
+                    "unit": null,
+                    "confidence": 8
+                },
+                "Top Performing Assets": {
+                    "value": "Your call asset (209) 758-2041 and business brand name\/logo assets are driving the largest volume of high-value actions, accounting for a major portion of your clicks and conversions.",
+                    "unit": null,
+                    "confidence": 8
+                },
+                "Total Conversion Value": {
+                    "value": "$151,513.54",
+                    "unit": null,
+                    "confidence": 56
+                },
+                "Total Conversions": {
+                    "value": "211.26",
+                    "unit": null,
+                    "confidence": 56
+                }
+            }
+        },
+        "Advertiser (or \"Domain\")": {
+            "bestrv.com": {
+                "Impression Share": {
+                    "value": "13.58%",
+                    "unit": null,
+                    "confidence": 76
+                },
+                "Overlap Rate": {
+                    "value": "11.43%",
+                    "unit": null,
+                    "confidence": 76
+                },
+                "Position Above Rate": {
+                    "value": "36.90%",
+                    "unit": null,
+                    "confidence": 76
+                }
+            },
+            "bluecompassrv.com": {
+                "Impression Share": {
+                    "value": "< 10%",
+                    "unit": null,
+                    "confidence": 76
+                },
+                "Overlap Rate": {
+                    "value": "6.83%",
+                    "unit": null,
+                    "confidence": 76
+                },
+                "Position Above Rate": {
+                    "value": "52.36%",
+                    "unit": null,
+                    "confidence": 76
+                }
+            },
+            "campingworld.com": {
+                "Impression Share": {
+                    "value": "16.14%",
+                    "unit": null,
+                    "confidence": 76
+                },
+                "Overlap Rate": {
+                    "value": "14.36%",
+                    "unit": null,
+                    "confidence": 76
+                },
+                "Position Above Rate": {
+                    "value": "60.76%",
+                    "unit": null,
+                    "confidence": 76
+                }
+            },
+            "donsrv.com": {
+                "Impression Share": {
+                    "value": "< 10%",
+                    "unit": null,
+                    "confidence": 76
+                },
+                "Overlap Rate": {
+                    "value": "5.41%",
+                    "unit": null,
+                    "confidence": 76
+                },
+                "Position Above Rate": {
+                    "value": "51.79%",
+                    "unit": null,
+                    "confidence": 76
+                }
+            },
+            "google.com": {
+                "Impression Share": {
+                    "value": "< 10%",
+                    "unit": null,
+                    "confidence": 76
+                },
+                "Overlap Rate": {
+                    "value": "6.73%",
+                    "unit": null,
+                    "confidence": 76
+                },
+                "Position Above Rate": {
+                    "value": "44.98%",
+                    "unit": null,
+                    "confidence": 76
+                }
+            },
+            "happydazerv.com": {
+                "Impression Share": {
+                    "value": "< 10%",
+                    "unit": null,
+                    "confidence": 76
+                },
+                "Overlap Rate": {
+                    "value": "6.44%",
+                    "unit": null,
+                    "confidence": 76
+                },
+                "Position Above Rate": {
+                    "value": "39.50%",
+                    "unit": null,
+                    "confidence": 76
+                }
+            },
+            "lamesarv.com": {
+                "Impression Share": {
+                    "value": "< 10%",
+                    "unit": null,
+                    "confidence": 76
+                },
+                "Overlap Rate": {
+                    "value": "5.54%",
+                    "unit": null,
+                    "confidence": 76
+                },
+                "Position Above Rate": {
+                    "value": "54.07%",
+                    "unit": null,
+                    "confidence": 76
+                }
+            },
+            "rvsofsac.com": {
+                "Impression Share": {
+                    "value": "< 10%",
+                    "unit": null,
+                    "confidence": 76
+                },
+                "Overlap Rate": {
+                    "value": "6.54%",
+                    "unit": null,
+                    "confidence": 76
+                },
+                "Position Above Rate": {
+                    "value": "41.87%",
+                    "unit": null,
+                    "confidence": 76
+                }
+            },
+            "rvsoftracy.com": {
+                "Impression Share": {
+                    "value": "< 10%",
+                    "unit": null,
+                    "confidence": 76
+                },
+                "Overlap Rate": {
+                    "value": "7.25%",
+                    "unit": null,
+                    "confidence": 76
+                },
+                "Position Above Rate": {
+                    "value": "50.67%",
+                    "unit": null,
+                    "confidence": 76
+                }
+            },
+            "trailerhitchrv.com": {
+                "Impression Share": {
+                    "value": "11.71%",
+                    "unit": null,
+                    "confidence": 76
+                },
+                "Overlap Rate": {
+                    "value": "11.53%",
+                    "unit": null,
+                    "confidence": 76
+                },
+                "Position Above Rate": {
+                    "value": "47.21%",
+                    "unit": null,
+                    "confidence": 76
+                }
+            },
+            "You": {
+                "Impression Share": {
+                    "value": "32.06%",
+                    "unit": null,
+                    "confidence": 76
+                },
+                "Overlap Rate": {
+                    "value": "\u2014",
+                    "unit": null,
+                    "confidence": 76
+                },
+                "Position Above Rate": {
+                    "value": "\u2014",
+                    "unit": null,
+                    "confidence": 76
+                }
+            }
+        },
+        "Asset Type": {
+            "Business Logo": {
+                "Asset Text or Description": {
+                    "value": "independentrvca Logo (Round)",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Clicks": {
+                    "value": "199",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Conversions": {
+                    "value": "60.74",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Status": {
+                    "value": "Eligible",
+                    "unit": null,
+                    "confidence": 90
+                }
+            },
+            "Business Name": {
+                "Asset Text or Description": {
+                    "value": "independentrvca",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Clicks": {
+                    "value": "223",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Conversions": {
+                    "value": "63.74",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Status": {
+                    "value": "Eligible",
+                    "unit": null,
+                    "confidence": 82
+                }
+            },
+            "Call": {
+                "Asset Text or Description": {
+                    "value": "(209) 758-2041",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Clicks": {
+                    "value": "681",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Conversions": {
+                    "value": "118.06",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Status": {
+                    "value": "Eligible",
+                    "unit": null,
+                    "confidence": 82
+                }
+            },
+            "Callout": {
+                "Asset Text or Description": {
+                    "value": "View Inventory Online",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Clicks": {
+                    "value": "27",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Conversions": {
+                    "value": "0.00",
+                    "unit": null,
+                    "confidence": 100
+                },
+                "Status": {
+                    "value": "Eligible",
+                    "unit": null,
+                    "confidence": 100
+                }
+            },
+            "Image": {
+                "Asset Text or Description": {
+                    "value": "Round Logo Image",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Clicks": {
+                    "value": "0",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Conversions": {
+                    "value": "0.00",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Status": {
+                    "value": "Not eligible (Disapproved: Text or graphic overlays)",
+                    "unit": null,
+                    "confidence": 82
+                }
+            },
+            "Logo": {
+                "Asset Text or Description": {
+                    "value": "Logo of Independent Rv (1237 x 1237)",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Clicks": {
+                    "value": "311",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Conversions": {
+                    "value": "53.00",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Status": {
+                    "value": "Eligible",
+                    "unit": null,
+                    "confidence": 90
+                }
+            },
+            "Sitelink": {
+                "Asset Text or Description": {
+                    "value": "Contact Us (Welcomes feedback...)",
+                    "unit": null,
+                    "confidence": 90
+                },
+                "Clicks": {
+                    "value": "93",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Conversions": {
+                    "value": "5.50",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Status": {
+                    "value": "Eligible",
+                    "unit": null,
+                    "confidence": 100
+                }
+            },
+            "Structured Snippet": {
+                "Asset Text or Description": {
+                    "value": "Highlights: Online Application Option Available...",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Clicks": {
+                    "value": "3",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Conversions": {
+                    "value": "0.00",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Status": {
+                    "value": "Eligible",
+                    "unit": null,
+                    "confidence": 82
+                }
+            }
+        },
+        "Audience Segment \/ Signal": {
+            "All other campaigns": {
+                "Campaign": {
+                    "value": "No segments applied",
+                    "unit": null,
+                    "confidence": 77
+                },
+                "Clicks": {
+                    "value": "0",
+                    "unit": null,
+                    "confidence": 77
+                },
+                "Conversions": {
+                    "value": "0.00",
+                    "unit": null,
+                    "confidence": 77
+                },
+                "Spend": {
+                    "value": "$0.00",
+                    "unit": null,
+                    "confidence": 77
+                }
+            },
+            "Your data & Interests and detailed demographics": {
+                "Campaign": {
+                    "value": "Performance Max Calls 1\/21\/25",
+                    "unit": null,
+                    "confidence": 77
+                },
+                "Clicks": {
+                    "value": "903",
+                    "unit": null,
+                    "confidence": 77
+                },
+                "Conversions": {
+                    "value": "118.06",
+                    "unit": null,
+                    "confidence": 77
+                },
+                "Spend": {
+                    "value": "$2,781.08",
+                    "unit": null,
+                    "confidence": 77
+                }
+            }
+        },
+        "Campaign": {
+            "INDEPENDENT RV, LLC": {
+                "Avg Daily Spend": {
+                    "value": "$0.00\/day",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Daily Budget": {
+                    "value": "$10.20\/day",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Impr. Share Lost (Budget)": {
+                    "value": "\u2014 (Paused)",
+                    "unit": null,
+                    "confidence": 92
+                }
+            },
+            "Leads-Search-1": {
+                "Avg Daily Spend": {
+                    "value": "$0.00\/day",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Daily Budget": {
+                    "value": "$25.00\/day",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Impr. Share Lost (Budget)": {
+                    "value": "\u2014 (Paused)",
+                    "unit": null,
+                    "confidence": 92
+                }
+            },
+            "Leads-Search-2": {
+                "Avg Daily Spend": {
+                    "value": "$25.25\/day",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Clicks": {
+                    "value": "285",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Conversions": {
+                    "value": "78.27",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Cost Per Conversion": {
+                    "value": "$9.68",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "CPC": {
+                    "value": "$2.66",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "CTR": {
+                    "value": "7.87%",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Daily Budget": {
+                    "value": "$25.00\/day",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Impr. Share Lost (Budget)": {
+                    "value": "35.09%",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Impressions": {
+                    "value": "3,622",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Spend": {
+                    "value": "$757.58",
+                    "unit": null,
+                    "confidence": 92
+                }
+            },
+            "Performance Max Calls 1\/21\/25": {
+                "Avg Daily Spend": {
+                    "value": "$56.96\/day",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Clicks": {
+                    "value": "903",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Conversions": {
+                    "value": "132.98",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Cost Per Conversion": {
+                    "value": "$12.85",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "CPC": {
+                    "value": "$1.89",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "CTR": {
+                    "value": "9.25%",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Daily Budget": {
+                    "value": "$58.00\/day",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Impr. Share Lost (Budget)": {
+                    "value": "23.20%",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Impressions": {
+                    "value": "9,763",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Spend": {
+                    "value": "$1,708.91",
+                    "unit": null,
+                    "confidence": 92
+                }
+            }
+        },
+        "Conversion Action": {
+            "Android installs (all other apps)": {
+                "Category": {
+                    "value": "Downloads",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Counting": {
+                    "value": "One",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Primary or Secondary": {
+                    "value": "Secondary",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Status": {
+                    "value": "No recent conversions (Awaiting conversions)",
+                    "unit": null,
+                    "confidence": 82
+                }
+            },
+            "Business profile - Call": {
+                "Category": {
+                    "value": "Contacts",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Counting": {
+                    "value": "One",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Primary or Secondary": {
+                    "value": "Primary",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Status": {
+                    "value": "No recent conversions (Awaiting conversions)",
+                    "unit": null,
+                    "confidence": 82
+                }
+            },
+            "Business profile - Learn more": {
+                "Category": {
+                    "value": "Engagements",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Counting": {
+                    "value": "One",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Primary or Secondary": {
+                    "value": "Primary",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Status": {
+                    "value": "No recent conversions (Awaiting conversions)",
+                    "unit": null,
+                    "confidence": 82
+                }
+            },
+            "Calls from ads": {
+                "Category": {
+                    "value": "Phone call leads",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Counting": {
+                    "value": "Every",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Primary or Secondary": {
+                    "value": "Primary",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Status": {
+                    "value": "Active",
+                    "unit": null,
+                    "confidence": 82
+                }
+            },
+            "Calls from Smart Campaign Ads": {
+                "Category": {
+                    "value": "Phone call leads",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Counting": {
+                    "value": "One",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Primary or Secondary": {
+                    "value": "Primary",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Status": {
+                    "value": "Active",
+                    "unit": null,
+                    "confidence": 82
+                }
+            },
+            "Clicks to call": {
+                "Category": {
+                    "value": "Contacts",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Counting": {
+                    "value": "Every",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Primary or Secondary": {
+                    "value": "Primary",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Status": {
+                    "value": "Active",
+                    "unit": null,
+                    "confidence": 82
+                }
+            },
+            "Local actions - Directions": {
+                "Category": {
+                    "value": "Get directions",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Counting": {
+                    "value": "Every",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Primary or Secondary": {
+                    "value": "Primary",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Status": {
+                    "value": "Active",
+                    "unit": null,
+                    "confidence": 82
+                }
+            },
+            "Local actions - Menu views": {
+                "Category": {
+                    "value": "Page views",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Counting": {
+                    "value": "Every",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Primary or Secondary": {
+                    "value": "Primary",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Status": {
+                    "value": "No recent conversions (Awaiting conversions)",
+                    "unit": null,
+                    "confidence": 82
+                }
+            },
+            "Local actions - Other engagements": {
+                "Category": {
+                    "value": "Engagements",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Counting": {
+                    "value": "Every",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Primary or Secondary": {
+                    "value": "Primary",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Status": {
+                    "value": "Active",
+                    "unit": null,
+                    "confidence": 82
+                }
+            },
+            "Local actions - Website visits": {
+                "Category": {
+                    "value": "Page views",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Counting": {
+                    "value": "Every",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Primary or Secondary": {
+                    "value": "Primary",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Status": {
+                    "value": "Active",
+                    "unit": null,
+                    "confidence": 82
+                }
+            },
+            "Smart campaign ad clicks to call": {
+                "Category": {
+                    "value": "Contacts",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Counting": {
+                    "value": "Every",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Primary or Secondary": {
+                    "value": "Primary",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Status": {
+                    "value": "No recent conversions (Awaiting conversions)",
+                    "unit": null,
+                    "confidence": 82
+                }
+            },
+            "Smart campaign map clicks to call": {
+                "Category": {
+                    "value": "Contacts",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Counting": {
+                    "value": "Every",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Primary or Secondary": {
+                    "value": "Primary",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Status": {
+                    "value": "No recent conversions (Awaiting conversions)",
+                    "unit": null,
+                    "confidence": 82
+                }
+            },
+            "Smart campaign map directions": {
+                "Category": {
+                    "value": "Get directions",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Counting": {
+                    "value": "Every",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Primary or Secondary": {
+                    "value": "Primary",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Status": {
+                    "value": "No recent conversions (Awaiting conversions)",
+                    "unit": null,
+                    "confidence": 82
+                }
+            },
+            "Store visits": {
+                "Category": {
+                    "value": "Store visits",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Counting": {
+                    "value": "Every",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Primary or Secondary": {
+                    "value": "Primary",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Status": {
+                    "value": "No recent conversions (Awaiting conversions)",
+                    "unit": null,
+                    "confidence": 82
+                }
+            }
+        },
+        "Device": {
+            "Computers (Desktop)": {
+                "Clicks": {
+                    "value": "68",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Conversion Rate": {
+                    "value": "1.47%",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Conversions": {
+                    "value": "1.00",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Spend": {
+                    "value": "$7.88",
+                    "unit": null,
+                    "confidence": 82
+                }
+            },
+            "Mobile phones": {
+                "Clicks": {
+                    "value": "1,103",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Conversion Rate": {
+                    "value": "19.06%",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Conversions": {
+                    "value": "210.25",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Spend": {
+                    "value": "$2,457.88",
+                    "unit": null,
+                    "confidence": 82
+                }
+            },
+            "Tablets": {
+                "Clicks": {
+                    "value": "17",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Conversion Rate": {
+                    "value": "0.00%",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Conversions": {
+                    "value": "0.00",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Spend": {
+                    "value": "$0.73",
+                    "unit": null,
+                    "confidence": 82
+                }
+            }
+        },
+        "Landing Page": {
+            ":---": {
+                "Clicks": {
+                    "value": ":---",
+                    "unit": null,
+                    "confidence": 80
+                },
+                "Conversions": {
+                    "value": "598",
+                    "unit": null,
+                    "confidence": 80
+                },
+                "Spend": {
+                    "value": "https:\/\/www.independentrvca.com\/ (Record 1)",
+                    "unit": null,
+                    "confidence": 80
+                }
+            },
+            "$830.07": {
+                "Clicks": {
+                    "value": "20.36",
+                    "unit": null,
+                    "confidence": 80
+                },
+                "Conversions": {
+                    "value": "https:\/\/www.independentrvca.com\/#1739516392629-8329a50d-ffb5",
+                    "unit": null,
+                    "confidence": 80
+                },
+                "Spend": {
+                    "value": "3.40%",
+                    "unit": null,
+                    "confidence": 80
+                }
+            },
+            "2. Raw landing Page Records from Account (Last 30 Days)": {
+                "Clicks": {
+                    "value": "Landing Page",
+                    "unit": null,
+                    "confidence": 80
+                },
+                "Conversion Rate": {
+                    "value": "Conversions",
+                    "unit": null,
+                    "confidence": 80
+                },
+                "Conversions": {
+                    "value": "Spend",
+                    "unit": null,
+                    "confidence": 80
+                },
+                "Spend": {
+                    "value": "Clicks",
+                    "unit": null,
+                    "confidence": 80
+                }
+            },
+            "216": {
+                "Clicks": {
+                    "value": "$475.48",
+                    "unit": null,
+                    "confidence": 80
+                },
+                "Conversions": {
+                    "value": "13.28%",
+                    "unit": null,
+                    "confidence": 80
+                },
+                "Spend": {
+                    "value": "28.69",
+                    "unit": null,
+                    "confidence": 80
+                }
+            },
+            "Conversion Rate": {
+                "Clicks": {
+                    "value": ":---",
+                    "unit": null,
+                    "confidence": 80
+                },
+                "Conversions": {
+                    "value": ":---",
+                    "unit": null,
+                    "confidence": 80
+                },
+                "Spend": {
+                    "value": ":---",
+                    "unit": null,
+                    "confidence": 80
+                }
+            },
+            "https:\/\/www.independentrvca.com\/": {
+                "Clicks": {
+                    "value": "647",
+                    "unit": null,
+                    "confidence": 80
+                },
+                "Conversion Rate": {
+                    "value": "3.15%",
+                    "unit": null,
+                    "confidence": 80
+                },
+                "Conversions": {
+                    "value": "20.36",
+                    "unit": null,
+                    "confidence": 80
+                },
+                "Spend": {
+                    "value": "$840.33",
+                    "unit": null,
+                    "confidence": 80
+                }
+            },
+            "https:\/\/www.independentrvca.com\/ (Record 2)": {
+                "Clicks": {
+                    "value": "49",
+                    "unit": null,
+                    "confidence": 80
+                },
+                "Conversion Rate": {
+                    "value": "0.00%",
+                    "unit": null,
+                    "confidence": 80
+                },
+                "Conversions": {
+                    "value": "0.00",
+                    "unit": null,
+                    "confidence": 80
+                },
+                "Spend": {
+                    "value": "$10.26",
+                    "unit": null,
+                    "confidence": 80
+                }
+            },
+            "https:\/\/www.independentrvca.com\/#1739516392629-8329a50d-ffb5": {
+                "Clicks": {
+                    "value": "216",
+                    "unit": null,
+                    "confidence": 80
+                },
+                "Conversion Rate": {
+                    "value": "13.28%",
+                    "unit": null,
+                    "confidence": 80
+                },
+                "Conversions": {
+                    "value": "28.69",
+                    "unit": null,
+                    "confidence": 80
+                },
+                "Spend": {
+                    "value": "$475.48",
+                    "unit": null,
+                    "confidence": 80
+                }
+            },
+            "https:\/\/www.independentrvca.com\/about-us\/": {
+                "Clicks": {
+                    "value": "27",
+                    "unit": null,
+                    "confidence": 88
+                },
+                "Conversion Rate": {
+                    "value": "0.00%",
+                    "unit": null,
+                    "confidence": 88
+                },
+                "Conversions": {
+                    "value": "0.00",
+                    "unit": null,
+                    "confidence": 88
+                },
+                "Spend": {
+                    "value": "$6.24",
+                    "unit": null,
+                    "confidence": 88
+                }
+            },
+            "https:\/\/www.independentrvca.com\/contact-us\/": {
+                "Clicks": {
+                    "value": "2",
+                    "unit": null,
+                    "confidence": 80
+                },
+                "Conversion Rate": {
+                    "value": "0.00%",
+                    "unit": null,
+                    "confidence": 80
+                },
+                "Conversions": {
+                    "value": "0.00",
+                    "unit": null,
+                    "confidence": 80
+                },
+                "Spend": {
+                    "value": "$0.02",
+                    "unit": null,
+                    "confidence": 80
+                }
+            },
+            "https:\/\/www.independentrvca.com\/contact-us\/ (Record 1)": {
+                "Clicks": {
+                    "value": "1",
+                    "unit": null,
+                    "confidence": 80
+                },
+                "Conversion Rate": {
+                    "value": "0.00%",
+                    "unit": null,
+                    "confidence": 80
+                },
+                "Conversions": {
+                    "value": "0.00",
+                    "unit": null,
+                    "confidence": 80
+                },
+                "Spend": {
+                    "value": "$0.01",
+                    "unit": null,
+                    "confidence": 80
+                }
+            },
+            "https:\/\/www.independentrvca.com\/contact-us\/ (Record 2)": {
+                "Clicks": {
+                    "value": "1",
+                    "unit": null,
+                    "confidence": 80
+                },
+                "Conversion Rate": {
+                    "value": "0.00%",
+                    "unit": null,
+                    "confidence": 80
+                },
+                "Conversions": {
+                    "value": "0.00",
+                    "unit": null,
+                    "confidence": 80
+                },
+                "Spend": {
+                    "value": "$0.01",
+                    "unit": null,
+                    "confidence": 80
+                }
+            },
+            "https:\/\/www.independentrvca.com\/inventory\/": {
+                "Clicks": {
+                    "value": "46",
+                    "unit": null,
+                    "confidence": 80
+                },
+                "Conversion Rate": {
+                    "value": "6.52%",
+                    "unit": null,
+                    "confidence": 80
+                },
+                "Conversions": {
+                    "value": "3.00",
+                    "unit": null,
+                    "confidence": 80
+                },
+                "Spend": {
+                    "value": "$15.17",
+                    "unit": null,
+                    "confidence": 80
+                }
+            },
+            "https:\/\/www.independentrvca.com\/inventory\/ (Record 1)": {
+                "Clicks": {
+                    "value": "38",
+                    "unit": null,
+                    "confidence": 80
+                },
+                "Conversion Rate": {
+                    "value": "5.27%",
+                    "unit": null,
+                    "confidence": 80
+                },
+                "Conversions": {
+                    "value": "2.00",
+                    "unit": null,
+                    "confidence": 80
+                },
+                "Spend": {
+                    "value": "$13.00",
+                    "unit": null,
+                    "confidence": 80
+                }
+            },
+            "https:\/\/www.independentrvca.com\/inventory\/ (Record 2)": {
+                "Clicks": {
+                    "value": "8",
+                    "unit": null,
+                    "confidence": 80
+                },
+                "Conversion Rate": {
+                    "value": "12.50%",
+                    "unit": null,
+                    "confidence": 80
+                },
+                "Conversions": {
+                    "value": "1.00",
+                    "unit": null,
+                    "confidence": 80
+                },
+                "Spend": {
+                    "value": "$2.17",
+                    "unit": null,
+                    "confidence": 80
+                }
+            },
+            "https:\/\/www.independentrvca.com\/inventory\/micro-minnie\/": {
+                "Clicks": {
+                    "value": "3",
+                    "unit": null,
+                    "confidence": 88
+                },
+                "Conversion Rate": {
+                    "value": "0.00%",
+                    "unit": null,
+                    "confidence": 88
+                },
+                "Conversions": {
+                    "value": "0.00",
+                    "unit": null,
+                    "confidence": 88
+                },
+                "Spend": {
+                    "value": "$0.10",
+                    "unit": null,
+                    "confidence": 88
+                }
+            },
+            "https:\/\/www.independentrvca.com\/rv-finder\/": {
+                "Clicks": {
+                    "value": "5",
+                    "unit": null,
+                    "confidence": 88
+                },
+                "Conversion Rate": {
+                    "value": "0.00%",
+                    "unit": null,
+                    "confidence": 88
+                },
+                "Conversions": {
+                    "value": "0.00",
+                    "unit": null,
+                    "confidence": 88
+                },
+                "Spend": {
+                    "value": "$1.66",
+                    "unit": null,
+                    "confidence": 88
+                }
+            },
+            "https:\/\/www.independentrvca.com\/sell-your-rv\/": {
+                "Clicks": {
+                    "value": "13",
+                    "unit": null,
+                    "confidence": 88
+                },
+                "Conversion Rate": {
+                    "value": "0.00%",
+                    "unit": null,
+                    "confidence": 88
+                },
+                "Conversions": {
+                    "value": "0.00",
+                    "unit": null,
+                    "confidence": 88
+                },
+                "Spend": {
+                    "value": "$7.39",
+                    "unit": null,
+                    "confidence": 88
+                }
+            },
+            "https:\/\/www.independentrvca.com\/service\/": {
+                "Clicks": {
+                    "value": "14",
+                    "unit": null,
+                    "confidence": 80
+                },
+                "Conversion Rate": {
+                    "value": "7.14%",
+                    "unit": null,
+                    "confidence": 80
+                },
+                "Conversions": {
+                    "value": "1.00",
+                    "unit": null,
+                    "confidence": 80
+                },
+                "Spend": {
+                    "value": "$35.60",
+                    "unit": null,
+                    "confidence": 80
+                }
+            },
+            "https:\/\/www.independentrvca.com\/service\/ (Record 1)": {
+                "Clicks": {
+                    "value": "13",
+                    "unit": null,
+                    "confidence": 80
+                },
+                "Conversion Rate": {
+                    "value": "7.69%",
+                    "unit": null,
+                    "confidence": 80
+                },
+                "Conversions": {
+                    "value": "1.00",
+                    "unit": null,
+                    "confidence": 80
+                },
+                "Spend": {
+                    "value": "$35.59",
+                    "unit": null,
+                    "confidence": 80
+                }
+            },
+            "https:\/\/www.independentrvca.com\/service\/ (Record 2)": {
+                "Clicks": {
+                    "value": "1",
+                    "unit": null,
+                    "confidence": 80
+                },
+                "Conversion Rate": {
+                    "value": "0.00%",
+                    "unit": null,
+                    "confidence": 80
+                },
+                "Conversions": {
+                    "value": "0.00",
+                    "unit": null,
+                    "confidence": 80
+                },
+                "Spend": {
+                    "value": "$0.01",
+                    "unit": null,
+                    "confidence": 80
+                }
+            }
+        },
+        "Location": {
+            "30.0 mi around (37.685013, -121.238537) (custom)": {
+                "Clicks": {
+                    "value": "903",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Conversion Rate": {
+                    "value": "14.73%",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Conversions": {
+                    "value": "132.98",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Spend": {
+                    "value": "$1,708.91",
+                    "unit": null,
+                    "confidence": 82
+                }
+            },
+            "Alameda County, California, United States": {
+                "Clicks": {
+                    "value": "1",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Conversion Rate": {
+                    "value": "0.00%",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Conversions": {
+                    "value": "0.00",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Spend": {
+                    "value": "$2.62",
+                    "unit": null,
+                    "confidence": 82
+                }
+            },
+            "Amador County, California, United States": {
+                "Clicks": {
+                    "value": "3",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Conversion Rate": {
+                    "value": "0.00%",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Conversions": {
+                    "value": "0.00",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Spend": {
+                    "value": "$2.65",
+                    "unit": null,
+                    "confidence": 82
+                }
+            },
+            "Calaveras County, California, United States": {
+                "Clicks": {
+                    "value": "11",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Conversion Rate": {
+                    "value": "18.20%",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Conversions": {
+                    "value": "2.00",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Spend": {
+                    "value": "$41.40",
+                    "unit": null,
+                    "confidence": 82
+                }
+            },
+            "Contra Costa County, California, United States": {
+                "Clicks": {
+                    "value": "3",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Conversion Rate": {
+                    "value": "0.00%",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Conversions": {
+                    "value": "0.00",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Spend": {
+                    "value": "$0.79",
+                    "unit": null,
+                    "confidence": 82
+                }
+            },
+            "Merced County, California, United States": {
+                "Clicks": {
+                    "value": "9",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Conversion Rate": {
+                    "value": "33.33%",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Conversions": {
+                    "value": "3.00",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Spend": {
+                    "value": "$35.63",
+                    "unit": null,
+                    "confidence": 82
+                }
+            },
+            "San Joaquin County, California, United States": {
+                "Clicks": {
+                    "value": "38",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Conversion Rate": {
+                    "value": "28.94%",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Conversions": {
+                    "value": "11.00",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Spend": {
+                    "value": "$183.52",
+                    "unit": null,
+                    "confidence": 82
+                }
+            },
+            "Santa Clara, California, United States": {
+                "Clicks": {
+                    "value": "2",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Conversion Rate": {
+                    "value": "50.00%",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Conversions": {
+                    "value": "1.00",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Spend": {
+                    "value": "$4.48",
+                    "unit": null,
+                    "confidence": 82
+                }
+            },
+            "Stanislaus County, California, United States": {
+                "Clicks": {
+                    "value": "213",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Conversion Rate": {
+                    "value": "28.77%",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Conversions": {
+                    "value": "61.28",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Spend": {
+                    "value": "$478.49",
+                    "unit": null,
+                    "confidence": 82
+                }
+            },
+            "Tuolumne County, California, United States": {
+                "Clicks": {
+                    "value": "5",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Conversion Rate": {
+                    "value": "0.00%",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Conversions": {
+                    "value": "0.00",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Spend": {
+                    "value": "$8.00",
+                    "unit": null,
+                    "confidence": 82
+                }
+            }
+        },
+        "Recommendation": {
+            "Add callouts to your ads": {
+                "Estimated Impact": {
+                    "value": "+0.7%",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Type": {
+                    "value": "Ads & assets",
+                    "unit": null,
+                    "confidence": 82
+                }
+            },
+            "Add descriptions to your sitelinks": {
+                "Estimated Impact": {
+                    "value": "+<0.1%",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Type": {
+                    "value": "Ads & assets",
+                    "unit": null,
+                    "confidence": 82
+                }
+            },
+            "Add new keywords": {
+                "Estimated Impact": {
+                    "value": "+0.6%",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Type": {
+                    "value": "Keywords & targeting",
+                    "unit": null,
+                    "confidence": 82
+                }
+            },
+            "Add structured snippets to your ads": {
+                "Estimated Impact": {
+                    "value": "+0.7%",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Type": {
+                    "value": "Ads & assets",
+                    "unit": null,
+                    "confidence": 82
+                }
+            },
+            "Create a Performance Max campaign that includes store goals": {
+                "Estimated Impact": {
+                    "value": "+5.4%",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Type": {
+                    "value": "Automated campaigns",
+                    "unit": null,
+                    "confidence": 82
+                }
+            },
+            "Remove redundant keywords": {
+                "Estimated Impact": {
+                    "value": "+<0.1%",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Type": {
+                    "value": "Keywords & targeting",
+                    "unit": null,
+                    "confidence": 82
+                }
+            },
+            "Set a target ROAS": {
+                "Estimated Impact": {
+                    "value": "+8.0%",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Type": {
+                    "value": "Bidding & budgets",
+                    "unit": null,
+                    "confidence": 82
+                }
+            },
+            "Try the new Google Ads mobile app": {
+                "Estimated Impact": {
+                    "value": "\u2014 (No numeric impact)",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Type": {
+                    "value": "General \/ Other",
+                    "unit": null,
+                    "confidence": 82
+                }
+            },
+            "Update Google tags on Shopify": {
+                "Estimated Impact": {
+                    "value": "\u2014 (No numeric impact)",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Type": {
+                    "value": "Measurement",
+                    "unit": null,
+                    "confidence": 82
+                }
+            },
+            "Use your conversion data for Customer Match": {
+                "Estimated Impact": {
+                    "value": "\u2014 (No numeric impact)",
+                    "unit": null,
+                    "confidence": 82
+                },
+                "Type": {
+                    "value": "Keywords & targeting",
+                    "unit": null,
+                    "confidence": 82
+                }
+            }
+        },
+        "Scenario": {
+            "Existing settings": {
+                "Forecasted Conversions": {
+                    "value": "100",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Forecasted Cost Per Conversion": {
+                    "value": "$6.50",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Suggested Spend": {
+                    "value": "$750",
+                    "unit": null,
+                    "confidence": 92
+                }
+            },
+            "Planned settings (Recommended)": {
+                "Forecasted Conversions": {
+                    "value": "250",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Forecasted Cost Per Conversion": {
+                    "value": "$10.26",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Suggested Spend": {
+                    "value": "$2,560",
+                    "unit": null,
+                    "confidence": 92
+                }
+            }
+        },
+        "Search Term": {
+            "independence rv": {
+                "Ad Group": {
+                    "value": "\u2014 (PMax)",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Clicks": {
+                    "value": "12",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Conversions": {
+                    "value": "1.00",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Matched Campaign": {
+                    "value": "Performance Max Calls 1\/21\/25",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Spend": {
+                    "value": "$23.48",
+                    "unit": null,
+                    "confidence": 92
+                }
+            },
+            "independent rv": {
+                "Ad Group": {
+                    "value": "\u2014 (PMax)",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Clicks": {
+                    "value": "283",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Conversions": {
+                    "value": "45.73",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Matched Campaign": {
+                    "value": "Performance Max Calls 1\/21\/25",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Spend": {
+                    "value": "$275.51",
+                    "unit": null,
+                    "confidence": 92
+                }
+            },
+            "independent rv llc": {
+                "Ad Group": {
+                    "value": "\u2014 (PMax)",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Clicks": {
+                    "value": "32",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Conversions": {
+                    "value": "2.00",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Matched Campaign": {
+                    "value": "Performance Max Calls 1\/21\/25",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Spend": {
+                    "value": "$17.12",
+                    "unit": null,
+                    "confidence": 92
+                }
+            },
+            "independent rv modesto": {
+                "Ad Group": {
+                    "value": "\u2014 (PMax)",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Clicks": {
+                    "value": "57",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Conversions": {
+                    "value": "9.00",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Matched Campaign": {
+                    "value": "Performance Max Calls 1\/21\/25",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Spend": {
+                    "value": "$96.35",
+                    "unit": null,
+                    "confidence": 92
+                }
+            },
+            "independent rv modesto ca": {
+                "Ad Group": {
+                    "value": "\u2014 (PMax)",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Clicks": {
+                    "value": "11",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Conversions": {
+                    "value": "3.00",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Matched Campaign": {
+                    "value": "Performance Max Calls 1\/21\/25",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Spend": {
+                    "value": "$14.69",
+                    "unit": null,
+                    "confidence": 92
+                }
+            },
+            "modesto rv center": {
+                "Ad Group": {
+                    "value": "\u2014 (PMax)",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Clicks": {
+                    "value": "8",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Conversions": {
+                    "value": "0.00",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Matched Campaign": {
+                    "value": "Performance Max Calls 1\/21\/25",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Spend": {
+                    "value": "$2.81",
+                    "unit": null,
+                    "confidence": 92
+                }
+            },
+            "rv dealer near me": {
+                "Ad Group": {
+                    "value": "\u2014 (PMax)",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Clicks": {
+                    "value": "7",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Conversions": {
+                    "value": "1.00",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Matched Campaign": {
+                    "value": "Performance Max Calls 1\/21\/25",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Spend": {
+                    "value": "$6.98",
+                    "unit": null,
+                    "confidence": 92
+                }
+            },
+            "rv repair modesto": {
+                "Ad Group": {
+                    "value": "New Vehicles",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Clicks": {
+                    "value": "8",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Conversions": {
+                    "value": "5.00",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Matched Campaign": {
+                    "value": "Leads-Search-2",
+                    "unit": null,
+                    "confidence": 92
+                },
+                "Spend": {
+                    "value": "$33.08",
+                    "unit": null,
+                    "confidence": 92
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,107 @@
+[
+  {
+    "timestamp": "2026-07-22T02:03:01.816Z",
+    "level": "INFO",
+    "message": "Pipeline started: Module 1 Data Extraction",
+    "context": {}
+  },
+  {
+    "timestamp": "2026-07-22T02:03:01.819Z",
+    "level": "INFO",
+    "message": "Loaded plugin manifest: google_ads v1.0",
+    "context": {}
+  },
+  {
+    "timestamp": "2026-07-22T02:03:01.820Z",
+    "level": "INFO",
+    "message": "Skipping extraction and knowledge generation phase (AI Data Collection System generated knowledge.json).",
+    "context": {}
+  },
+  {
+    "timestamp": "2026-07-22T02:03:01.948Z",
+    "level": "INFO",
+    "message": "Module 3: Rule Engine started.",
+    "context": {}
+  },
+  {
+    "timestamp": "2026-07-22T02:03:01.952Z",
+    "level": "INFO",
+    "message": "Rule Engine loaded 3 rules across 2 categories.",
+    "context": {}
+  },
+  {
+    "timestamp": "2026-07-22T02:03:01.957Z",
+    "level": "INFO",
+    "message": "Module 3: Rule Engine completed successfully.",
+    "context": {
+      "triggered": 0,
+      "passed": 3
+    }
+  },
+  {
+    "timestamp": "2026-07-22T02:03:02.006Z",
+    "level": "INFO",
+    "message": "Module 4: Scoring Engine started.",
+    "context": {}
+  },
+  {
+    "timestamp": "2026-07-22T02:03:02.009Z",
+    "level": "INFO",
+    "message": "Module 4: Scoring Engine completed. Overall Score: 100 (A)",
+    "context": {}
+  },
+  {
+    "timestamp": "2026-07-22T02:03:02.042Z",
+    "level": "INFO",
+    "message": "Module 5: Opportunity Engine started.",
+    "context": {}
+  },
+  {
+    "timestamp": "2026-07-22T02:03:02.046Z",
+    "level": "INFO",
+    "message": "Module 5: Opportunity Engine completed. Generated 1 opportunities.",
+    "context": {}
+  },
+  {
+    "timestamp": "2026-07-22T02:03:02.074Z",
+    "level": "INFO",
+    "message": "Module 6: Recommendation Engine started.",
+    "context": {}
+  },
+  {
+    "timestamp": "2026-07-22T02:03:02.076Z",
+    "level": "WARN",
+    "message": "No recommendation reference found for rule AI_GENERATED",
+    "context": {}
+  },
+  {
+    "timestamp": "2026-07-22T02:03:02.077Z",
+    "level": "INFO",
+    "message": "Module 6: Recommendation Engine completed. Generated 1 recommendations.",
+    "context": {}
+  },
+  {
+    "timestamp": "2026-07-22T02:03:02.101Z",
+    "level": "INFO",
+    "message": "Module 7: Executive Summary Engine started.",
+    "context": {}
+  },
+  {
+    "timestamp": "2026-07-22T02:03:02.103Z",
+    "level": "INFO",
+    "message": "Module 7: Executive Summary Engine completed.",
+    "context": {}
+  },
+  {
+    "timestamp": "2026-07-22T02:03:02.124Z",
+    "level": "INFO",
+    "message": "Module 8: Contract Builder started.",
+    "context": {}
+  },
+  {
+    "timestamp": "2026-07-22T02:03:02.126Z",
+    "level": "INFO",
+    "message": "Module 8: Contract Builder completed successfully.",
+    "context": {}
+  }
+]

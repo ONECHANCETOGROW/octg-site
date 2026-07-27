@@ -1,0 +1,92 @@
+{
+  "metadata": {
+    "contract_version": "1.0",
+    "engine_version": "1.0",
+    "plugin": "google_ads",
+    "generated_at": "2026-07-18T03:02:16.476Z"
+  },
+  "knowledge": {
+    "metadata": {
+      "contract_version": "1.0",
+      "engine_version": "1.0",
+      "plugin": "google_ads",
+      "plugin_version": "1.0",
+      "generated_at": "2026-07-18T03:02:15Z",
+      "client_id": "1",
+      "audit_id": "8",
+      "source_files": [
+        "ai_data_collection"
+      ],
+      "unclassified_fact_groups": 1
+    },
+    "statistics": {
+      "total_spend": 2466.48,
+      "total_conversions": 211.26,
+      "total_clicks": 1188
+    },
+    "entities": {
+      "campaigns": [],
+      "searchTerms": [],
+      "keywords": [],
+      "devices": [],
+      "locations": [],
+      "conversions": [],
+      "landingPages": [],
+      "tracking": [],
+      "budget": [],
+      "audiences": [],
+      "extensions": []
+    }
+  },
+  "scorecard": {
+    "metadata": {
+      "contract_version": "1.0",
+      "engine_version": "1.0",
+      "plugin": "google_ads",
+      "generated_at": "2026-07-18T03:02:16.386Z"
+    },
+    "overall_score": 100,
+    "health_status": "Excellent",
+    "grade": "A",
+    "categories": {},
+    "penalties": []
+  },
+  "opportunities": {
+    "metadata": {
+      "contract_version": "1.0",
+      "engine_version": "1.0",
+      "plugin": "google_ads",
+      "generated_at": "2026-07-18T03:02:16.413Z"
+    },
+    "opportunities": []
+  },
+  "recommendations": {
+    "metadata": {
+      "contract_version": "1.0",
+      "engine_version": "1.0",
+      "plugin": "google_ads",
+      "generated_at": "2026-07-18T03:02:16.434Z"
+    },
+    "recommendations": []
+  },
+  "executive_summary": {
+    "metadata": {
+      "contract_version": "1.0",
+      "engine_version": "1.0",
+      "plugin": "google_ads",
+      "generated_at": "2026-07-18T03:02:16.456Z"
+    },
+    "executive_summary": "The marketing account has achieved an overall health score of 100 (A). While there are performing segments, immediate attention is required in key areas to prevent budget waste.",
+    "biggest_wins": [
+      "Active campaigns driving baseline conversions."
+    ],
+    "biggest_risks": [
+      "No immediate high-priority risks detected."
+    ],
+    "immediate_actions": [
+      "Continue monitoring campaign performance."
+    ],
+    "long_term_strategy": "Focus on reallocating wasted spend from poor performing segments into top converting campaigns to scale ROI.",
+    "overall_business_assessment": "Stable but needs optimization."
+  }
+}

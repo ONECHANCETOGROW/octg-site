@@ -2,15 +2,16 @@ import os
 import ftplib
 
 host = "191.101.79.129"
-user = "u263949463.darkorange-deer-673279.hostingersite.com"
+user = "u263949463.onechancetogrow.com"
 password = "G6CXmz37@123"
 
 files_to_upload = [
-    (r"d:\Website\octg-site\admin\includes\admin-layout-start.php", "admin/includes/admin-layout-start.php"),
-    (r"d:\Website\octg-site\admin\page-builder.php", "admin/page-builder.php"),
-    (r"d:\Website\octg-site\admin\includes\builder\about.php", "admin/includes/builder/about.php"),
-    (r"d:\Website\octg-site\about.php", "about.php"),
-    (r"d:\Website\octg-site\api\_lib.php", "api/_lib.php")
+    (r"d:\Website\octg-site\index.php", "index.php"),
+    (r"d:\Website\octg-site\assets\css\index.css", "assets/css/index.css"),
+    (r"d:\Website\octg-site\assets\css\components.css", "assets/css/components.css"),
+    (r"d:\Website\octg-site\assets\css\variables.css", "assets/css/variables.css"),
+    (r"d:\Website\octg-site\includes\header.php", "includes/header.php"),
+    (r"d:\Website\octg-site\includes\footer.php", "includes/footer.php")
 ]
 
 try:

@@ -14,11 +14,14 @@
 
    1. Uncomment the @font-face block below and point src at your licensed
       font files (e.g. copy them to /assets/fonts/ and reference them here).
-   2. Change --font-display below from 'Bodoni Moda' to 'MoonScape'.
+   2. Change --font-display below from 'Plus Jakarta Sans' to 'MoonScape'.
 
    Every hero heading, section heading, stat number, and brand statement
    site-wide reads from --font-display, so both edits together are the
    entire activation — no other file references a font name directly.
+   Current display face: Plus Jakarta Sans (bold/extrabold), loaded via the
+   Google Fonts link in includes/header.php — chosen for a bold, modern
+   agency feel in place of the previous serif (Bodoni Moda).
 */
 /*
 @font-face{
@@ -44,15 +47,14 @@
   --white:      #FFFFFF;
 
   /* --- Type families ---
-     Display: see the MOONSCAPE ACTIVATION note at the top of this file.
-     Bodoni Moda is the placeholder until a licensed webfont is available. */
-  --font-display: 'Bodoni Moda', Georgia, serif; /* PLACEHOLDER for MoonScape */
+     Display: see the MOONSCAPE ACTIVATION note at the top of this file. */
+  --font-display: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-body:    'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-label:   'Poppins', -apple-system, sans-serif;
 
   /* --- Layout --- */
-  --container: 1280px;
-  --edge: clamp(20px, 5vw, 80px);
+  --container: 1800px;
+  --edge: clamp(24px, 6vw, 80px);
 
   /* --- Fluid type scale --- */
   --h1: clamp(2.6rem, 1.7rem + 3.6vw, 5.6rem);
@@ -62,4 +64,5 @@
 
   /* --- Motion --- */
   --ease: cubic-bezier(.22,.68,.32,1);
+  --ease-reveal: cubic-bezier(.22,1,.36,1); /* premium ease-out, used by scroll-reveal only */
 }

@@ -1,6 +1,65 @@
+# One Chance To Grow — robots.txt
+# Public pages are open to search and AI crawlers. The admin panel is blocked.
+
 User-agent: *
 Allow: /
-Disallow: /admin/
+Disallow: /admin8828051506/
+
+User-agent: Googlebot
+Allow: /
+Disallow: /admin8828051506/
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /admin8828051506/
+
+User-agent: Bingbot
+Allow: /
+Disallow: /admin8828051506/
+
+User-agent: GPTBot
+Allow: /
+Disallow: /admin8828051506/
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /admin8828051506/
+
+User-agent: anthropic-ai
+Allow: /
+Disallow: /admin8828051506/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /admin8828051506/
+
+User-agent: Applebot
+Allow: /
+Disallow: /admin8828051506/
+
+User-agent: Applebot-Extended
+Allow: /
+Disallow: /admin8828051506/
+
+User-agent: CCBot
+Allow: /
+Disallow: /admin8828051506/
+
+User-agent: Amazonbot
+Allow: /
+Disallow: /admin8828051506/
+
+User-agent: facebookexternalhit
+Allow: /
+Disallow: /admin8828051506/
+
+User-agent: Twitterbot
+Allow: /
+Disallow: /admin8828051506/
+
+User-agent: LinkedInBot
+Allow: /
+Disallow: /admin8828051506/
 
 Sitemap: https://onechancetogrow.com/sitemap.xml
 Sitemap: https://onechancetogrow.com/sitemap-images.xml

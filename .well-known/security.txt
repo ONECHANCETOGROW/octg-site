@@ -1,4 +1,4 @@
-Contact: mailto:hello@onechancetogrow.com
+Contact: mailto:support@onechancetogrow.com
 Contact: tel:+18022768331
 Preferred-Languages: en
 Canonical: https://onechancetogrow.com/.well-known/security.txt

@@ -18,6 +18,15 @@
 .glossary-term__link svg{ transition:transform .3s var(--ease); }
 .glossary-term:hover .glossary-term__link svg{ transform:translateX(3px); }
 
+/* Dark mode — same translucent-card pattern used for industry/team/case
+   study cards elsewhere on the site. */
+.site--dark .glossary-list{ background:rgba(255,255,255,0.08) !important; border-color:rgba(255,255,255,0.08) !important; }
+.site--dark .glossary-term{ background:rgba(15,15,10,0.6) !important; }
+.site--dark .glossary-term:hover{ background:rgba(15,15,10,0.85) !important; }
+.site--dark .glossary-term h3{ color:var(--paper) !important; }
+.site--dark .glossary-term p{ color:rgba(247,246,241,0.72) !important; }
+.site--dark .glossary-term__link{ color:#a3ff47 !important; }
+
 @media (min-width:640px){ .glossary-list{ grid-template-columns:repeat(2,1fr); } }
 @media (min-width:980px){
   .glossary-hero{ padding:190px 0 30px; }

@@ -1,0 +1,9 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Extracted Data Array",
+    "description": "Output format for Module 1 Data Extraction Engine",
+    "type": "array",
+    "items": {
+        "type": "object"
+    }
+}

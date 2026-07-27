@@ -47,7 +47,7 @@ if ($pdo) {
 }
 
 try {
-    octg_save_lead('audit', [
+    $leadId = octg_save_lead('audit', [
         'name' => $businessName, 'business_name' => $businessName, 'phone' => $phone,
         'email' => $email, 'website' => $websiteUrl,
         'interested_service' => implode(', ', $auditAreas), 'source_page' => $sourcePage,
@@ -55,7 +55,8 @@ try {
     octg_notify_lead('Free Audit Request', [
         'Business Name' => $businessName, 'Website' => $websiteUrl, 'Email' => $email,
         'Phone' => $phone, 'Areas Requested' => implode(', ', $auditAreas),
-    ]);
+    ], $leadId);
+    octg_send_customer_confirmation('Free Audit Request', $email, $businessName);
 } catch (Throwable $e) {
     // Audit request is already saved above regardless of notification outcome.
 }

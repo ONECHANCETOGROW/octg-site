@@ -4,24 +4,62 @@
    ========================================================================== */
 
 .hero{
-  padding:168px 0 90px;
-  display:grid; gap:56px;
+  padding-top:132px; padding-bottom:64px;
+  display:grid; gap:40px;
   position:relative;
 }
-@media (min-width:940px){ .hero{ padding:200px 0 120px; grid-template-columns:1.15fr 0.85fr; align-items:center; } }
+@media (min-width:940px){ .hero{ padding-top:200px; padding-bottom:120px; gap:56px; grid-template-columns:1.15fr 0.85fr; align-items:center; } }
 
-.hero__eyebrow-row{ display:flex; flex-wrap:wrap; gap:10px 16px; align-items:center; margin-bottom:26px; }
+/* Hero Full Background modifier */
+.hero--has-bg {
+  display: flex; align-items: center; justify-content: center;
+  min-height: 100vh; padding: 120px 20px 80px; overflow: hidden;
+  color: var(--white);
+}
+@media (min-width:940px) { .hero--has-bg { min-height: 100vh; padding-top: 140px; } }
+
+.hero__bg-container {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;
+}
+.hero__bg-overlay {
+  position: absolute; inset: 0; background: rgba(10, 10, 10, 0.7); z-index: 1; mix-blend-mode: multiply;
+}
+.hero__bg-media {
+  width: 100%; height: 100%; object-fit: cover; z-index: 0; position: relative;
+}
+
+.hero__content-center {
+  position: relative; z-index: 2; text-align: center; max-width: 1400px; margin: 0 auto;
+}
+.hero--has-bg .hero__eyebrow-row { justify-content: center; }
+.hero--has-bg .eyebrow { color: rgba(255,255,255,0.8); border-color: rgba(255,255,255,0.2); }
+.hero--has-bg h1 { color: var(--white); }
+.hero--has-bg .lead { color: rgba(255,255,255,0.9); margin-left: auto; margin-right: auto; }
+.hero--has-bg .hero__ctas { justify-content: center; }
+.hero--has-bg .hero__tagline { border-top-color: rgba(255,255,255,0.15); justify-content: center; color: rgba(255,255,255,0.8); }
+.hero--has-bg .hero__tagline b { color: var(--white); }
+
+.btn-ghost-light { color: var(--white); border-color: rgba(255,255,255,0.3); }
+.btn-ghost-light:hover { background: var(--white); color: var(--ink); border-color: var(--white); }
+
+.hero__eyebrow-row{ display:flex; flex-wrap:wrap; gap:10px 16px; align-items:center; margin-bottom:22px; }
 .hero__eyebrow-row .eyebrow{ margin-bottom:0; }
 
-.hero h1{ margin-bottom:26px; max-width:15ch; }
-.hero .lead{ margin-bottom:38px; }
-.hero__ctas{ display:flex; flex-wrap:wrap; gap:16px; margin-bottom:52px; }
+.hero h1{ margin-bottom:20px; text-wrap:initial; }
+.hero .lead{ margin-bottom:28px; max-width:54ch; text-wrap:pretty; }
+.hero__ctas{ display:flex; flex-wrap:wrap; gap:14px; margin-bottom:32px; }
+@media (min-width:940px){ .hero .lead{ margin-bottom:38px; } .hero__ctas{ gap:16px; margin-bottom:52px; } }
+@media (max-width:759px){
+  .hero__ctas{ flex-direction:column; align-items:stretch; }
+  .hero__ctas .btn{ width:100%; justify-content:center; }
+}
 
 .hero__tagline{
   display:flex; flex-wrap:wrap; gap:8px 22px;
   font-family:var(--font-label); font-size:0.78rem; letter-spacing:0.18em; text-transform:uppercase;
-  color:var(--graphite); padding-top:26px; border-top:1px solid var(--paper-line);
+  color:var(--graphite); padding-top:18px; border-top:1px solid var(--paper-line);
 }
+@media (min-width:940px){ .hero__tagline{ padding-top:26px; } }
 .hero__tagline b{ font-weight:500; color:var(--ink); }
 .hero__tagline .dot{ color:var(--green-deep); }
 
@@ -31,6 +69,23 @@
 .hero__vine{
   position:absolute; top:-30px; right:-26px; width:120px; height:170px; z-index:2; color:var(--green);
 }
+@media (max-width:539px){
+  .hero__vine{ width:84px; height:120px; top:-16px; right:-10px; }
+}
+
+/* Premium placeholder for the hero visual until a real CMS photo is
+   uploaded — replaces the generic "Connected to CMS" slot marker (never
+   shown to visitors) with an intentional brand-toned gradient panel. */
+.hero__frame .media-placeholder[data-cms-key="hero_image"]{
+  border:none;
+  background:
+    repeating-linear-gradient(135deg, transparent, transparent 13px, rgba(247,246,241,0.045) 13px, rgba(247,246,241,0.045) 14px),
+    radial-gradient(120% 130% at 18% 0%, rgba(92,143,34,0.4), transparent 55%),
+    linear-gradient(160deg, var(--ink) 0%, #223016 55%, var(--green-deep) 130%);
+}
+.hero__frame .media-placeholder[data-cms-key="hero_image"]::after{ display:none; }
+.hero__frame .media-placeholder[data-cms-key="hero_image"] svg,
+.hero__frame .media-placeholder[data-cms-key="hero_image"] .media-placeholder__label{ display:none; }
 
 /* ---------- Trust bar ---------- */
 .trust-bar{ padding:36px 0; border-top:1px solid var(--paper-line); border-bottom:1px solid var(--paper-line); }
@@ -38,16 +93,131 @@
   display:block; text-align:center; font-family:var(--font-label); font-size:0.72rem; letter-spacing:0.1em;
   text-transform:uppercase; color:var(--graphite); margin-bottom:22px;
 }
-.trust-bar__logos{ display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:28px; }
-.trust-bar__logo{ position:relative; width:120px; height:48px; opacity:0.6; transition:opacity .3s var(--ease); }
-.trust-bar__logo:hover{ opacity:1; }
-.trust-bar__logo .media-placeholder{ padding:8px; }
-.trust-bar__logo .media-placeholder svg{ width:20px; height:20px; }
-.trust-bar__logo .media-placeholder__label{ font-size:0.6rem; }
-.trust-bar__logo .media-placeholder__label b{ font-size:0.62rem; }
-.trust-bar__logo .media-real{ object-fit:contain; }
+
+/* Premium logo-card system: every uploaded logo — whatever its own
+   proportions, padding or background — sits in an identical glass card, so
+   the row reads as curated rather than a raw dump of client-supplied files.
+   No mix-blend-mode trickery; the card normalizes presentation instead. */
+.trust-bar__logo-slide{
+  position:relative;
+  width:140px; height:128px; flex-shrink:0;
+  display:flex; align-items:center; justify-content:center;
+  padding:18px; border-radius:16px;
+  background:var(--paper); border:1px solid var(--paper-line);
+  box-shadow:0 10px 26px rgba(0,0,0,0.04), inset 0 1px 0 rgba(255,255,255,0.4);
+  transition:transform .35s var(--ease), border-color .35s var(--ease), box-shadow .35s var(--ease), background .35s var(--ease);
+}
+/* Tiny glowing accent marks, top and bottom center — the "this card is
+   individually lit" detail from the reference. Quiet at rest, brightens
+   on hover along with the border. */
+.trust-bar__logo-slide::before,
+.trust-bar__logo-slide::after{
+  content:''; position:absolute; left:50%; transform:translateX(-50%);
+  width:28px; height:2px; border-radius:2px;
+  background:var(--green);
+  box-shadow:0 0 10px 1px rgba(92,143,34,0.45);
+  opacity:0.45;
+  transition:opacity .35s var(--ease), box-shadow .35s var(--ease), width .35s var(--ease);
+}
+.trust-bar__logo-slide::before{ top:-1px; }
+.trust-bar__logo-slide::after{ bottom:-1px; }
+.trust-bar__logo-slide:hover{
+  transform:translateY(-3px);
+  border-color:var(--green);
+  box-shadow:0 14px 30px rgba(92,143,34,0.15), inset 0 1px 0 rgba(255,255,255,0.5);
+}
+.trust-bar__logo-slide:hover::before,
+.trust-bar__logo-slide:hover::after{
+  width:38px; opacity:0.9;
+  box-shadow:0 0 16px 2px rgba(92,143,34,0.6);
+}
+.trust-bar__img{ max-width:100%; max-height:100%; width:auto; height:auto; object-fit:contain; }
+.hero__bg-video { border-radius: 12px; }
+
+.site--dark .trust-bar__logo-slide{
+  background:rgba(15,15,10,0.5) !important;
+  -webkit-backdrop-filter:blur(16px); backdrop-filter:blur(16px);
+  border-color:rgba(255,255,255,0.08) !important;
+  box-shadow:0 10px 26px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.06);
+}
+.site--dark .trust-bar__logo-slide::before,
+.site--dark .trust-bar__logo-slide::after{
+  background:#a3ff47;
+  box-shadow:0 0 12px 2px rgba(163,255,71,0.5);
+  opacity:0.5;
+}
+.site--dark .trust-bar__logo-slide:hover{
+  border-color:#a3ff47 !important;
+  box-shadow:0 16px 34px rgba(163,255,71,0.16), 0 0 0 1px rgba(163,255,71,0.2), inset 0 1px 0 rgba(255,255,255,0.1);
+}
+.site--dark .trust-bar__logo-slide:hover::before,
+.site--dark .trust-bar__logo-slide:hover::after{
+  opacity:1;
+  box-shadow:0 0 20px 3px rgba(163,255,71,0.7);
+}
+
+/* Quiet placeholder until real client logos are uploaded */
+.trust-bar__logo-slide .media-placeholder{
+  border:none; background:transparent; display: flex; align-items: center; justify-content: center;
+}
+.trust-bar__logo-slide .media-placeholder::after{ display:none; }
+.trust-bar__logo-slide .media-placeholder .media-placeholder__label{ display:none; }
 
 @media (min-width:760px){
-  .trust-bar__logos{ gap:48px; }
-  .trust-bar__logo{ width:140px; height:56px; }
+  .trust-bar__logo-slide{ width:190px; height:172px; padding:26px; border-radius:20px; }
+  .trust-bar__logo-slide::before,
+  .trust-bar__logo-slide::after{ width:34px; }
+  .trust-bar__logo-slide:hover::before,
+  .trust-bar__logo-slide:hover::after{ width:46px; }
 }
+
+/* Slow, luxurious loop — long enough that every logo actually registers
+   before the set repeats. Scoped to the trust bar only; the shared
+   .marquee__track default (animations.css) stays 42s for any future reuse. */
+.trust-bar__marquee .marquee__track{ animation-duration:34s; }
+
+/* Quiet placeholder for testimonial photos until real ones are uploaded —
+   .quote-card is shared with reviews.php, so this is scoped to the
+   homepage's own instances only; reviews.php is untouched. */
+.page-home .quote-card__who .media-placeholder{
+  border:none; background:var(--green-pale);
+}
+.page-home .quote-card__who .media-placeholder::after{ display:none; }
+.page-home .quote-card__who .media-placeholder svg,
+.page-home .quote-card__who .media-placeholder__label{ display:none; }
+
+/* .pillar and .marquee are homepage-exclusive components; mobile spacing
+   for shared components (.compare, .why-item, .quote-card, .final-cta,
+   .section-head, .stat-card) now lives in components.css/utilities.css
+   as global rules, so every page shares the same spacing system. */
+@media (max-width:539px){
+  .pillar{ padding:34px 24px; }
+  .marquee{ padding:24px 0; }
+}
+
+/* ---------- By The Numbers (homepage stat strip) ----------
+   Deliberately its own class, not a reuse of about.css's .team-stats:
+   that component is styled for a dark hero background (light text,
+   translucent-white grid lines) and has no rules in this file at all,
+   so placing it here rendered completely unstyled. Same grid/icon
+   layout, values remapped for the light background this section
+   actually sits on. */
+.home-stats{
+  width:min(94vw, 1000px); margin:0 auto;
+  display:grid; grid-template-columns:repeat(2,1fr); gap:1px;
+  background:var(--paper-line);
+  border:1px solid var(--paper-line); border-radius:18px; overflow:hidden;
+}
+.home-stats__item{
+  background:var(--paper);
+  padding:26px 16px; display:flex; flex-direction:column; align-items:center; text-align:center; gap:6px;
+}
+.home-stats__item svg{ width:24px; height:24px; color:var(--green-deep); margin-bottom:2px; }
+.home-stats__value{ font-family:var(--font-display); font-weight:800; font-size:1.7rem; color:var(--ink); }
+.home-stats__label{ font-family:var(--font-label); font-size:0.68rem; letter-spacing:0.05em; text-transform:uppercase; color:var(--graphite); }
+@media (min-width:700px){ .home-stats{ grid-template-columns:repeat(4,1fr); } }
+.site--dark .home-stats{ background:rgba(255,255,255,0.08); border-color:rgba(255,255,255,0.08); }
+.site--dark .home-stats__item{ background:rgba(15,15,10,0.55); }
+.site--dark .home-stats__item svg{ color:#a3ff47; }
+.site--dark .home-stats__value{ color:var(--paper); }
+.site--dark .home-stats__label{ color:rgba(247,246,241,0.55); }

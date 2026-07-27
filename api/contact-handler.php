@@ -26,8 +26,14 @@ $businessName = octg_field('business_name');
 $message     = octg_field('message');
 $sourcePage  = octg_field('source_page', '/contact.php');
 
-if ($name === '' || $message === '' || !octg_is_valid_email($email)) {
-    octg_send_json(['ok' => false, 'error' => 'Please fill in your name, a valid email, and a message.'], 422);
+/* Only Name and Phone are required — Email, Message, and Business Name are
+   all optional. Email is still format-checked, but only when the visitor
+   actually provided one; an empty email is valid, a malformed one isn't. */
+if ($name === '' || $phone === '') {
+    octg_send_json(['ok' => false, 'error' => 'Please fill in your name and phone number.'], 422);
+}
+if ($email !== '' && !octg_is_valid_email($email)) {
+    octg_send_json(['ok' => false, 'error' => 'That email address doesn\'t look right — please double check it, or leave it blank.'], 422);
 }
 
 $data = compact('name', 'email', 'phone', 'businessName', 'message', 'sourcePage');
@@ -53,14 +59,15 @@ if ($pdo) {
 /* CRM record + email notification — never allowed to break the form's
    success response, even if something in here throws. */
 try {
-    octg_save_lead('contact', [
+    $leadId = octg_save_lead('contact', [
         'name' => $name, 'business_name' => $businessName, 'phone' => $phone,
         'email' => $email, 'message' => $message, 'source_page' => $sourcePage,
     ]);
     octg_notify_lead('Contact Form', [
         'Name' => $name, 'Business Name' => $businessName, 'Email' => $email,
         'Phone' => $phone, 'Message' => $message,
-    ]);
+    ], $leadId);
+    octg_send_customer_confirmation('Contact Form', $email, $name);
 } catch (Throwable $e) {
     // Contact message is already saved above — a notification failure here
     // must never surface as a failed submission to the visitor.

@@ -1,0 +1,10 @@
+CREATE TABLE IF NOT EXISTS `mi_channels` (
+    `id` BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    `code` VARCHAR(64) NOT NULL UNIQUE,
+    `name` VARCHAR(190) NOT NULL,
+    `description` TEXT NULL,
+    `is_active` TINYINT(1) NOT NULL DEFAULT 0,
+    `sort_order` SMALLINT UNSIGNED NOT NULL DEFAULT 0,
+    `created_at` DATETIME NOT NULL,
+    `updated_at` DATETIME NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

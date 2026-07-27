@@ -1,0 +1,249 @@
+{
+    "metadata": {
+        "contract_version": "1.0",
+        "engine_version": "1.0",
+        "plugin": "google_ads",
+        "plugin_version": "1.0",
+        "generated_at": "2026-07-22T01:06:02Z",
+        "client_id": "1",
+        "audit_id": "12",
+        "source_files": [
+            "ai_data_collection"
+        ],
+        "unclassified_fact_groups": 0
+    },
+    "statistics": {
+        "total_spend": 2488.08,
+        "total_conversions": 213.94,
+        "total_clicks": 1147,
+        "total_impressions": 13036
+    },
+    "entities": {
+        "campaigns": [
+            {
+                "campaign_name": "Leads-Search-2",
+                "clicks": 288,
+                "conversions": 75.96,
+                "impressions": 3560,
+                "spend": 759.13
+            },
+            {
+                "campaign_name": "Performance Max Calls 12125",
+                "clicks": 859,
+                "conversions": 137.98,
+                "impressions": 9476,
+                "spend": 1728.95
+            }
+        ],
+        "searchTerms": [
+            {
+                "clicks": 11,
+                "conversions": 1,
+                "impressions": 17,
+                "search_term": "independence rv",
+                "spend": 21.87
+            },
+            {
+                "clicks": 272,
+                "conversions": 53.72,
+                "impressions": 500,
+                "search_term": "independent rv",
+                "spend": 324.45
+            },
+            {
+                "clicks": 29,
+                "conversions": 2,
+                "impressions": 91,
+                "search_term": "independent rv llc",
+                "spend": 16.96
+            },
+            {
+                "clicks": 6,
+                "conversions": 2,
+                "impressions": 8,
+                "search_term": "independent rv modesto ca",
+                "spend": 7.37
+            },
+            {
+                "clicks": 44,
+                "conversions": 7,
+                "impressions": 129,
+                "search_term": "independent rv modesto Performance Max",
+                "spend": 80.91
+            },
+            {
+                "clicks": 12,
+                "conversions": 1,
+                "impressions": 30,
+                "search_term": "independent rv modesto Search - Broad",
+                "spend": 6.82
+            },
+            {
+                "clicks": 40,
+                "conversions": 4,
+                "impressions": 92,
+                "search_term": "independent rv modesto Search - Phrase",
+                "spend": 53.6
+            },
+            {
+                "clicks": 8,
+                "conversions": 0,
+                "impressions": 46,
+                "search_term": "modesto rv center",
+                "spend": 2.81
+            },
+            {
+                "clicks": 7,
+                "conversions": 1,
+                "impressions": 51,
+                "search_term": "rv dealer near me",
+                "spend": 6.98
+            },
+            {
+                "clicks": 6,
+                "conversions": 2,
+                "impressions": 26,
+                "search_term": "rv repair modesto",
+                "spend": 28.13
+            },
+            {
+                "clicks": 7,
+                "conversions": 3.5,
+                "impressions": 66,
+                "search_term": "rv repair near me",
+                "spend": 24.46
+            }
+        ],
+        "keywords": [
+            {
+                "clicks": 127,
+                "conversions": 34.2,
+                "impressions": 1128,
+                "keyword": "buy a rv",
+                "spend": 288.41
+            },
+            {
+                "clicks": 12,
+                "conversions": 1,
+                "impressions": 141,
+                "keyword": "buy new rv",
+                "spend": 25.03
+            },
+            {
+                "clicks": 16,
+                "conversions": 4.4,
+                "impressions": 162,
+                "keyword": "CA",
+                "spend": 17.93
+            },
+            {
+                "clicks": 9,
+                "conversions": 3.87,
+                "impressions": 118,
+                "keyword": "new 5th wheel rvs",
+                "spend": 65.34
+            },
+            {
+                "clicks": 9,
+                "conversions": 1,
+                "impressions": 169,
+                "keyword": "new class a rvs",
+                "spend": 7.36
+            },
+            {
+                "clicks": 3,
+                "conversions": 0,
+                "impressions": 157,
+                "keyword": "new class c rvs",
+                "spend": 21.54
+            },
+            {
+                "clicks": 10,
+                "conversions": 1,
+                "impressions": 90,
+                "keyword": "new rv",
+                "spend": 8.42
+            },
+            {
+                "clicks": 10,
+                "conversions": 4,
+                "impressions": 287,
+                "keyword": "new rv dealership near me",
+                "spend": 34.78
+            },
+            {
+                "clicks": 5,
+                "conversions": 0,
+                "impressions": 176,
+                "keyword": "new rv financing",
+                "spend": 15.44
+            },
+            {
+                "clicks": 8,
+                "conversions": 0,
+                "impressions": 121,
+                "keyword": "new rvs for sale",
+                "spend": 14.91
+            },
+            {
+                "clicks": 22,
+                "conversions": 3.5,
+                "impressions": 348,
+                "keyword": "rv collision repair",
+                "spend": 65.05
+            },
+            {
+                "clicks": 49,
+                "conversions": 21,
+                "impressions": 440,
+                "keyword": "rv repair Modesto",
+                "spend": 173.73
+            },
+            {
+                "clicks": 1,
+                "conversions": 0,
+                "impressions": 65,
+                "keyword": "rv roof repair",
+                "spend": 0.01
+            },
+            {
+                "clicks": 0,
+                "conversions": 0,
+                "impressions": 0,
+                "keyword": "venta",
+                "spend": 0
+            }
+        ],
+        "devices": [],
+        "locations": [],
+        "conversions": [],
+        "landingPages": [],
+        "tracking": [],
+        "budget": [],
+        "audiences": [],
+        "extensions": [],
+        "ai_recommendations": [
+            {
+                "priority": "Medium",
+                "what_to_change": "Increase the daily budget for the Performance Max campaign (Performance Max Calls 1\/21\/25) by $32.00\/day (from $58.00 to $90.00) \u2014 The campaign currently operates at a 97% budget utilization rate, and this budget expansion is forecasted to capture untapped headroom, driving an estimated 5.9 more weekly conversions and $8.4k in weekly conversion value. (Priority: High)",
+                "why_it_matters": "Increase the daily budget for the Search campaign (Leads-Search-2) by $7.50\/day (a 30% increase from $25.00 to $32.50) \u2014 This campaign is highly efficient but restricted by its budget (97% utilization rate over the last 28 days); increasing it creates a healthy buffer to capture more local vehicle-buying intent during peak search periods. (Priority: Medium) Regularly audit search terms and add negative keywords for non-sales and non-service intents (such as \"rv salvage\" or \"rv rental\") \u2014 While your local search terms are highly relevant, filtering out low-intent or unrelated queries will preserve your budget and focus your ad spend strictly on high-intent sales and repair leads. (Priority: Low)"
+            }
+        ],
+        "ai_opportunities": [
+            {
+                "priority": "Medium",
+                "what_to_change": "Expand Performance Max campaign daily budget capacity \u2014 ROI Impact: High, Effort: Low \u2014 The Performance Max Calls 1\/21\/25 campaign is operating at a 97% budget utilization rate with a very efficient $12.53 CPA. Expanding the daily budget by $32.00 is forecasted by Google's internal optimization tools to drive an additional 5.9 weekly conversions and $8.4k in weekly conversion value.",
+                "why_it_matters": "Increase budget buffer for the main Search campaign (Leads-Search-2) \u2014 ROI Impact: High, Effort: Low \u2014 Leads-Search-2 is highly efficient with an average CPA of $9.99 (even lower than the account-wide average), but it currently runs at a 97% budget utilization rate. Adding a modest $7.50 daily budget buffer prevents the campaign from being capped during peak search hours. Align Search ad copy with special financing and local program offers \u2014 ROI Impact: Medium, Effort: Medium \u2014 Your business profile highlights specialized financing programs like ITIN programs and zero down payment options. Adding these high-converting value propositions as dedicated headlines and sitelinks in your Leads-Search-2 campaign will directly increase click-through rates and capture more credit-seeking RV buyers."
+            }
+        ],
+        "ai_executive_summary": [
+            {
+                "biggest_risks": "",
+                "biggest_wins": "",
+                "executive_summary": "Executive Summary: Over the last 30 days (Jun 22 \u2013 Jul 21, 2026), the account spent $2,488.08, driving 1,147 clicks, 130,036 impressions, and 213.94 conversions. This represents a highly efficient operation with strong customer acquisition costs across both your Search and Performance Max campaigns.",
+                "immediate_actions": "",
+                "long_term_strategy": ""
+            }
+        ]
+    }
+}

@@ -1,0 +1,215 @@
+/* 
+  One Chance To Grow - Premium Client Portal Styles 
+  Overrides default app.css to inject a Dark Mode Glassmorphism aesthetic.
+*/
+
+:root {
+    --portal-bg: #09090b;
+    --portal-surface: rgba(24, 24, 27, 0.7);
+    --portal-surface-hover: rgba(39, 39, 42, 0.8);
+    --portal-border: rgba(255, 255, 255, 0.08);
+    --portal-border-light: rgba(255, 255, 255, 0.04);
+    
+    --portal-text-main: #f8fafc;
+    --portal-text-muted: #94a3b8;
+    
+    --portal-primary: #3b82f6;
+    --portal-primary-glow: rgba(59, 130, 246, 0.5);
+    
+    --portal-success: #10b981;
+    --portal-success-glow: rgba(16, 185, 129, 0.4);
+    
+    --font-outfit: 'Outfit', 'Inter', system-ui, sans-serif;
+}
+
+body {
+    background-color: var(--portal-bg) !important;
+    color: var(--portal-text-main) !important;
+    font-family: var(--font-outfit) !important;
+    background-image: 
+        radial-gradient(circle at 15% 50%, rgba(59, 130, 246, 0.08), transparent 25%),
+        radial-gradient(circle at 85% 30%, rgba(16, 185, 129, 0.08), transparent 25%) !important;
+    background-attachment: fixed !important;
+}
+
+/* Sidebar Overrides */
+.app-sidebar {
+    background: rgba(9, 9, 11, 0.8) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    border-right: 1px solid var(--portal-border) !important;
+}
+
+.sidebar-header {
+    border-bottom: 1px solid var(--portal-border-light) !important;
+}
+
+.sidebar-header .header-logo span:first-child {
+    background: linear-gradient(135deg, #60a5fa, #3b82f6) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    font-family: var(--font-outfit) !important;
+    font-weight: 800 !important;
+}
+
+.sidebar-header .header-logo span:last-child {
+    color: var(--portal-text-muted) !important;
+}
+
+.nav-item {
+    color: var(--portal-text-muted) !important;
+    transition: all 0.25s ease !important;
+    border-radius: 8px !important;
+    margin: 4px 8px !important;
+    padding: 10px 16px !important;
+}
+
+.nav-item:hover {
+    background: var(--portal-surface) !important;
+    color: var(--portal-text-main) !important;
+    transform: translateX(4px) !important;
+}
+
+.nav-item.active {
+    background: linear-gradient(90deg, rgba(59, 130, 246, 0.15), transparent) !important;
+    color: #60a5fa !important;
+    border-left: 3px solid #3b82f6 !important;
+    font-weight: 600 !important;
+}
+
+.sidebar-footer {
+    border-top: 1px solid var(--portal-border-light) !important;
+    background: transparent !important;
+}
+
+.user-name {
+    color: var(--portal-text-main) !important;
+}
+.user-role {
+    color: var(--portal-text-muted) !important;
+}
+
+/* Header Overrides */
+.app-header {
+    background: transparent !important;
+    border-bottom: 1px solid var(--portal-border) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+}
+
+.breadcrumbs .current {
+    color: var(--portal-text-main) !important;
+    font-weight: 600 !important;
+}
+
+/* Cards & Glassmorphism */
+.card {
+    background: var(--portal-surface) !important;
+    border: 1px solid var(--portal-border) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2) !important;
+    border-radius: 16px !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.card:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.1) !important;
+}
+
+.card-header {
+    border-bottom: 1px solid var(--portal-border-light) !important;
+}
+
+.card-title {
+    color: var(--portal-text-main) !important;
+    font-family: var(--font-outfit) !important;
+}
+
+.card-body {
+    color: var(--portal-text-muted) !important;
+}
+
+.card-body p {
+    color: var(--portal-text-main) !important;
+}
+
+/* Typography Overrides */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-outfit) !important;
+    color: var(--portal-text-main) !important;
+}
+
+/* Page Titles */
+.page-title {
+    background: linear-gradient(135deg, #fff, #94a3b8) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+}
+
+/* Buttons */
+.btn-primary {
+    background: linear-gradient(135deg, #3b82f6, #2563eb) !important;
+    border: none !important;
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.3) !important;
+    transition: all 0.3s ease !important;
+    color: #fff !important;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #60a5fa, #3b82f6) !important;
+    box-shadow: 0 0 25px rgba(59, 130, 246, 0.5) !important;
+    transform: translateY(-1px) !important;
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid var(--portal-border) !important;
+    color: var(--portal-text-main) !important;
+    transition: all 0.3s ease !important;
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Status Badges */
+.badge-success {
+    background: rgba(16, 185, 129, 0.15) !important;
+    color: #34d399 !important;
+    border: 1px solid rgba(16, 185, 129, 0.3) !important;
+}
+
+.badge-warning {
+    background: rgba(245, 158, 11, 0.15) !important;
+    color: #fbbf24 !important;
+    border: 1px solid rgba(245, 158, 11, 0.3) !important;
+}
+
+.badge-danger {
+    background: rgba(239, 68, 68, 0.15) !important;
+    color: #f87171 !important;
+    border: 1px solid rgba(239, 68, 68, 0.3) !important;
+}
+
+/* Load Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.app-content > * {
+    animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.card {
+    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}

@@ -1,0 +1,20 @@
+{
+  "metadata": {
+    "contract_version": "1.0",
+    "engine_version": "1.0",
+    "plugin": "google_ads",
+    "generated_at": "2026-07-18T03:18:38.737Z"
+  },
+  "executive_summary": "The marketing account has achieved an overall health score of 100 (A). While there are performing segments, immediate attention is required in key areas to prevent budget waste.",
+  "biggest_wins": [
+    "Active campaigns driving baseline conversions."
+  ],
+  "biggest_risks": [
+    "No immediate high-priority risks detected."
+  ],
+  "immediate_actions": [
+    "Continue monitoring campaign performance."
+  ],
+  "long_term_strategy": "Focus on reallocating wasted spend from poor performing segments into top converting campaigns to scale ROI.",
+  "overall_business_assessment": "Stable but needs optimization."
+}

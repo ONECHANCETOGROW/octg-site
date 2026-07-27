@@ -26,6 +26,8 @@ window.OCTG = window.OCTG || {};
     options = options || {};
     var count = options.count || 40;
     var color = options.color || '92,143,34';
+    var connections = !!options.connections;
+    var connectDistance = options.connectDistance || 120;
     var particles = [];
     var raf;
 
@@ -50,6 +52,22 @@ window.OCTG = window.OCTG || {};
 
     function tick() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
+      if (connections) {
+        for (var i = 0; i < particles.length; i++) {
+          for (var j = i + 1; j < particles.length; j++) {
+            var dx = particles[i].x - particles[j].x, dy = particles[i].y - particles[j].y;
+            var dist = Math.sqrt(dx * dx + dy * dy);
+            if (dist < connectDistance) {
+              ctx.beginPath();
+              ctx.moveTo(particles[i].x, particles[i].y);
+              ctx.lineTo(particles[j].x, particles[j].y);
+              ctx.strokeStyle = 'rgba(' + color + ',' + (0.14 * (1 - dist / connectDistance)) + ')';
+              ctx.lineWidth = 1;
+              ctx.stroke();
+            }
+          }
+        }
+      }
       particles.forEach(function (p) {
         p.x += p.vx; p.y += p.vy;
         if (p.x < 0) p.x = canvas.width; if (p.x > canvas.width) p.x = 0;
@@ -144,6 +162,47 @@ window.OCTG = window.OCTG || {};
         });
       }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
       revealEls.forEach(function (el) { io.observe(el); });
+    }
+
+    /* ---- Card stagger reveal: each card observed individually so it
+       reveals exactly when IT scrolls into view (CSS in animations.css
+       adds a small nth-child delay for cards entering together as a row).
+       Deliberately separate from the .reveal observer above — a card
+       waiting on a parent container's timing is what caused the previous
+       "scrolled past before it finished appearing" regression. */
+    var cardEls = document.querySelectorAll('.pillar, .why-item, .quote-card, .step, .compare__col, .service-chip, .stat-card');
+    if (reduceMotion || !('IntersectionObserver' in window)) {
+      cardEls.forEach(function (el) { el.classList.add('is-visible'); });
+    } else {
+      var cardIo = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            cardIo.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+      cardEls.forEach(function (el) { cardIo.observe(el); });
+    }
+
+    /* ---- Scroll progress bar (thin line under the header, any page that
+       has the .scroll-progress element) — width via scaleX, rAF-throttled,
+       transform-only so it never triggers layout. ---- */
+    var progressBar = document.getElementById('scrollProgress');
+    if (progressBar && !reduceMotion) {
+      var progressPending = null;
+      var updateProgress = function () {
+        var doc = document.documentElement;
+        var scrollable = doc.scrollHeight - doc.clientHeight;
+        var pct = scrollable > 0 ? Math.min(window.scrollY / scrollable, 1) : 0;
+        progressBar.style.transform = 'scaleX(' + pct + ')';
+        progressPending = null;
+      };
+      window.addEventListener('scroll', function () {
+        if (progressPending) return;
+        progressPending = requestAnimationFrame(updateProgress);
+      }, { passive: true });
+      updateProgress();
     }
 
     /* ---- Growth rail: fill + section nodes (present on every page) ---- */
