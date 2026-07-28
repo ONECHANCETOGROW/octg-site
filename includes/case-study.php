@@ -32,6 +32,8 @@ if ($pdo) {
                 'quote' => $r['quote'],
                 'quote_role' => $r['quote_role'],
                 'services_used' => json_decode($r['services_used'] ?? '[]', true) ?: [],
+                'meta_title' => $r['meta_title'] ?? null,
+                'meta_description' => $r['meta_description'] ?? null,
                 'order' => $r['display_order']
             ];
         }
@@ -68,8 +70,8 @@ if (!$case) {
 
 $nextCase = $CASES[($caseIndex + 1) % count($CASES)];
 
-$pageTitle       = $case['title'] . ' — ' . $case['industry'] . ' Case Study | One Chance To Grow';
-$pageDescription = $case['challenge'];
+$pageTitle       = !empty($case['meta_title']) ? $case['meta_title'] : ($case['title'] . ' — ' . $case['industry'] . ' Case Study | One Chance To Grow');
+$pageDescription = !empty($case['meta_description']) ? $case['meta_description'] : $case['challenge'];
 $pageSlug        = $case['slug'];
 $canonicalPath   = 'projects/' . $case['slug'] . '.php';
 $activeNav       = '';
